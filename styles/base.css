@@ -1,0 +1,122 @@
+/* ----------- COLOR SCHEME ------ 
+Mikado yellow #FFC328
+Delft blue #3D4058
+French gray #B5BABE
+terra cotta #E07A5F
+
+*/
+
+/* ***************** SITE WIDE *************** */
+:root{
+    font-family: "Merriweather Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+/* ***************** HEADER *************** */
+header{
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+
+}
+
+header img{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+header span{
+    font-size: 1.2rem;
+    color: #3D4058;
+}
+
+/* ***************** HAMBURGER *************** */
+/* Mobile View */
+.hamburger{
+    background: none;
+    border: none;
+    color: #3D4058;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before{
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger.show::before{
+    content: "\00D7";
+}
+
+/* ***************** NAVIGATION *************** */
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation a{
+    display: block;
+    padding: .8rem  10px;
+    color: #3D4058;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation li.current{
+    background-color: #bdbcbc;;
+}
+
+.navigation a:hover{
+    background-color: #FFC328;
+}
+
+
+/* ***************** MAIN *************** */
+h1{
+    margin-left: 10px;
+    color: #3D4058;
+}
+
+
+/* ***************** FOOTER *************** */
+footer{
+    background-color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+.social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: #ccc solid 1px;
+    border-radius: 22px;
+}
+.social img{
+    width: 22px;
+    height: 22px;
+}
+.social a:hover{
+    background-color: #FFC328;
+}
