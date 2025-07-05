@@ -147,6 +147,7 @@ main {
     margin: -1rem -1rem 1rem -1rem;
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
+    text-align: center;
 }
 
 .course-filters {
@@ -220,27 +221,16 @@ footer{
 /* Stack card1 and card2 vertically on small screens */
 @media (max-width: 606px) {
     .about-container {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
 
-    .card2 {
-        width: 100%;
-    }
-
-    .card2 h2 {
-        width: 100%;
-        box-sizing:border-box;
-        text-align: center;
-        margin-right: 0 !important;
-        /* Or reset the whole margin: */
-       
-    }
-
-
     .card2 img {
         display: block;
         margin: 0 auto;
     }
+
+
 }
