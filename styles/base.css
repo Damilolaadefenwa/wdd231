@@ -150,41 +150,74 @@ main {
     text-align: center;
 }
 
+/* Course Filters */
 .course-filters {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+    justify-content: center;
 }
 
 .course-filters button {
     flex: 1;
-    padding: 0.5rem;
-    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border, #bbb);
     background: #fff;
+    color: var(--primary, #3D4058);
     cursor: pointer;
-    font-weight: bold; 
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: background 0.2s, color 0.2s;
 }
 
+.course-filters button:hover,
+.course-filters button.active {
+    background: var(--secondary, #FFC328);
+    color: var(--primary, #3D4058);
+}
+
+/* Course List & Cards */
 .course-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1rem;
+    justify-content: center;
 }
 
-.course-list>div {
-    flex: 1;
-    border: 1px solid var(--border);
-    padding: 0.5rem;
-    text-align: center;
-    background: #f9f9f9;
+.course-card {
+    flex: 1 1 220px;
+    min-width: 220px;
+    max-width: 300px;
+    border: 1px solid var(--border, #bbb);
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: var(--primary, #3D4058);
+    text-align: left;
+    transition: background 0.3s, border 0.3s;
+    margin-bottom: 0;
 }
 
-.course-total {
-    text-align: center;
-    font-size: 0.95rem;
-    color: #333; 
+.course-card.completed {
+    background: #d4f8e8;
+    /* Complimentary color for completed */
+    border-color: #2ecc71;
+    color: #217a53;
+    font-weight: bold;
 }
 
+.course-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.course-card p {
+    margin: 0.3rem 0;
+    font-size: 0.98rem;
+}
 
 /* ***************** FOOTER *************** */
 footer{
@@ -230,6 +263,16 @@ footer{
     .card2 img {
         display: block;
         margin: 0 auto;
+    }
+
+    .course-list {
+        flex-direction: column;
+        align-items: stretch;
+     }
+    
+    .course-card {
+        max-width: 100%;
+        min-width: 0;
     }
 
 
