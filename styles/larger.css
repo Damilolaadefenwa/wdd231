@@ -30,5 +30,34 @@
         border: none;
     }
 
+    /* Group card1 and card2 side by side for large screens */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-container {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card1 {
+        flex: 2;
+    }
+
+    .card2 {
+        flex: 1;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+    }
+
+    .card2 img {
+        display: block;
+        margin: 0 auto;
+    }
+
 
 }

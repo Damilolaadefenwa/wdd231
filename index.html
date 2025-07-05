@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 231 | Damilola Adefenwa</title>
-    <meta name="author" content="Damilola Adefenwa">
     <meta name="description" content="This is the course home page for WDD 231, Web Frontend Development-I.">
+    <meta name="author" content="Damilola Adefenwa">
+    <meta name="keywords" content="WDD 231, Web Frontend Development, BYUI, HTML, CSS, JavaScript, Course Homepage">
 
     <!-- Style Sheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <!-- Scripts -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
+    <!-- Custom Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <header>
         <img src="images/home.svg" alt="Site Logo" width="512" height="512">
@@ -25,26 +34,82 @@
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li class="current"><a href="index.html" title="Homepage">Home</a></li>
-            <li><a href="#" title="My Assignment">Assignment</a></li>
+            <li class="current"><a href="index.html" title="Home-page">Home</a></li>
+            <li><a href="#" title="Commerce Chamber">Chamber of Commerce</a></li>
             <li><a href="#" title="My project">Final Project</a></li>
-            <!-- <li><a href=""></a></li>
-            <li><a href=""></a></li> -->
         </ul>
     </nav>
     <main>
-        <h1>Home </h1>
+        <h1>Home</h1>
+        <div class="about-container">
+            <section class="card1">
+                <h2>About Me!</h2>
+                <p>
+                    Greetings, everyone! I'm Damilola Adefenwa, a passionate and driven digital designer who is currently enrolled
+                    in
+                    foundational certificate in Web Frontend Development 1 from BYU-Idaho. This achievement will be a culmination of
+                    dedicated
+                    effort across several courses, including WDD 130 (Web Fundamentals) and WDD 131 (Dynamic Web Fundamentals),
+                    which
+                    provided a robust understanding of modern web principles.
+            
+                    My enthusiasm lies in transforming concepts into visually engaging and highly functional web experiences. I
+                    thrive on
+                    the challenge of building responsive websites with clean HTML, elegant CSS, and dynamic JavaScript. As I
+                    continue to
+                    deepen my expertise, I'm particularly interested in exploring cutting-edge development tools and technologies
+                    that
+                    streamline workflows and enhance user interaction. Beyond the screen, I find inspiration in travel, hiking
+                    through
+                    serene countrysides, and immersing myself in cinema or industry events, always with an eye for design and
+                    innovation.
+            
+                    I'm truly excited to be part of this vibrant class this term. I'm eager to collaborate on projects, share
+                    insights,
+                    and contribute to a supportive environment as we all grow in our skills. Let's connect and build something
+                    amazing!
+                </p>
+            </section>
+            
+            <!-- Section 2: Student Photo -->
+            <section class="card2">
+                <h2>Student Photo</h2>
+                <img src="images/profile-picture.webp" alt="student Photo" width="300" loading="lazy">
+            </section>
+        </div>
+        
+        <!-- Section 3: Web Certificate Courses -->
+        <section class="courses-section">
+            <h2>Web Certificate Courses</h2>
+            <div class="course-filters">
+                <button>All</button>
+                <button>CSE</button>
+                <button>WDD</button>
+            </div>
+            <div class="course-list">
+                <div>WDD 130</div>
+                <div>WDD 131</div>
+                <div>WDD 231</div>
+            </div>
+            <div class="course-total">
+                The total credits for courses listed above is 6
+            </div>
+        </section>
     </main>
     <footer>
         <div class="social">
-            <a href="https://www.linkedin.com/in/damilolamercy17/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
-            <a href="https://github.com/Damilolaadefenwa" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
-            <a href="https://web.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
-            <a href="https://x.com/i/flow/login" target="_blank"><img src="images/twitter-x.svg" alt="twitter-x" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/damilolamercy17/" target="_blank"><img src="images/linkedin.svg"
+                    alt="linkedin" width="16" height="16"></a>
+            <a href="https://github.com/Damilolaadefenwa" target="_blank"><img src="images/github.svg" alt="github"
+                    width="16" height="16"></a>
+            <a href="https://web.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16"
+                    height="16"></a>
+            <a href="https://x.com/i/flow/login" target="_blank"><img src="images/twitter-x.svg" alt="twitter-x"
+                    width="16" height="16"></a>
         </div>
-        <p>copyright symbol and current year</p>
-        <p>Last Modified</p>
+        <p>©<span id="current-year"></span>| 🌹  Damilola Adefenwa 🌹| Ibadan-Oyo, Nigeria</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
-    <script src="scripts/navigation.js"></script>
+
 </body>
 </html>
