@@ -1,4 +1,4 @@
-                // Dynamic filling of course section.
+// Dynamic filling of course section.
 //Copy this array of course objects into a JavaScript file
 const courses = [
     {
@@ -84,6 +84,7 @@ const courses = [
 // to true if you have completed a course. Mark completed courses.
 courses.forEach(course => {
     if (
+        course.subject === 'CSE' ||
         (course.subject === 'WDD' && course.number === 130) ||
         (course.subject === 'WDD' && course.number === 131)
         // Add more conditions for other completed courses
