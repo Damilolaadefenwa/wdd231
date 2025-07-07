@@ -26,29 +26,6 @@ body {
     background: white;
 }
 
-.skip-link {
-    position: absolute;
-    left: -999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    z-index: 100;
-    background: #fff;
-    color: #3D4058;
-}
-
-.skip-link:focus {
-    left: 10px;
-    top: 10px;
-    width: auto;
-    height: auto;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: 2px solid #3D4058;
-}
-
-
 /* ***************** HEADER *************** */
 header {
     display: grid;
