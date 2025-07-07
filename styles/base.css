@@ -26,6 +26,28 @@ body {
     background: white;
 }
 
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 100;
+    background: #fff;
+    color: #3D4058;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #3D4058;
+}
+
 
 /* ***************** HEADER *************** */
 header {
@@ -165,8 +187,6 @@ main {
     text-align: center;
 }
 
-
-
 /* Course Filters */
 .course-filters {
     display: flex;
@@ -259,12 +279,15 @@ footer {
     width: 44px;
     height: 44px;
     border: #ccc solid 1px;
-    border-radius: 22px;
+    border-radius: 50%;
+    padding-left: 9px;
+    padding-top: 7px;
+    box-sizing: border-box;
 }
 
 .social img {
-    width: 22px;
-    height: 22px;
+    width: 32px;
+    height: 32px;
 }
 
 .social a:hover {
@@ -345,12 +368,14 @@ footer {
     .social a {
         width: 38px;
         height: 38px;
-        border-radius: 19px;
+        border-radius: 50%;
+        padding-left: 9px;
+        padding-top: 7px;
     }
 
     .social img {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
     }
 
 }
