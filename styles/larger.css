@@ -1,32 +1,36 @@
 @media only screen and (min-width: 38rem) {
-    header, main, nav, footer{
+
+    header,
+    main,
+    nav,
+    footer {
         max-width: 900px;
         margin: 0 auto;
     }
 
-    header{
+    header {
         grid-template-columns: 24px auto;
     }
 
-    .hamburger{
+    .hamburger {
         display: none;
     }
 
     .navigation {
-        display: block; 
+        display: block;
         border-bottom: solid 1px #ddd;
-        background-color: #eee;  
-    } 
+        background-color: #eee;
+    }
 
     .navigation ul li:not(:first-child) {
         border-left: 1px solid #bbb;
     }
-    
+
     .navigation ul {
-        display: flex;   
+        display: flex;
     }
-    
-    .navigation a{
+
+    .navigation a {
         border: none;
     }
 
