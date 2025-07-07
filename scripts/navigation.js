@@ -7,6 +7,13 @@ const navLinks = document.querySelector('#nav-bar');
 navbutton.addEventListener('click', () => {
     navbutton.classList.toggle('show');
     navLinks.classList.toggle('show');
+    //Update aria-label for accessibility
+    if (navbutton.classList.contains('show')) {
+        navbutton.setAttribute('aria-label', 'close main navigation menu')
+    }
+    else {
+        navbutton.setAttribute('arial-label', 'open main navigation menu')
+    }
 });
 
 
