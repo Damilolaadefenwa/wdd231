@@ -1,0 +1,100 @@
+/* Page background and font */
+body {
+    background-color: #e6e6ea;
+    font-family: 'Merriweather Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Container for cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:0.5rem;
+    /* gap: 1.5rem; */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual card */
+.cards .card {
+    background-color: #d3d3e3;
+    border: 2px solid #b2b2c2;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(60, 60, 80, 0.08);
+    padding: 1rem 1rem 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.cards .card:hover {
+    box-shadow: 0 4px 16px rgba(60, 60, 80, 0.18);
+}
+
+/* Card title */
+.cards .card h2 {
+    color: #5a5a9a;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+    font-family: 'Merriweather Sans', Arial, sans-serif;
+}
+
+/* Card details */
+.cards .card p {
+    color: #444;
+    font-size: 1rem;
+    margin: 0.2rem 0;
+    text-align: center;
+}
+
+/* Card image styling */
+.cards .card img {
+    margin: 1rem 0;
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(60, 60, 80, 0.12);
+    border: 1px solid #b2b2c2;
+    background: #fff;
+}
+
+footer {
+    background: #d3d3e3;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .cards .card img {
+        width: 100%;
+        height: auto;
+        max-width: 320px;
+    }
+}
+
