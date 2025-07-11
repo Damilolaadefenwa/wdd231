@@ -1,0 +1,28 @@
+{
+    "family_name": "Johnson",
+    "move_in_date": "17 June 2025",
+    "number_of_people": 4,
+    "Visited_by_bishopric": true,
+    "family_members": [
+        {
+            "name": "Martins Johnson",
+            "gender": "male",
+            "birthdate": "22-07-1986"
+        },
+        {
+            "name": "Mercy Johnson",
+            "gender": "female",
+            "birthdate": "16-08-1988"
+        },
+        {
+            "name": "Thompson Johnson",
+            "gender": "male",
+            "birthdate": "10-03-2015"
+        },
+        {
+            "name": "Grace Johnson",
+            "gender": "female",
+            "birthdate": "7-11-2024"
+        }
+    ]
+}
