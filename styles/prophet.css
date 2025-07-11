@@ -8,6 +8,7 @@ body {
 
 h1 {
     text-align: center;
+    color: #5a5a9a;
 }
 
 /* Container for cards */
@@ -81,6 +82,7 @@ footer p {
     letter-spacing: 0.5px;
     font-size: 1.5rem;
     font-weight: 600;
+    color: #3f3f6e;
 }
 
 /* Responsive adjustments */
