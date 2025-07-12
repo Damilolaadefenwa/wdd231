@@ -1,0 +1,46 @@
+/* ----------- COLOR SCHEME & TYPOGRAPHY ------ 
+
+Primary/main Color: #3D4058 - Delft blue
+Secondary/supporting Color-1: #B5BABE - French gray
+Secondary/supporting Color-2: #E07A5F - Burnt Sienna
+
+Background Color: #B5BABE - French gray
+Text Color: #0d0d12 -Night
+Font Family: "Merriweather Sans", sans-serif;
+
+*/
+
+/* ***************** SITE WIDE *************** */
+:root {
+    
+    --myfont-family: "Merriweather Sans", sans-serif;
+    --primary: #3D4058;
+    --darktext: #0d0d12;
+    --secondary: #B5BABE;
+    --accent: #E07A5F;
+}
+
+body {
+    margin: 0;
+    font-family: "Merriweather Sans", sans-serif;
+    background: var(--secondary);
+}
+
+/* ***************** HAMBURGER *************** */
+/* ***************** NAVIGATION *************** */
+/* ***************** MAIN *************** */
+/* ***************** FOOTER *************** */
+
+/* --- Responsive Design --- */
+
+/* 1. Mobile adjustments */
+/* Stack card1 and card2 vertically on small screens */
+@media (max-width: 606px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* 2. Large screen adjustments (if needed beyond general styles) */
