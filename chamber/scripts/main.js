@@ -36,23 +36,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // // Dark Mode Toggle (Optional, but included for completeness from header)
-    // const darkModeToggleBtn = document.querySelector('.dark-mode-toggle button');
-    // if (darkModeToggleBtn) {
-    //     // Check for saved theme preference
-    //     const currentTheme = localStorage.getItem('theme');
-    //     if (currentTheme === 'dark') {
-    //         document.body.classList.add('dark-mode');
-    //     }
+    // Dark Mode Toggle (Optional, but included for completeness from header)
+    const darkModeToggleBtn = document.querySelector('.dark-mode-toggle button');
+    if (darkModeToggleBtn) {
+        // Check for saved theme preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
 
-    //     darkModeToggleBtn.addEventListener('click', () => {
-    //         document.body.classList.toggle('dark-mode');
-    //         // Save preference to localStorage
-    //         if (document.body.classList.contains('dark-mode')) {
-    //             localStorage.setItem('theme', 'dark');
-    //         } else {
-    //             localStorage.setItem('theme', 'light');
-    //         }
-    //     });
-    // }
+        darkModeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            // Save preference to localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
 });

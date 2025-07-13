@@ -23,9 +23,15 @@ Font Family: "Merriweather Sans", sans-serif;
     --greybackground: #eaecef;
     --accentcolor: #E07A5F;
     --popcolor: #FFC328;
+
+    /* Dark Mode Colors (example) */
+    --dark-mode-background: #2c3e50;
+    --dark-mode-text: #ecf0f1;
+    --dark-mode-card-bg: #34495e;
+    --dark-mode-border: #4a627d;
 }
 
-/* Base Styles */
+/************* Base Styles ************/
 body {
     font-family: var(--myfont);
     background-color: var(--greybackground);
@@ -38,43 +44,116 @@ body {
     /* Ensures footer sticks to bottom*/
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--myfont);
+    color: var(--darktext);
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--darktextcolor);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 /* ***************** DARK THEME STYLES *************** */
-/* body.dark-theme {
-    background-color: #333;
-    color: #f0f4f8;
+.dark-mode-toggle {
+    order: 4;
+    /* Last on small screens */
+    margin-left: auto;
+    /* Push to right */
+    margin-top: 1rem;
+    /* Spacing for small screens */
 }
 
-body.dark-theme header {
-    background-color: #555;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+.dark-mode-toggle button {
+    background: none;
+    border: 1px solid black;
+    color: black;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-body.dark-theme .site-name,
-body.dark-theme .main-nav a {
-    color: #f0f4f8;
-} */
+.dark-mode-toggle button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/*** Dark Mode Body Class ****/
+body.dark-mode {
+    background-color: var(--dark-mode-background);
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--dark-);
+}
+
+body.dark-mode a {
+    color: var(--accentcolor);
+    /* Keep accent color for links formally used light blue*/
+}
+
+body.dark-mode .nav-links a.active {
+    color: #2c3e50;
+    /* Ensure text is visible on accent */
+}
+
+body.dark-mode .logo a:hover{
+    color: var(--primarycolor);
+}
 
 /* ***************** HEADER *************** */
 
 header {
-    display: flex;
-    /* Makes children (header-left, header-right-group) flex items */
-    justify-content: space-between;
-    /* Pushes header-left to start, header-right-group to end */
-    align-items: center;
-    /* Vertically centers all items */
     background-color: var(--secondarycolor);
-    /* Gray background as seen in the image */
-    padding: 10px 20px;
+    padding: 5px 10px;
     /* Padding around the content inside the header */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     /* Subtle shadow for depth */
     border-radius: 8px;
     /* Rounded corners for the header */
-    margin: 10px;
+    margin: 3px;
     /* Margin around the header itself */
+
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    /* Makes children flex items */
     flex-wrap: wrap;
-    /* Allows header content to wrap on smaller screens */
+    /* Allows wrapping on smaller screens */
+    align-items: center;
+    /* Vertically centers all items */
+    justify-content: space-between;
+    /* Pushes header-left to start, header-right-group to end */
     gap: 15px;
     /* Gap between main flex items in header */
 }
@@ -93,7 +172,6 @@ header {
     /* Fixed size for the logo */
     height: 40px;
     border-radius: 10%;
-    /* Makes the placeholder image round, if desired */
     object-fit: cover;
     /* Ensures image covers the area without distortion */
 }
@@ -104,8 +182,7 @@ header {
     font-weight: bold;
     /* Make it bold */
     color: var(--darktextcolor);
-    /* Darker text color */
-    white-space: nowrap;
+    /* white-space: nowrap; */
     /* Prevents site name from wrapping */
 }
 
@@ -216,7 +293,17 @@ nav {
 } */
 
 /* ***************** MAIN *************** */
-
+main {
+    flex: 1;
+    /* Allows main content to grow and push footer down */
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Center align main content */
+    width: 100%;
+    box-sizing: border-box;
+    /* Include padding in element's total width and height */
+}
 
 /* ***************** FOOTER *************** */
 footer {
@@ -297,10 +384,10 @@ footer a:hover {
 }
 
 /* ***************** DARK MODE FOOTER *************** */
-/* body.dark-mode footer {
+body.dark-mode footer {
     background-color: #1a252f;
-    /* Even darker for dark mode footer 
-} */
+    /* Even darker for dark mode footer*/
+} 
 
 
 /* ***************** RESPONSIVE DESIGN *************** */
@@ -312,14 +399,6 @@ footer a:hover {
         overflow-x: hidden;
     }
 
-    /* header {
-        flex-direction: column;
-        /* Stack items vertically 
-    align-items: center;
-    /* Center items when stacked 
-        padding: 15px;
-    } */
-
     .logo {
         flex-direction: column;
         /* Stack logo and site name vertically */
@@ -327,6 +406,7 @@ footer a:hover {
         /* Center them horizontally when stacked */
         gap: 5px;
         /* Reduce gap between stacked items */
+        margin-left: 2.5rem;
     }
 
     .logo a {
@@ -334,13 +414,19 @@ footer a:hover {
         /* Allow site name to wrap if it's too long */
         text-align: center;
         /* Center the text if it wraps */
+        font-size: 1.5rem;
     }
 
 }
 
 /* 2. Large screen adjustments (e.g, tablet, laptop etc) */
+@media only screen and (min-width: 608px) {
+    .header-content {
+        flex-wrap: nowrap;
+        /* Prevent wrapping for header elements */
+        width: auto;
+    }
 
-@media only screen and (min-width: 768px) {
     nav {
         width: auto;
         order: initial;
@@ -348,7 +434,7 @@ footer a:hover {
         margin-top: 0;
         text-align: left;
         /* Align nav to left in header*/
-        margin-left: 25rem;
+        margin-left: 20rem;
         /* Space from logo*/
     }
 
@@ -399,6 +485,20 @@ footer a:hover {
         width: 5rem;
         padding: 4px 7px;
     }
+
+    /* 
+    .keynote-tickets {
+        order: initial;
+        margin-top: 0;
+    } */
+
+    .dark-mode-toggle {
+        order: initial;
+        margin-top: 0;
+        /* margin-left: 1rem; */
+        margin-right: 7rem;
+    }
+
 
     .footer-content {
         justify-content: space-between;
