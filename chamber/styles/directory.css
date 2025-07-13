@@ -20,16 +20,14 @@ Font Family: "Merriweather Sans", sans-serif;
     --accent: #E07A5F;
 }
 
-body {
+/* body {
     margin: 0;
     font-family: "Merriweather Sans", sans-serif;
     background: var(--secondary);
-}
+} */
 
-/* ***************** HAMBURGER *************** */
-/* ***************** NAVIGATION *************** */
+
 /* ***************** MAIN *************** */
-/* ***************** FOOTER *************** */
 
 /* --- Responsive Design --- */
 
