@@ -1,0 +1,447 @@
+/* Color Palette (Example - customize these for your design brief) */
+/* Author Diogo Rangel Dos Santos/
+/* Date: 2025-07-09 */
+
+/* ----------- COLOR SCHEME & TYPOGRAPHY ------ 
+
+Primary/main Color: #3D4058 - Delft blue
+Secondary/supporting Color-1: #B5BABE - French gray
+Secondary/supporting Color-2: #E07A5F - Burnt Sienna
+
+Background Color: #B5BABE - French gray
+Text Color: #0d0d12 -Night
+Font Family: "Merriweather Sans", sans-serif;
+
+*/
+
+/* ***************** SITE WIDE *************** */
+:root {
+
+    --myfont-family: "Merriweather Sans", sans-serif;
+    --primary: #3D4058;
+    --darktext: #0d0d12;
+    --secondary: #B5BABE;
+    --accent: #E07A5F;
+}
+
+/* ***************** HAMBURGER *************** */
+/* ***************** NAVIGATION *************** */
+/* ***************** MAIN *************** */
+/* ***************** FOOTER *************** */
+
+
+/* Base Styles */
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: white;
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensures footer sticks to bottom */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    margin-top: 0;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Layout - Main Content Area */
+main {
+    flex: 1;
+    /* Allows main content to grow and push footer down */
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Center align main content */
+    width: 100%;
+    box-sizing: border-box;
+    /* Include padding in element's total width and height */
+}
+
+/* Header */
+header {
+    /* background-color: var(--primary-color); */
+    background-color: #B5BABE;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+}
+
+.logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navigation */
+nav {
+    flex-grow: 1;
+    /* Allows nav to take available space */
+    text-align: right;
+    order: 2;
+    /* Ensures nav appears below logo on small screens */
+    width: 100%;
+    /* Take full width on small screens */
+    margin-top: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* Stacked by default for mobile */
+    background-color: var(--primary-color);
+    /* Matches header */
+    width: 100%;
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+    /* Hidden by default */
+    overflow: hidden;
+}
+
+.nav-links.open {
+    max-height: 500px;
+    /* Adjust as needed to reveal all links */
+}
+
+.nav-links li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-links li:last-child {
+    border-bottom: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--secondary-color);
+    color: var(--heading-color);
+    /* Contrast for active/hover */
+    text-decoration: none;
+}
+
+.hamburger-menu {
+    display: block;
+    /* Show hamburger on mobile */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    order: 1;
+    /* Appears first on small screens */
+}
+
+/* Keynote Tickets & Dark Mode Toggle */
+.keynote-tickets {
+    background-color: var(--secondary-color);
+    color: var(--heading-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 1rem;
+    order: 3;
+    /* After nav on small screens */
+    margin-top: 1rem;
+    /* Spacing for small screens */
+}
+
+.keynote-tickets:hover {
+    background-color: darken(var(--secondary-color), 10%);
+    /* Example of a potential hover state */
+    text-decoration: none;
+}
+
+.dark-mode-toggle {
+    order: 4;
+    /* Last on small screens */
+    margin-left: auto;
+    /* Push to right */
+    margin-top: 1rem;
+    /* Spacing for small screens */
+}
+
+.dark-mode-toggle button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Mode Body Class */
+body.dark-mode {
+    background-color: var(--dark-mode-background);
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode a {
+    color: var(--accent-color);
+    /* Keep accent color for links */
+}
+
+body.dark-mode .nav-links a.active {
+    color: var(--heading-color);
+    /* Ensure text is visible on accent */
+}
+
+/* Footer */
+footer {
+    background-color: #3D4058;;
+    /* Darker background */
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1.5rem;
+    /* Space between flex items */
+}
+
+.contact-info,
+.social-media,
+.development-info {
+    flex: 1 1 250px;
+    /* Allow items to grow/shrink, with a base width */
+    text-align: left;
+}
+
+footer h3 {
+    color: var(--secondary-color);
+    /* Highlight with secondary color */
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    /* Center icons if they wrap */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-media img {
+    width: 40px;
+    /* Size for social icons */
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.development-info {
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+/* Dark Mode Footer */
+body.dark-mode footer {
+    background-color: #1a252f;
+    /* Even darker for dark mode footer */
+}
+
+/* Responsive Design */
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 768px) {
+    .header-content {
+        flex-wrap: nowrap;
+        /* Prevent wrapping for header elements */
+    }
+
+    nav {
+        width: auto;
+        order: initial;
+        /* Reset order */
+        margin-top: 0;
+        text-align: left;
+        /* Align nav to left in header */
+        margin-left: 2rem;
+        /* Space from logo */
+    }
+
+    .hamburger-menu {
+        display: none;
+        /* Hide hamburger on larger screens */
+    }
+
+    .nav-links {
+        flex-direction: row;
+        /* Display links in a row */
+        max-height: none;
+        /* Always visible */
+        overflow: visible;
+        background-color: transparent;
+        /* No background for nav links */
+    }
+
+    .nav-links li {
+        border-bottom: none;
+        margin-right: 1.5rem;
+        /* Spacing between links */
+    }
+
+    .nav-links li:last-child {
+        margin-right: 0;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 0;
+        background-color: transparent;
+        color: white;
+        /* Default color */
+        border-bottom: 2px solid transparent;
+        /* For hover effect */
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        background-color: transparent;
+        color: white;
+        border-bottom-color: var(--secondary-color);
+        /* Highlight active/hover */
+    }
+
+    .keynote-tickets {
+        order: initial;
+        margin-top: 0;
+    }
+
+    .dark-mode-toggle {
+        order: initial;
+        margin-top: 0;
+        margin-left: 1rem;
+    }
+
+    .footer-content {
+        justify-content: space-between;
+    }
+
+    .contact-info,
+    .social-media,
+    .development-info {
+        flex: 0 1 auto;
+        /* Allow items to take natural width */
+    }
+
+    .social-media {
+        order: -1;
+        /* Move social media to the left in the middle */
+        margin-top: 0;
+    }
+
+    .development-info {
+        text-align: right;
+    }
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 1024px) {
+    /* Adjustments for larger screens if necessary */
+}
