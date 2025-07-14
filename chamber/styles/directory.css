@@ -12,6 +12,7 @@
     --greybackground: #eaecef;
     --accentcolor: #ff977a;
     --popcolor: #FFC328;
+    --popvariant: #fcff42;
 
     /* Dark Mode Colors (example) */
     --dark-mode-background: #2c3e50;
@@ -97,7 +98,7 @@ body.dark-mode .view-toggle button.active {
     color: var(--darktextcolor);
 }
 
-/* Member Display Area */
+/*************** Member Display Area *********************/
 #member-display {
     display: grid;
     /* Default to grid view */
@@ -105,7 +106,7 @@ body.dark-mode .view-toggle button.active {
     margin-top: 1rem;
 }
 
-/* Grid View Specifics */
+/************** Grid View Specifics **************/
 .member-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     justify-content: center;
@@ -196,7 +197,7 @@ body.dark-mode .membership-level {
 }
 
 body.dark-mode .member-card a {
-    color: var(--popcolor);
+    color: var(--popvariant);
 }
 
 /* List View Specifics */

@@ -24,6 +24,7 @@ Font Family: "Merriweather Sans", sans-serif;
     --greybackground: #eaecef;
     --accentcolor: #ff977a;
     --popcolor: #FFC328;
+    --popvariant: #fcff42;
 
     /* Dark Mode Colors (example) */
     --dark-mode-background: #2c3e50;
@@ -348,7 +349,7 @@ footer p {
 }
 
 footer a {
-    color: var(--popcolor);
+    color: var(--popvariant);
     text-decoration: none;
 }
 
@@ -392,7 +393,7 @@ body.dark-mode footer {
 }
 
 body.dark-mode footer a {
-    color: var(--popcolor);
+    color: var(--popvariant);
 }
 
 
