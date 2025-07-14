@@ -18,10 +18,11 @@ Font Family: "Merriweather Sans", sans-serif;
 
     --myfont: "Merriweather Sans", sans-serif;
     --primarycolor: #3D4058;
+    --primarypop:#005e8a;
     --darktextcolor: #0d0d12;
     --secondarycolor: #B5BABE;
     --greybackground: #eaecef;
-    --accentcolor: #E07A5F;
+    --accentcolor: #ff977a;
     --popcolor: #FFC328;
 
     /* Dark Mode Colors (example) */
@@ -29,6 +30,7 @@ Font Family: "Merriweather Sans", sans-serif;
     --dark-mode-text: #ecf0f1;
     --dark-mode-card-bg: #34495e;
     --dark-mode-border: #4a627d;
+    --dark-mode-footer: #1a252f;
 }
 
 /************* Base Styles ************/
@@ -115,7 +117,7 @@ body.dark-mode h6 {
 }
 
 body.dark-mode a {
-    color: var(--accentcolor);
+    color: var(--darktextcolor);
     /* Keep accent color for links formally used light blue*/
 }
 
@@ -346,13 +348,13 @@ footer p {
 }
 
 footer a {
-    color: var(--accentcolor);
+    color: var(--popcolor);
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: var(--popcolor);
+    color: var(--accentcolor);
 }
 
 .social-media {
@@ -375,7 +377,7 @@ footer a:hover {
 
 .social-media img:hover {
     transform: scale(1.1);
-    background-color: var(--popcolor);
+    background-color: var(--accentcolor);
 }
 
 .development-info {
@@ -385,8 +387,11 @@ footer a:hover {
 
 /* ***************** DARK MODE FOOTER *************** */
 body.dark-mode footer {
-    background-color: #1a252f;
+    background-color: var(--dark-mode-footer);
     /* Even darker for dark mode footer*/
+}
+body.dark-mode footer a{
+    color: var(--popcolor);
 }
 
 
