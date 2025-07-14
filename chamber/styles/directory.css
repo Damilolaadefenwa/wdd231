@@ -84,7 +84,7 @@ body.dark-mode .directory-hero p {
     background-color: var(--popcolor);
     color: var(--darktextcolor);
     font-weight: bold;
-    pointer-events: none;
+    /* pointer-events: none; */
     /* Disable click on active button */
 }
 
@@ -98,7 +98,7 @@ body.dark-mode .view-toggle button.active {
     color: var(--darktextcolor);
 }
 
-/*************** Member Display Area *********************/
+/*************** MEMBERS DISPLAY AREAS *********************/
 #member-display {
     display: grid;
     /* Default to grid view */
@@ -106,7 +106,7 @@ body.dark-mode .view-toggle button.active {
     margin-top: 1rem;
 }
 
-/************** Grid View Specifics **************/
+/************** GRID VIEW SPECIFICS **************/
 .member-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     justify-content: center;
@@ -200,7 +200,7 @@ body.dark-mode .member-card a {
     color: var(--popvariant);
 }
 
-/* List View Specifics */
+/**************** LIST VIEW SPECIFICS ******************/
 .member-list {
     display: block;
     /* Overrides grid display */
@@ -274,7 +274,6 @@ body.dark-mode .member-list .member-card:hover {
     /* Prevent wrapping */
 }
 
-/* Loading Message Styling */
 /* ******** LOADING MESSAGE STYLING **************** */
 .loading-message {
     text-align: center;

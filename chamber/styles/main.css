@@ -102,7 +102,7 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-/*** Dark Mode Body Class ****/
+/*** DARK MODE BODY CLASS ****/
 body.dark-mode {
     background-color: var(--dark-mode-background);
     color: var(--dark-mode-text);
