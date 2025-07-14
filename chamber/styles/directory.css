@@ -1,44 +1,275 @@
-/* ----------- COLOR SCHEME & TYPOGRAPHY ------ 
+/* Directory Page Hero Section */
+/* Author Diogo Rangel Dos Santos/
+/* Date: 2025-07-09 */
 
-Primary/main Color: #3D4058 - Delft blue
-Secondary/supporting Color-1: #B5BABE - French gray
-Secondary/supporting Color-2: #E07A5F - Burnt Sienna
-
-Background Color: #B5BABE - French gray
-Text Color: #0d0d12 -Night
-Font Family: "Merriweather Sans", sans-serif;
-
-*/
-
-/* ***************** SITE WIDE *************** */
-:root {
-    
-    --myfont-family: "Merriweather Sans", sans-serif;
-    --primary: #3D4058;
-    --darktext: #0d0d12;
-    --secondary: #B5BABE;
-    --accent: #E07A5F;
+.directory-hero {
+    background-color: var(--light-grey);
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
 }
 
-/* body {
-    margin: 0;
-    font-family: "Merriweather Sans", sans-serif;
-    background: var(--secondary);
-} */
+body.dark-mode .directory-hero {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
+.directory-hero h1 {
+    color: var(--heading-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .directory-hero h1 {
+    color: var(--dark-mode-text);
+}
+
+.directory-hero p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+body.dark-mode .directory-hero p {
+    color: var(--dark-mode-text);
+}
 
 
-/* ***************** MAIN *************** */
+/* Member Controls (View Toggle Buttons) */
+.member-controls {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
 
-/* --- Responsive Design --- */
+.view-toggle button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-/* 1. Mobile adjustments */
-/* Stack card1 and card2 vertically on small screens */
-@media (max-width: 606px) {
+.view-toggle button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
 
-    html,
-    body {
-        overflow-x: hidden;
+.view-toggle button.active {
+    background-color: var(--secondary-color);
+    color: var(--heading-color);
+    font-weight: bold;
+    pointer-events: none;
+    /* Disable click on active button */
+}
+
+body.dark-mode .view-toggle button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+body.dark-mode .view-toggle button.active {
+    background-color: var(--secondary-color);
+    color: var(--heading-color);
+}
+
+/* Member Display Area */
+#member-display {
+    display: grid;
+    /* Default to grid view */
+    gap: 20px;
+    margin-top: 1rem;
+}
+
+/* Grid View Specifics */
+.member-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+    /* Center items if not enough to fill a row */
+}
+
+.member-card {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Pushes content apart, aligning footer to bottom */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.dark-mode .member-card {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+    max-width: 120px;
+    /* Size for business logos */
+    height: auto;
+    margin: 0 auto 1rem;
+    /* Center and space below */
+    border-radius: 5px;
+    /* Slightly rounded corners for images */
+}
+
+.member-card h3 {
+    color: var(--heading-color);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .member-card h3 {
+    color: var(--dark-mode-text);
+}
+
+.member-card p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0.3rem 0;
+}
+
+body.dark-mode .member-card p {
+    color: var(--dark-mode-text);
+}
+
+.member-card a {
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-top: 1rem;
+    /* Space above URL */
+    display: block;
+    /* Make link a block for easier styling */
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+.membership-level {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    /* Separator */
+}
+
+body.dark-mode .membership-level {
+    border-top: 1px solid var(--dark-mode-border);
+}
+
+
+/* List View Specifics */
+.member-list {
+    display: block;
+    /* Overrides grid display */
+}
+
+.member-list .member-card {
+    display: flex;
+    /* Arrange content in a row */
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    margin-bottom: 15px;
+    /* Space between list items */
+    box-shadow: none;
+    /* No shadow for list items */
+    transition: background-color 0.2s ease;
+}
+
+body.dark-mode .member-list .member-card {
+    background-color: var(--dark-mode-card-bg);
+    /* Use card background for list items too */
+}
+
+.member-list .member-card:hover {
+    background-color: var(--light-grey);
+    /* Light hover for list */
+    transform: none;
+    /* No transform */
+    box-shadow: none;
+    /* No shadow */
+}
+
+body.dark-mode .member-list .member-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Dark mode hover */
+}
+
+
+.member-list .member-card img {
+    max-width: 80px;
+    /* Smaller image for list view */
+    margin: 0 1.5rem 0 0;
+    /* Space to the right of image */
+    flex-shrink: 0;
+    /* Prevent image from shrinking */
+}
+
+.member-list .member-card .card-content {
+    flex-grow: 1;
+    /* Allow content to take remaining space */
+}
+
+.member-list .member-card h3 {
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.member-list .member-card p {
+    margin: 0.1rem 0;
+}
+
+.member-list .member-card .membership-level {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    margin-left: auto;
+    /* Push membership level to the far right */
+    font-size: 0.9rem;
+    white-space: nowrap;
+    /* Prevent wrapping */
+}
+
+/* Loading Message Styling */
+.loading-message {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    grid-column: 1 / -1;
+    /* Span across all columns in grid */
+}
+
+/* Media Queries for Directory Page */
+@media (max-width: 600px) {
+    .member-list .member-card {
+        flex-direction: column;
+        /* Stack elements on very small screens */
+        text-align: center;
+    }
+
+    .member-list .member-card img {
+        margin: 0 auto 0.8rem;
+    }
+
+    .member-list .member-card .membership-level {
+        margin-left: 0;
+        margin-top: 0.8rem;
     }
 }
-
-/* 2. Large screen adjustments (if needed beyond general styles) */

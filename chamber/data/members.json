@@ -1,0 +1,83 @@
+[
+    {
+        "name": "L'Artisanat Store",
+        "address": "Rte to Kabara, Timbuktu",
+        "phone": "+223 44 123 429",
+        "website": "https://www.timbuktuartisans.org",
+        "image": "../images/lartisanatstore.webp",
+        "membershipLevel": "Gold",
+        "tagline": "Preserving ancient crafts"
+    },
+    {
+        "name": "Ahmed Baba Historical Library",
+        "address": "University Lane, Timbuktu",
+        "phone": "+223 56 234 595",
+        "website": "https://www.ahmedbababooks.com",
+        "image": "../images/ahmedbabalibrary.webp",
+        "membershipLevel": "Gold",
+        "tagline": "Historical place, Books, scrolls, and ancient wisdom"
+    },
+    {
+        "name": "Timbuctu Oasis Tours",
+        "address": "30 Sahara Way, Timbuktu",
+        "phone": "+223 56 987 650",
+        "website": "https://www.timbuctuoasistours.com",
+        "image": "../images/timbutuoasistour.webp",
+        "membershipLevel": "Silver",
+        "tagline": "estactic desert adventures"
+    },
+    {
+        "name": "Sankore Salam Logistics",
+        "address": "Port Road, Timbuktu",
+        "phone": "+223 79 345 739",
+        "website": "https://www.sankoresalamlogistics.net",
+        "image": "../images/sankorelogistic.webp",
+        "membershipLevel": "Bronze",
+        "tagline": "Reliable transport across the region"
+    },
+    {
+        "name": "Sahara Spicey Ko.",
+        "address": "Bazaar District, Timbuktu",
+        "phone": "+223 67 456 133",
+        "website": "https://www.saharaspicey.com",
+        "image": "../images/saharaspiceyko.webp",
+        "membershipLevel": "Silver",
+        "tagline": "Exotic spices from the heart of Africa"
+    },
+    {
+        "name": "Timbuktu Music Academy",
+        "address": "Culture Street, Timbuktu",
+        "phone": "+223 78 567 890",
+        "website": "https://www.Timbuktumusic.edu",
+        "image": "../images/timbuktumusicacademy.webp",
+        "membershipLevel": "Non-Profit",
+        "tagline": "Nurturing the next generation of musician"
+    },
+    {
+        "name": "Antiquity Jewelry Palace",
+        "address": "Gold Market, Timbuktu",
+        "phone": "+223 81 678 904",
+        "website": "https://www.antiquityjewelrypalace.biz",
+        "image": "../images/antiquityjewelrypalace.webp",
+        "membershipLevel": "Gold",
+        "tagline": "Trusted partners in excotic precious metals"
+    },
+    {
+        "name": "Caravan Cafe",
+        "address": "Oasis Avenue, Timbuktu",
+        "phone": "+223 60 789 012",
+        "website": "https://www.caravancafe.com",
+        "image": "../images/caravancafe.webp",
+        "membershipLevel": "Bronze",
+        "tagline": "The best dates and tea in town"
+    },
+    {
+        "name": "Salam Restaurant",
+        "address": "Oyster Avenue off diva drive, Timbuktu",
+        "phone": "+223 76 729 904",
+        "website": "https://www.salamrestaurant.com",
+        "image": "../images/salamrestuarant.webp",
+        "membershipLevel": "Bronze",
+        "tagline": "The best African restaurant in Town"
+    }
+]
