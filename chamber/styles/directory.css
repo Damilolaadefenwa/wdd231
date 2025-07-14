@@ -195,7 +195,7 @@ body.dark-mode .membership-level {
     border-top: 1px solid var(--dark-mode-border);
 }
 
-body.dark-mode .member-card a{
+body.dark-mode .member-card a {
     color: var(--popcolor);
 }
 
@@ -240,7 +240,7 @@ body.dark-mode .member-list .member-card:hover {
 
 
 .member-list .member-card img {
-    max-width: 80px;
+    max-width: 120px;
     /* Smaller image for list view */
     margin: 0 1.5rem 0 0;
     /* Space to the right of image */
@@ -284,7 +284,20 @@ body.dark-mode .member-list .member-card:hover {
 }
 
 /* ***************** MEDIA QUERIES FOR DIRECTORY PAGE *************** */
-@media (max-width: 600px) {
+/* 1. Mobile  or small screen adjustments */
+@media (max-width: 606px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .member-card a {
+        word-break: break-all;
+        display: block;
+        /* display: inline-block; */
+    }
+
     .member-list .member-card {
         flex-direction: column;
         /* Stack elements on very small screens */

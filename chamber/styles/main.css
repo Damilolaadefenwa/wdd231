@@ -18,7 +18,7 @@ Font Family: "Merriweather Sans", sans-serif;
 
     --myfont: "Merriweather Sans", sans-serif;
     --primarycolor: #3D4058;
-    --primarypop:#005e8a;
+    --primarypop: #005e8a;
     --darktextcolor: #0d0d12;
     --secondarycolor: #B5BABE;
     --greybackground: #eaecef;
@@ -390,7 +390,8 @@ body.dark-mode footer {
     background-color: var(--dark-mode-footer);
     /* Even darker for dark mode footer*/
 }
-body.dark-mode footer a{
+
+body.dark-mode footer a {
     color: var(--popcolor);
 }
 
@@ -411,15 +412,13 @@ body.dark-mode footer a{
         /* Center them horizontally when stacked */
         gap: 5px;
         /* Reduce gap between stacked items */
-        margin-left: 2.5rem;
+        /* margin-left: 2.5rem; */
     }
 
     .logo a {
-        white-space: normal;
-        /* Allow site name to wrap if it's too long */
-        text-align: center;
-        /* Center the text if it wraps */
-        font-size: 1.5rem;
+        word-break: break-all;
+        display: block;
+        /* display: inline-block; */
     }
 
 }
