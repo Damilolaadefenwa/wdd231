@@ -47,15 +47,8 @@ body {
     /* Ensures footer sticks to bottom*/
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--myfont);
-    color: var(--darktext);
-    margin-top: 0;
+section h1 {
+    font-size: 2.4rem;
 }
 
 img {
@@ -404,6 +397,10 @@ body.dark-mode footer a {
     html,
     body {
         overflow-x: hidden;
+    }
+
+    section h1 {
+        font-size: 1.9rem;
     }
 
     .logo {
