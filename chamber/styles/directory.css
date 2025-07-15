@@ -42,6 +42,7 @@ body.dark-mode .directory-hero {
 .directory-hero h1 {
     color: var(--darktextcolor);
     font-size: 2.4rem;
+    line-height: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -144,8 +145,8 @@ body.dark-mode .member-card {
 .member-card img {
     max-width: 220px;
     /* Size for business logos */
-    width: 100%;
-    height: auto;
+    width:100%;
+    height:auto;
     margin: 0 auto 1rem;
     /* Center and space below */
     border-radius: 5px;
@@ -246,8 +247,8 @@ body.dark-mode .member-list .member-card:hover {
 .member-list .member-card img {
     max-width: 120px;
     /* Smaller image for list view */
-    width: 100%;
-    height: auto;
+    width:100%;
+    height:auto;
     margin: 0 1.5rem 0 0;
     /* Space to the right of image */
     flex-shrink: 0;
@@ -303,6 +304,8 @@ body.dark-mode .member-list .member-card:hover {
 
     .directory-hero h1 {
         font-size: 1.9rem;
+        line-height: 2.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .member-card a {
