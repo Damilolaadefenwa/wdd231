@@ -21,7 +21,7 @@
     --dark-mode-border: #4a627d;
 }
 
-section h1{
+section h1 {
     font-size: 2.4rem;
 }
 
@@ -39,7 +39,7 @@ body.dark-mode .directory-hero {
     border: 1px solid var(--dark-mode-border);
 }
 
-.directory-hero h1{
+.directory-hero h1 {
     color: var(--darktextcolor);
     font-size: 2.4rem;
     margin-bottom: 0.5rem;
@@ -298,6 +298,14 @@ body.dark-mode .member-list .member-card:hover {
         overflow-x: hidden;
     }
 
+    section h1 {
+        font-size: 1.9rem;
+    }
+
+    .directory-hero h1 {
+        font-size: 1.9rem;
+    }
+
     .member-card a {
         word-break: break-all;
         display: block;
@@ -308,6 +316,7 @@ body.dark-mode .member-list .member-card:hover {
         flex-direction: column;
         /* Stack elements on very small screens */
         text-align: center;
+        overflow-x: hidden;
     }
 
     .member-list .member-card img {
