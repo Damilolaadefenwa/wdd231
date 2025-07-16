@@ -21,5 +21,5 @@ function renderSections(sections) {
 //2.Export the setTitle and renderSections
 // functions as named exports.
 
-export function setTitle(course) { }
+export function setTitle(course) {}
 export function renderSections(sections) {}
