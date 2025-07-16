@@ -1,6 +1,6 @@
-import byuiCourse from './course';
-import { setSectionSelection } from './sections';
-import { setTitle, renderSections } from "./output";
+import byuiCourse from '../modules/course';
+import { setSectionSelection } from '../modules/sections';
+import { setTitle, renderSections } from "../modules/output";
 
 //1.At the top of the file, import the byuiCourse object
 //  from the course module.
