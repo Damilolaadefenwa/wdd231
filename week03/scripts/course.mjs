@@ -1,3 +1,8 @@
+//In this course file, export the byuiCourse object 
+// as the his course.mjs file, export the byuiCourse 
+// object as the default.This line can be the last line of the file.
+
+
 const byuiCourse = {
     code: "WDD231",
     name: "Web Frontend Development I",
