@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+}
+
+main{
+    padding: 1rem;
+    background-color: #fff;
+    color: #333;
+    width: fit-content;
+    margin: 1rem auto;
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+fig
+
+.card{
+    border: 1px solid #5d6f67;
+    background-color: #f6f0da;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card h2{
+    color: #3a5250;
+    margin: .3rem 0;
+}
+
+.card #description {
+    text-transform: capitalize;
+    color: #3a5250;
+    margin: .3rem 0;
+}
+
+.card #temperature {
+    font-size: 2rem;
+    color: #537279;
+    margin: .3rem 0;
+}
+
+footer {
+    width: 40%;
+    /* Or a fixed pixel value like 960px, 1200px, etc. */
+    margin: 0 auto;
+    /* This is the magic! */
+    background-color: #fff;
+    /* Just for visibility */
+    color: #000;
+    /* Just for visibility */
+    padding: 20px;
+    /* Just for visibility */
+    text-align: center;
+    /* To center the text content inside the footer */
+    border-radius: 8px;
+    /* For a nice look */
+    font-weight: bold;
+    /* text-indent: 3rem; */
+    word-spacing: .2rem;
+    /* letter-spacing: 2px; */
+}
