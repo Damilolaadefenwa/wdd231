@@ -157,7 +157,7 @@ header {
     /* Vertically centers all items */
     justify-content: space-between;
     /* Pushes header-left to start, header-right-group to end */
-    gap: 15px;
+    gap: 10px;
     /* Gap between main flex items in header */
 }
 
@@ -273,27 +273,6 @@ nav {
 .nav-links li.current a {
     color: #0d0d12;
 }
-
-/****************** KEYNOTE ****************/
-/* .keynote-tickets {
-    /* background-color: var(--secondary-color);
-    color: var(--heading-color);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 1rem;
-    order: 3; */
-/* After nav on small screens
-    margin-top: 1rem;
-    /* Spacing for small screens
-} */
-
-/* .keynote-tickets:hover {
-    background-color: darken(var(--secondary-color), 10%);
-    /* Example of a potential hover state 
-    text-decoration: none;
-} */
 
 /* ***************** MAIN *************** */
 main {

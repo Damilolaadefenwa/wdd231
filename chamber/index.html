@@ -10,14 +10,14 @@
         content="Empowering businesses and fostering economic growth in Timbuktu.Connect with local enterprises and community initiatives.">
     <meta property="og:image"
         content="https://raw.githubusercontent.com/Damilolaadefenwa/wdd231/refs/heads/main/chamber/images/Timbuktusocialmetatag.webp">
-    <meta property="og:url" content="https://damilolaadefenwa.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://damilolaadefenwa.github.io/wdd231/chamber/index.html">
     <!-- End Social media meta tags for Facebook -->
     <title>Chamber of Commerce | Home</title>
     <meta name="description"
-        content="Discover the list of local businesses and other organizations that belong to the Timbuktu of commerce.">
+        content="Discover Timbuktu's vibrant business community.Find local events, weather updates, and featured companies on the official Timbuktu Chamber of Commerce home-page.">
     <meta name="author" content="Damilola Adefenwa">
     <meta name="keywords"
-        content="Timbuktu, trade, chamber of commerce, local businesses, business community, find businesses in Timbuktu, businesses near me">
+        content="Timbuktu business,Timbuktu community,Timbuktu events,business summit,business workshop,business network,Timbuktu weather, weather forecast,Timbuktu live weather forecast,Timbuktu trade,commerce">
 
     <!-- Style Sheets -->
     <link rel="stylesheet" href="styles/normalize.css">
@@ -55,7 +55,6 @@
                     <li><a href="discover.html" title="Discover more">Discover</a></li>
                 </ul>
             </nav>
-            <a href="#" class="keynote-tickets">Keynote Tickets</a>
             <div class="dark-mode-toggle">
                 <button type="button" aria-label="Toggle dark mode">&#9680;</button>
             </div>
@@ -63,7 +62,56 @@
     </header>
 
     <main class="">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <a href="#" class="keynote-button">Keynote Tickets</a>
+        </section>
 
+        <!-- Events and Weather Section -->
+        <section class="events-weather-grid">
+            <div class="card event-card">
+                <h2>Events</h2>
+                <p>
+                    Join us for our annual Timbuktu Business Summit! This year, we're focusing on sustainable growth and
+                    digital
+                    transformation for local enterprises.Network with industry leaders,attend insightful workshops, and
+                    discover new opportunities to elevate your business.
+                    <br><br>
+                    <span>Date:</span> October 26-28, 2025<br>
+                    <span>Location:</span> Timbuktu Convention Center<br>
+                    <span>Keynote Speaker:</span> Dr. Amina Diallo on "Innovating for Tomorrow's Economy"
+                </p>
+            </div>
+
+            <div class="weather-cards-group"> <!-- NEW WRAPPER FOR WEATHER CARDS -->
+                <div class="card weather-card">
+                    <h2>Current Weather</h2>
+                    <img id="weather-icon" src="" alt="">
+                    <p id="location"></p>
+                    <p id="temperature"></p>
+                    <p id="description"></p>
+                    <p id="details"></p>
+                </div>
+
+                <div class="card weather-card">
+                    <h2>Weather Forecast</h2>
+                    <img id="weather-icon2" src="" alt="">
+                    <p id="location2"></p>
+                    <p id="temperature2"></p>
+                    <p id="description2"></p>
+                    <p id="details2"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Spotlight Section -->
+        <section class="company-spotlight">
+            <h2>Company Spotlight</h2>
+            <div id="spotlight-grid" class="spotlight-grid">
+                <!-- Company cards will be loaded here by JavaScript -->
+                <p>Loading company spotlights...</p>
+            </div>
+        </section>
     </main>
 
     <footer>
