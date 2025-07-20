@@ -114,7 +114,7 @@ body.dark-mode h3,
 body.dark-mode h4,
 body.dark-mode h5,
 body.dark-mode h6 {
-    color: var(--dark-);
+    color: var(--dark-mode-text);
 }
 
 body.dark-mode a {

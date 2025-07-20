@@ -61,18 +61,28 @@
         </div>
     </header>
 
-    <main class="">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <a href="#" class="keynote-button">Keynote Tickets</a>
-        </section>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <picture>
+            <source srcset="images/largeheroimage.webp" media="(min-width: 608px)">
+            <img src="images/smallheroimage.webp" alt="A Manificient view of Timbuktu" loading="lazy">
+        </picture>
+        <div class="hero-content">
+            <h1>Welcome To Timbuktu<br>Chamber of Commerce</h1>
+            <a href="join.html" class="hero-btn">Join Us</a>
+        </div>
+        <a href="#" class="keynote-button">Keynote Tickets</a>
+    </div>
 
+    <main>
         <!-- Events and Weather Section -->
+        <h1>Home</h1>
         <section class="events-weather-grid">
             <div class="card event-card">
                 <h2>Events</h2>
                 <p>
-                    Join us for our annual Timbuktu Business Summit! This year, we're focusing on sustainable growth and
+                    Join us for our annual Timbuktu Business Summit! this year, we're focusing on sustainable growth
+                    and
                     digital
                     transformation for local enterprises.Network with industry leaders,attend insightful workshops, and
                     discover new opportunities to elevate your business.
@@ -87,19 +97,19 @@
                 <div class="card weather-card">
                     <h2>Current Weather</h2>
                     <img id="weather-icon" src="" alt="">
-                    <p id="location"></p>
-                    <p id="temperature"></p>
-                    <p id="description"></p>
-                    <p id="details"></p>
+                    <p id="location" class="location"></p>
+                    <p id="temperature" class="temperature"></p>
+                    <p id="description" class="description"></p>
+                    <p id="details" class="details"></p>
                 </div>
 
                 <div class="card weather-card">
                     <h2>Weather Forecast</h2>
                     <img id="weather-icon2" src="" alt="">
-                    <p id="location2"></p>
-                    <p id="temperature2"></p>
-                    <p id="description2"></p>
-                    <p id="details2"></p>
+                    <p id="location2" class="location"></p>
+                    <p id="temperature2" class="temperature"></p>
+                    <p id="description2" class="description"></p>
+                    <p id="details2" class="details"></p>
                 </div>
             </div>
         </section>
@@ -112,6 +122,7 @@
                 <p>Loading company spotlights...</p>
             </div>
         </section>
+
     </main>
 
     <footer>

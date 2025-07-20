@@ -21,27 +21,347 @@
     --dark-mode-border: #4a627d;
 }
 
+/****************** HERO SECTION ****************/
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    height: 60vh;
+    /* responsive height */
+    overflow: hidden;
+}
 
-/****************** KEYNOTE ****************/
-/* .keynote-tickets {
-    /* background-color: var(--secondary-color);
-    color: var(--heading-color);
+.hero-section picture {
+    position: static;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: white;
+    /* Semi-transparent overlay for text readability */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    max-width: 60vw;
+}
+
+.hero-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    font-family: var(--myfont);
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/**** Hero-Section Buttons Styling ****/
+.hero-btn {
+    display: inline-block;
+    background-color: var(--popcolor);
+    color: var(--darktextcolor);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.keynote-button {
+    position: absolute;
+    /* To be above the overlay */
+    z-index: 3;
+    top: 50%;
+    right: 10%;
+    background-color: var(--popcolor);
+    color: var(--darktextcolor);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    /* If it's an anchor */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    margin-top: 10rem;
+}
+
+.hero-section a:hover,
+.keynote-button:hover {
+    background-color: var(--accentcolor);
+    transform: translateY(-2px);
+}
+
+/* Hero Section Dark mode */
+body.dark-mode .hero-section {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
+body.dark-mode .hero-section h1 {
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode .hero-btn {
+    color: var(--dark-mode-text);
+    background-color: var(--dark-mode-background);
+}
+
+body.dark-mode .keynote-button {
+    background-color: var(--dark-mode-background);
+    color: var(--dark-mode-text);
+}
+
+/****************** EVENT & WEATHER SECTION ****************/
+/* Events and Weather Section (CSS Flexbox) */
+h1{
+    margin-left: 15px;
+}
+.events-weather-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Gap between event-card and weather-cards-group */
+    justify-content: center;
+    align-items: stretch;
+    /* Ensure cards stretch to fill available height */
+}
+
+/* Flexbox sizing for 2:1 ratio (Event Card vs. Weather Cards Group) */
+.event-card {
+    flex: 2 1 calc(50.02% - 4px);
+    /* Event card takes approx 2/3 of space, minus half gap */
+    min-width: 400px;
+    /* Minimum width before wrapping */
+}
+
+.weather-cards-group {
+    /* New flex container for the two weather cards */
+    flex: 1 1 calc(41.66% - 4px);
+    /* Weather group takes approx 1/3 of space, minus half gap */
+    display: flex;
+    flex-direction: row;
+    /* Make weather cards appear side-by-side within their group */
+    gap: 10px;
+    /* Gap between the two weather cards */
+    min-width: 200px;
+    /* Adjust min-width as needed */
+}
+
+/* Individual weather cards within the group */
+.weather-cards-group .weather-card {
+    flex: 1 1 calc(50% - 4px);
+    /* Each weather card takes equal space within its group, minus half gap */
+    margin: 0;
+    /* Remove potential default margins */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Push content to top/bottom */
+}
+
+.event-card h2 {
+    margin: 0 -0.5rem;
+    font-size: 1.3rem;
+    color: white;
+    background-color: var(--darktextcolor);
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 1rem;
-    order: 3; */
-/* After nav on small screens
-    margin-top: 1rem;
-    /* Spacing for small screens
-} */
+}
 
-/* .keynote-tickets:hover {
-    background-color: darken(var(--secondary-color), 10%);
-    /* Example of a potential hover state 
+.weather-card h2 {
+    margin-top: 0;
+    width: 93%;
+    font-size: 1.3rem;
+    color: white;
+    background-color: var(--darktextcolor);
+    /* border-bottom: 1px solid #eee; */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.event-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-left: 7px;
+    text-indent: 1.5rem;
+}
+
+.event-card span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primarypop);
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.weather-card .weather-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.weather-card .location {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.weather-card .temperature {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.weather-card .description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.weather-card .details {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.4;
+}
+
+/* Events and Weather Section Dark mode */
+body.dark-mode .card {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+body.dark-mode .card h2 {
+    color: var(--dark-mode-text);
+    background-color: var(--dark-mode-background);
+}
+body.dark-mode .card p {
+    color: var(--dark-mode-text);
+}
+body.dark-mode .card span {
+    color: var(--popvariant);
+}
+
+/****************** COMPANY SPOTLIGHT SECTION ****************/
+
+/* Company Spotlight Section */
+.company-spotlight {
+    text-align: center;
+}
+
+.company-spotlight h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Responsive columns */
+    gap: 25px;
+    justify-content: center;
+}
+
+.company-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    /* Slightly rounded corners for company logos */
+    object-fit: contain;
+    /* Ensure logo fits without cropping */
+    margin-bottom: 15px;
+}
+
+.company-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.company-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.company-card .contact-info {
+    font-size: 0.85rem;
+    color: #777;
+    text-align: left;
+    /* Align contact info to left within card */
+    width: 100%;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.company-card .contact-info strong {
+    color: #555;
+}
+
+.company-card a {
+    word-break: break-all;
+    /* For long URLs */
+    color: #007bff;
     text-decoration: none;
-} */
+}
+
+.company-card a:hover {
+    text-decoration: underline;
+}
 
 
 /* ***************** RESPONSIVE DESIGN *************** */
@@ -53,14 +373,106 @@
         overflow-x: hidden;
     }
 
+    h1{
+        margin-left: 20px;
+    }
+
+    .hero-section {
+        min-height: 600px;
+        height: 40vh;
+        /* Responsive height for mobile */
+    }
+
+    .hero-content {
+        left: 5%;
+        margin-bottom: 5%;
+        max-width: 90vw;
+        /* Adjust content width for mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-btn {
+        font-size: 1rem;
+    }
+
+    .keynote-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin-top: 13rem;
+    }
+
+    /* Events and Weather Section */
+    .events-weather-grid {
+        flex-direction: column;
+        /* Stack event card and weather group */
+        align-items: center;
+    }
+
+    .event-card,
+    .weather-cards-group {
+        flex: 1 1 100%;
+        /* Take full width when stacked */
+        max-width: 90%;
+        /* Limit width to ensure some padding/margin */
+    }
+
+    .weather-cards-group {
+        flex-direction: column;
+        /* Stack individual weather cards within their group */
+        gap: 20px;
+        /* Adjust gap for vertical stacking */
+    }
+
+    .weather-cards-group .weather-card {
+        flex: 1 1 100%;
+        /* Take full width within their stacked group */
+        max-width: 100%;
+        /* Ensure no overflow */
+    }
+
+    .event-card h2,
+    .weather-card h2 {
+        font-size: 1.5rem;
+        margin: 0 0 1rem 0;
+        text-align: center;
+    }
+
+    .event-card p {
+        font-size: 1rem;
+    }
+
+    .event-card span{
+        font-size: 1.2rem;
+    }
+
+    .weather-card .temperature {
+        font-size: 2rem;
+    }
+
+    .company-spotlight h2 {
+        font-size: 1.8rem;
+    }
+
 }
 
 /* 2. Large screen adjustments (e.g, tablet, laptop etc) */
 @media only screen and (min-width: 38rem) {
 
-    /* 
-        .keynote-tickets {
-            order: initial;
-            margin-top: 0;
-        } */
+    .hero-section {
+        height: 550px;
+        /* Taller hero section on very large screens */
+    }
+
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+
+
 }
