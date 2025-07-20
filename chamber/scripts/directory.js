@@ -1,5 +1,6 @@
-// Author : Diogo Rangel Dos Santos
-// Date   : 2025-07-09
+/* Directory Page Section */
+/* Author: Damilola Adefenwa/
+/* Date: 2025-07-11 */
 
 document.addEventListener('DOMContentLoaded', async () => {
     const membersDisplay = document.getElementById('member-display');

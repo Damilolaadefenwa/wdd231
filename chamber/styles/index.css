@@ -167,7 +167,7 @@ h1{
     /* Make weather cards appear side-by-side within their group */
     gap: 10px;
     /* Gap between the two weather cards */
-    min-width: 200px;
+    min-width: 300px;
     /* Adjust min-width as needed */
 }
 
@@ -186,7 +186,7 @@ h1{
     padding: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     /* Push content to top/bottom */
 }
 
@@ -234,16 +234,8 @@ h1{
 .weather-card .weather-icon {
     width: 60px;
     height: 60px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     object-fit: contain;
-}
-
-.weather-card .location {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #333;
-    margin-top: 0;
-    margin-bottom: 5px;
 }
 
 .weather-card .temperature {
@@ -255,16 +247,24 @@ h1{
 }
 
 .weather-card .description {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     color: #555;
     margin-top: 0;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .weather-card .details {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: #777;
-    line-height: 1.4;
+    /* line-height: 1.4; */
+}
+
+.weather-card .forecast {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #333;
+    margin-top: 0;
+    /* margin-bottom: 5px; */
 }
 
 /* Events and Weather Section Dark mode */
