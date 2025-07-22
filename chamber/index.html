@@ -93,34 +93,34 @@
                 </p>
             </div>
 
-            <div class="weather-cards-group"> <!-- NEW WRAPPER FOR WEATHER CARDS -->
-                <div class="card weather-card">
+            <div class="weather-cards-group">
+                <div class="card weather-card" id="current-weather-card">
                     <h2>Current Weather</h2>
-                    <img id="weather-icon" src="" alt="">
-                    <p id="temperature" class="temperature"></p>
-                    <p id="description" class="description"></p>
-                    <p id="high" class="details">High:</p>
-                    <p id="low" class="details">Low:</p>
-                    <p id="humidity" class="details">Humidity:</p>
-                    <p id="sunrise" class="details">Sunrise:</p>
-                    <p id="sunset" class="details">Sunset:</p>
+                    <img src="" alt="Weather Icon" class="weather-icon" id="current-weather-icon">
+                    <div class="weather-text-content">
+                        <p class="location" id="current-location">Timbuktu</p>
+                        <p class="temperature" id="current-temperature">--°F</p>
+                        <p class="description" id="current-description">Loading weather...</p>
+                        <p class="description" id="current-high">Loading weather...</p>
+                        <p class="description" id="current-low">Loading weather...</p>
+                        <p class="details" id="current-details">Humidity: --% | Sunrise: -- AM | Sunset:-- PM</p>
+                    </div>
                 </div>
 
-                <div class="card weather-card">
+                <div class="card weather-card" id="weather-forecast-card">
                     <h2>Weather Forecast</h2>
-                    <p id="today" class="forecast">Today:</p>
-                    <p id="tomorrow" class="forecast">Tomorrow:</p>
-                    <p id="nexttomorrow" class="forecast">Next:</p>
+                    <div class="forecast-days-container">
+                        <p>Loading forecast...</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Company Spotlight Section -->
-        <section class="company-spotlight">
-            <h2>Company Spotlight</h2>
-            <div id="spotlight-grid" class="spotlight-grid">
-                <!-- Company cards will be loaded here by JavaScript -->
-                <p>Loading company spotlights...</p>
+        <section class="spotlights">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-display" class="spotlight-grid">
+                <p>Loading business spotlights...</p>
             </div>
         </section>
 

@@ -2,59 +2,117 @@
 /* Author: Damilola Adefenwa/
 /* Date: 2025-07-11 */
 
-// Current Weather 
-// step 1: Select HTML elements in the document
-const myWeathericon = document.querySelector('#weather-icon');
-const myTemperature = document.querySelector('#temperature');
-const myDescription = document.querySelector('#description');
-const myHigh = document.querySelector('#high');
-const myLow = document.querySelector('#low');
-const myHumidity = document.querySelector('#humidity');
-const mySunrise = document.querySelector('#sunrise');
-const mySunset = document.querySelector('#sunset');
+// Current Weather, Weather Forecast and Json file for Member
 
-//Weather Forecast
-const myToday = document.querySelector('#today');
-const myTomorrow = document.querySelector('#tomorrow');
-const myNexttomorrow = document.querySelector('#nexttomorrow');
+// Current Weather
+const currentWeatherIcon = document.getElementById('current-weather-icon');
+const currentLocation = document.getElementById('current-location');
+const currentTemperature = document.getElementById('current-temperature');
+const currentDescription = document.getElementById('current-description');
+const currentHigh = document.getElementById('current-high');
+const currentLow = document.getElementById('current-low');
+const currentDetails = document.getElementById('current-details');
 
-// Creating Required Variables for the URL
-const myKey = "3caf86809b54413b53660a02dd4827f1";
+// Forecast Weather
+
+const membersDataUrl = 'data/members.json'; // Path to your members JSON
+
+// --- Weather API Integration ---
+const apiKey = "3caf86809b54413b53660a02dd4827f1";
 const myLat = "16.7662";
 const myLong = "-3.0036";
+const city = 'Timbuktu';
+const countryCode = 'ML'; // Mali's country code
 
-// Constructing a full path using template literals
-const myURL = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`
 
-//asynchronous function to call the API Url and handle errors.
-async function apiFetch() {
+// Weather API URLs (using my variables and &units=imperial for Fahrenheit)
+const currentWeatherUrl = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${apiKey}&units=imperial`
+const forecastUrl = `//api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${apiKey}&units=imperial`
+
+
+// The Function to fetch and display the Current Weather
+async function getWeatherData() {
     try {
-        const response = await fetch(myURL);
-        if (response.ok) {
-            const data = await response.json();
-            console.log(data); //testing only
-            displayResults(data); // uncomment when ready
+        const currentResponse = await fetch(currentWeatherUrl);
+        if (currentResponse.ok) {
+            const currentData = await currentResponse.json();
+            console.log(currentData); //testing only
+            displayWeather(currentData);
+
         } else {
-            throw Error(await response.text());
+            throw Error(await currentResponse.text());
         }
-    }
-    catch (error) {
-        console.log(error);
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
     }
 }
-apiFetch();
 
-//outputing the data through the given HTML document.
-function displayResults(data) {
+// The Function to format time to 12-hour format 
+// using the Unix timestamp (in seconds) in Openweather API
+function formatTime12Hour(unixTimestamp) {
+    // This check if unixTimestamp is valid before proceeding
+    if (typeof unixTimestamp !== 'number' || isNaN(unixTimestamp)) {
+        return "--:-- --"; // default value if not a valid number
+    }
+    // if true then convert seconds to milliseconds for Date object
+    const date = new Date(unixTimestamp * 1000);
+
+    // Also check if the Date object is valid incase parsing failed
+    if (isNaN(date.getTime())) {
+        return "--:-- --"; // default value if date is invalid
+    }
+
+    let hours = date.getHours();
+    const minutes = date.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // The hour '0' should be '12'
+    const strMinutes = minutes < 10 ? '0' + minutes : minutes;
+    return `${hours}:${strMinutes} ${ampm}`;
+}
+
+//Displaying result to the Current Weather Card.
+function displayWeather(currentData) {
+    console.log("welcome to my home");
+    currentWeatherIcon.src = `https://openweathermap.org/img/wn/${currentData.weather[0].icon}@2x.png`;
+    currentWeatherIcon.alt = `${currentData.weather[0].description} Icon`;
+    currentLocation.textContent = currentData.name;
+    currentTemperature.textContent = `${currentData.main.temp}°F`;
+    currentDescription.textContent = currentData.weather[0].description;
+    currentHigh.textContent = `High:${currentData.main.temp_max}°F`;
+    currentLow.textContent = `Low:${currentData.main.temp_min}°F`;
+
+    const sunriseTime = formatTime12Hour(currentData.sys.sunrise);
+    const sunsetTime = formatTime12Hour(currentData.sys.sunset);
+    currentDetails.innerHTML = `Humidity: ${currentData.main.humidity}% | Sunrise:${sunriseTime} | Sunset: ${sunsetTime}`;
+
+}
+
+// The Function to fetch and display the forecast data
+async function getForecastData() {
+    try {
+        const forecastResponse = await fetch(forecastUrl)
+        if (forecastResponse.ok) {
+            const forecastData = await forecastResponse.json();
+            console.log(forecastData); //testing only
+            displayForecast(forecastData);
+        }
+        else {
+            throw Error(await forecastResponse.text());
+        }
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+    }
+}
+
+//Displaying result to the Forecast Weather Card.
+function displayForecast(forecastData) {
     console.log("Hello World");
-    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-    myWeathericon.setAttribute('src', iconsrc);
-    myWeathericon.setAttribute('alt', data.weather[0].description);
-    myTemperature.innerHTML = `${data.main.temp}&deg;F`;
-    myDescription.innerHTML = data.weather[0].description;
-    myHigh.innerHTML = `${data.main.temp_max}&deg;F`;
-    myLow.innerHTML = `${data.main.temp_min}&deg;F`;
-    myHumidity.innerHTML = `${data.main.humidity}&percnt;`;
-    // mySunrise.innerHTML = `${data.sys.sunrise}`;
+
+
 }
 
+// Initialize functions
+getWeatherData();
+getForecastData();
+// loadSpotlights();
