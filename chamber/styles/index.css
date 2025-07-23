@@ -234,7 +234,7 @@ h1 {
 .weather-card .weather-icon {
     width: 60px;
     height: 60px;
-    margin-trim: 15px;
+    /* margin-trim: 15px; */
     margin-bottom: 0;
     object-fit: contain;
 }
@@ -274,6 +274,74 @@ h1 {
     line-height: 1.4;
 }
 
+/**** FORECAST SESSION ****/
+/* New CSS for Forecast Weather Card */
+/* #weather-forecast-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+#weather-forecast-card h2 {
+    width: 100%;
+} */
+
+.forecast-days-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack individual forecast days */
+    gap: 10px;
+    /* Space between each day's forecast */
+    width: 100%;
+    /* Take full width of parent */
+    margin-top: 10px;
+    /* Space below heading */
+}
+
+.forecast-day-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    /* Space between icon and text for each day */
+    /* width: 100%; */
+    width: 80%;
+    border-bottom: 1px dashed #eee;
+    /* Subtle separator */
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.forecast-day-item:last-child {
+    border-bottom: none;
+    /* No border on the last item */
+    padding-bottom: 0;
+}
+
+.forecast-day-item .forecast-day-name {
+    font-weight: 600;
+    /* flex-basis: 80px; */
+    flex-basis: 100px;
+    /* Give a fixed width for day name */
+    flex-shrink: 0;
+    margin: 0;
+    color: #333;
+    /* Ensure color for dark mode */
+}
+
+.forecast-day-item .forecast-temp {
+    font-weight: 700;
+    color: #007bff;
+    margin: 0;
+    flex-grow: 1;
+    /* Allow temperature to take available space */
+    text-align: right;
+    /* Align temp to right */
+    font-size: 1.1rem;
+    /* Make temperature more prominent */
+}
+
+
 /* Events and Weather Section Dark mode */
 body.dark-mode .card {
     background-color: var(--dark-mode-card-bg);
@@ -293,161 +361,124 @@ body.dark-mode .card span {
     color: var(--popvariant);
 }
 
-/* New CSS for Forecast Weather Card */
-#weather-forecast-card {
-    flex-direction: column;
-    /* Stack its own children (h2 and forecast container) */
-    align-items: flex-start;
-    /* Align content to the left */
-    text-align: left;
-    /* Ensure text is left-aligned */
-}
 
-#weather-forecast-card h2 {
-    width: 100%;
-    /* Ensure heading takes full width */
-}
 
-.forecast-days-container {
-    display: flex;
-    flex-direction: column;
-    /* Stack individual forecast days */
-    gap: 10px;
-    /* Space between each day's forecast */
-    width: 100%;
-    /* Take full width of parent */
-    margin-top: 10px;
-    /* Space below heading */
-}
-
-.forecast-day-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    /* Space between icon and text for each day */
-    width: 100%;
-    border-bottom: 1px dashed #eee;
-    /* Subtle separator */
-    padding-bottom: 5px;
-}
-
-.forecast-day-item:last-child {
-    border-bottom: none;
-    /* No border on the last item */
-    padding-bottom: 0;
-}
-
-.forecast-day-item .forecast-icon {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    flex-shrink: 0;
-    /* Prevent icon from shrinking */
-}
-
-.forecast-day-item .forecast-day-name {
-    font-weight: 600;
-    flex-basis: 80px;
-    /* Give a fixed width for day name */
-    flex-shrink: 0;
-    margin: 0;
-}
-
-.forecast-day-item .forecast-temp {
-    font-weight: 700;
-    color: #007bff;
-    margin: 0;
-    flex-grow: 1;
-    /* Allow temperature to take available space */
-    text-align: right;
-    /* Align temp to right */
-}
-
-.forecast-day-item .forecast-desc,
-.forecast-day-item .forecast-high-low {
-    font-size: 0.85rem;
-    color: #666;
-    margin: 0;
-    flex-grow: 1;
-    text-align: right;
-    /* Align text to right */
-}
 
 /****************** COMPANY SPOTLIGHT SECTION ****************/
+.company-spotlight {
+    text-align: center;
+}
+
+.company-spotlight h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
 
 .spotlight-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    /* gap: 25px; */
+    /* justify-content: center; */
 }
 
-.spotlight-card {
-    background-color: var(--light-grey);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
+.company-card {
+    background-color: #ffffff;
+    border-radius: 12px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
+    border: 1px solid var(--greybackground);
+    padding: 1.5rem;
+    /* padding: 20px; */
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    align-items: center;
 }
 
-body.dark-mode .spotlight-card {
+.company-card img {
+    width: 100px;
+    /* max-width: 100px; */
+    height: auto;
+    margin: 0 auto 1rem;
+    border-radius: 5px;
+    /* border-radius: 8px; */
+    object-fit: contain;
+    /* margin-bottom: 15px; */
+}
+
+.company-card h3 {
+    font-size: 1.4rem;
+    color: var(--darktextcolor);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    /* margin-bottom: 5px; */
+}
+
+.company-card p {
+    font-size: 0.95rem;
+    color: var(--darktextcolor);
+    margin: 0.3rem 0;
+    /* margin-bottom: 5px; */
+}
+
+.company-card .contact-info {
+    font-size: 0.85rem;
+    color: #777;
+    text-align: left;
+    width: 100%;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.company-card .contact-info strong {
+    color: #555;
+ }
+
+.company-card a {
+    color: var(--primarypop);
+    font-weight: bold;
+    margin-top: 0.8rem;
+    display: block;
+    word-break: break-all;
+}
+
+.company-card a:hover {
+    text-decoration: underline;
+    color: var(--popcolor);
+}
+
+.company-card .membership-level {
+    font-size: 0.8rem;
+    color: var(--primarycolor);
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #0d0d12;
+}
+
+body.dark-mode .company-card {
     background-color: var(--dark-mode-background);
     border: 1px solid var(--dark-mode-border);
 }
 
-.spotlight-card img {
-    max-width: 100px;
-    height: auto;
-    margin: 0 auto 1rem;
-    border-radius: 5px;
-}
-
-.spotlight-card h3 {
-    color: var(--heading-color);
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-}
-
-body.dark-mode .spotlight-card h3 {
+body.dark-mode .company-card h3 {
     color: var(--dark-mode-text);
 }
 
-.spotlight-card p {
-    font-size: 0.95rem;
-    color: var(--text-color);
-    margin: 0.3rem 0;
-}
-
-body.dark-mode .spotlight-card p {
+body.dark-mode .company-card p {
     color: var(--dark-mode-text);
 }
 
-.spotlight-card a {
-    color: var(--accent-color);
-    font-weight: bold;
-    margin-top: 0.8rem;
-    display: block;
-}
-
-.spotlight-card .membership-level {
-    font-size: 0.8rem;
-    color: var(--primary-color);
-    font-weight: bold;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
-}
-
-body.dark-mode .spotlight-card .membership-level {
+body.dark-mode .company-card .membership-level {
     border-top: 1px solid var(--dark-mode-border);
 }
 
 /* ***************** RESPONSIVE DESIGN *************** */
 /* 1. Mobile  or small screen adjustments */
-@media (max-width: 768px) {
+@media (max-width: 606px) {
 
     html,
     body {
@@ -542,13 +573,26 @@ body.dark-mode .spotlight-card .membership-level {
         font-size: 2rem;
     }
 
-    .spotlights {
+    .company-spotlight {
         padding: 1.5rem;
     }
 
     .spotlight-grid {
         grid-template-columns: 1fr;
         /* Stack on small screens */
+    }
+
+    .company-spotlight h2 {
+        font-size: 1.8rem;
+    }
+
+    .company-card {
+        padding: 15px;
+    }
+
+    .company-card img {
+        width: 80px;
+        height: 80px;
     }
 
 }
