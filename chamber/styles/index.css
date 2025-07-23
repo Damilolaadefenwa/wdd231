@@ -63,17 +63,17 @@
     max-width: 60vw;
 }
 
-.hero-content h1 {
-    font-size: 1.8rem;
+.hero-content h2 {
+    font-size: 2.5rem;
     margin-bottom: 10px;
-    line-height: 1.1;
+    line-height: 1.5;
     font-family: var(--myfont);
     color: white;
-    text-shadow: 0 2px 8px rgba(2, 1, 28, 0.7);
+    text-shadow: 0 2px 8px rgba(3, 1, 63, 0.7);
 }
 
 /**** Hero-Section Buttons Styling ****/
-/* .hero-btn {
+.hero-btn {
     display: inline-block;
     background-color: var(--popcolor);
     color: var(--darktextcolor);
@@ -86,7 +86,7 @@
     text-decoration: none;
     margin-top: 15px;
     margin-left: 20px;
-} */
+}
 
 .keynote-button {
     position: absolute;
@@ -516,8 +516,8 @@ body.dark-mode .company-card .contact-info strong {
         /* Adjust content width for mobile */
     }
 
-    .hero-content h1 {
-        font-size: 2rem;
+    .hero-content h2 {
+        font-size: 2.5rem;
     }
 
     .hero-content p {
