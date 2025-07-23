@@ -118,6 +118,11 @@ body.dark-mode h6 {
 }
 
 body.dark-mode a {
+    color: var(--dark-mode-text);
+    /* Keep accent color for links formally used light blue*/
+}
+
+body.dark-mode .logo a {
     color: var(--darktextcolor);
     /* Keep accent color for links formally used light blue*/
 }
@@ -200,7 +205,7 @@ header {
     /* Show hamburger on mobile */
     background: none;
     border: none;
-    color: white;
+    color: #000;
     font-size: 2rem;
     cursor: pointer;
     padding: 0.5rem;
@@ -475,6 +480,9 @@ body.dark-mode footer a {
         padding: 4px 7px;
     }
 
+    body.dark-mode .nav-links a{
+        color: var(--dark-mode-footer);
+    }
     /* 
     .keynote-tickets {
         order: initial;

@@ -22,8 +22,8 @@ const countryCode = 'ML'; // Mali's country code
 
 
 // Weather API URLs (using my variables and &units=imperial for Fahrenheit)
-const currentWeatherUrl = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${apiKey}&units=imperial`
-const forecastUrl = `//api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${apiKey}&units=imperial`
+const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${apiKey}&units=imperial`
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${apiKey}&units=imperial`
 
 
 // The Function to fetch and display the Current Weather
@@ -32,7 +32,7 @@ async function getWeatherData() {
         const currentResponse = await fetch(currentWeatherUrl);
         if (currentResponse.ok) {
             const currentData = await currentResponse.json();
-            console.log(currentData); //testing only
+            // console.log(currentData); //testing only
             displayWeather(currentData);
 
         } else {
@@ -69,7 +69,7 @@ function formatTime12Hour(unixTimestamp) {
 
 //Displaying result to the Current Weather Card.
 function displayWeather(currentData) {
-    console.log("welcome to my home");
+    // console.log("welcome to my home");
     currentWeatherIcon.src = `https://openweathermap.org/img/wn/${currentData.weather[0].icon}@2x.png`;
     currentWeatherIcon.alt = `${currentData.weather[0].description} Icon`;
     currentLocation.textContent = currentData.name;
@@ -90,7 +90,7 @@ async function getForecastData() {
         const forecastResponse = await fetch(forecastUrl)
         if (forecastResponse.ok) {
             const forecastData = await forecastResponse.json();
-            console.log(forecastData); //testing only
+            // console.log(forecastData); //testing only
             displayForecast(forecastData);
         }
         else {
@@ -103,7 +103,7 @@ async function getForecastData() {
 
 //Displaying result to the Forecast Weather Card.
 function displayForecast(forecastData) {
-    console.log("Hello World");
+    // console.log("Hello World");
     const forecastContainer = document.querySelector('#weather-forecast-card .forecast-days-container');
     forecastContainer.innerHTML = ''; // Clear loading message
 
@@ -158,7 +158,7 @@ async function getMembers() {
         const response = await fetch(membersDataUrl);
         if (response.ok) {
             const data = await response.json();
-            console.log(data)
+            // console.log(data) //for testing
             displaySpotlights(data);
         } else {
             throw Error(await response.text());
@@ -192,7 +192,7 @@ function displaySpotlights(data) {
     const selectedCompanies = shuffledGoldMembers.slice(0, 3);
 
     // --- DEBUGGING: Log selected companies to console ---
-    console.log("Selected Gold Members for Spotlight:", selectedCompanies);
+    // console.log("Selected Gold Members for Spotlight:", selectedCompanies);
     // --- END DEBUGGING ---
 
     if (selectedCompanies.length === 0) {
@@ -205,7 +205,7 @@ function displaySpotlights(data) {
         companyCard.classList.add('company-card');
 
         const image = document.createElement('img');
-        image.src = `images/${ member.image }`;
+        image.src = `images/${member.image}`;
         image.alt = `${member.name} Logo`;
         image.loading = `lazy`;
 

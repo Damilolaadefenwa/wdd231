@@ -69,11 +69,11 @@
     line-height: 1.1;
     font-family: var(--myfont);
     color: white;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 2px 8px rgba(2, 1, 28, 0.7);
 }
 
 /**** Hero-Section Buttons Styling ****/
-.hero-btn {
+/* .hero-btn {
     display: inline-block;
     background-color: var(--popcolor);
     color: var(--darktextcolor);
@@ -86,7 +86,7 @@
     text-decoration: none;
     margin-top: 15px;
     margin-left: 20px;
-}
+} */
 
 .keynote-button {
     position: absolute;
@@ -168,7 +168,7 @@ h1 {
     /* Event card takes 2/3 of space les 1/4 gap */
     /* min-width: 400px; */
     /* Minimum width before wrapping 
-    or I removed for responsiveness after testing */
+    or could removed for responsiveness after testing */
 }
 
 .weather-cards-group {
@@ -517,11 +517,11 @@ body.dark-mode .company-card .contact-info strong {
     }
 
     .hero-content h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
 
     .hero-content p {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .hero-btn {
