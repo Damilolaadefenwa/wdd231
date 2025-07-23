@@ -399,14 +399,14 @@ body.dark-mode .card span {
 }
 
 .company-card img {
-    width: 100px;
+    width: 100%;
     /* max-width: 100px; */
     height: auto;
     margin: 0 auto 1rem;
     border-radius: 5px;
-    /* border-radius: 8px; */
+    border-radius: 8px;
     object-fit: contain;
-    /* margin-bottom: 15px; */
+    margin-bottom: 15px;
 }
 
 .company-card h3 {

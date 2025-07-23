@@ -204,10 +204,10 @@ function displaySpotlights(data) {
         const companyCard = document.createElement('div');
         companyCard.classList.add('company-card');
 
-        const img = document.createElement('img');
-        img.src = member.image;
-        img.alt = `${member.name} Logo`;
-        img.loading = `lazy`;
+        const image = document.createElement('img');
+        image.src = `images/${ member.image }`;
+        image.alt = `${member.name} Logo`;
+        image.loading = `lazy`;
 
         const name = document.createElement('h3');
         name.textContent = member.name;
@@ -226,14 +226,15 @@ function displaySpotlights(data) {
                     <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">${member.website}</a></p>
                 `;
 
-        companyCard.appendChild(img);
+        companyCard.appendChild(image);
         companyCard.appendChild(name);
         companyCard.appendChild(address);
         companyCard.appendChild(contactInfo);
         companyCard.appendChild(membershipLevel);
 
-
         spotlightGrid.appendChild(companyCard);
+
+        return spotlightGrid;
     });
 
 }
