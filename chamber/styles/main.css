@@ -257,7 +257,7 @@ nav {
 .nav-links a {
     display: block;
     padding: 0.8rem 1rem;
-    color: white;
+    color: #eaecef;
     text-decoration: none;
     transition: background-color 0.3s ease;
     font-weight: 600;
@@ -480,9 +480,10 @@ body.dark-mode footer a {
         padding: 4px 7px;
     }
 
-    body.dark-mode .nav-links a{
+    body.dark-mode .nav-links a {
         color: var(--dark-mode-footer);
     }
+
     /* 
     .keynote-tickets {
         order: initial;
