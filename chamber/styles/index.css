@@ -145,10 +145,10 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    /* Gap btw event-card & weather-cards-group */
+    /* Gaping btw event-card & weather-cards-group */
     justify-content: center;
     align-items: stretch;
-    /* stretch to fill available height */
+    /* stretching to fill available height */
 }
 
 .card {
@@ -166,8 +166,9 @@ h1 {
 .event-card {
     flex: 2 1 calc(45.02% - 4px);
     /* Event card takes 2/3 of space les 1/4 gap */
-    min-width: 400px;
-    /* Minimum width before wrapping */
+    /* min-width: 400px; */
+    /* Minimum width before wrapping 
+    or I removed for responsiveness after testing */
 }
 
 .weather-cards-group {
@@ -179,8 +180,7 @@ h1 {
     /* Make weather cards appear side-by-side within their group */
     gap: 10px;
     /* Gap between the two weather cards */
-    min-width: 300px;
-    /* Adjust min-width as needed */
+    /* min-width: 300px; */
 }
 
 /* Individual weather cards within the group */
@@ -248,7 +248,7 @@ h1 {
 .weather-card .location {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #333;
+    color: var(--darktextcolor);
     margin-top: 0;
     margin-bottom: 5px;
 }
@@ -256,21 +256,21 @@ h1 {
 .weather-card .temperature {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #007bff;
+    color: var(--primarypop);
     margin-top: 0;
     margin-bottom: 5px;
 }
 
 .weather-card .description {
     font-size: 0.95rem;
-    color: #555;
+    color: var(--darktextcolor);
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .weather-card .details {
     font-size: 0.85rem;
-    color: #777;
+    color: var(--primarypop);
     line-height: 1.4;
 }
 
@@ -290,7 +290,7 @@ h1 {
     display: flex;
     flex-direction: column;
     /* Stack individual forecast days */
-    gap: 10px;
+    gap: 20px;
     /* Space between each day's forecast */
     width: 100%;
     /* Take full width of parent */
@@ -302,11 +302,10 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 0px;
+    gap: 5px;
     /* Space between icon and text for each day */
-    /* width: 100%; */
-    width: 80%;
-    border-bottom: 1px dashed #eee;
+    width: 95%;
+    border-bottom: 2px dashed #eee;
     /* Subtle separator */
     padding-bottom: 5px;
     padding-top: 5px;
@@ -325,13 +324,12 @@ h1 {
     /* Give a fixed width for day name */
     flex-shrink: 0;
     margin: 0;
-    color: #333;
-    /* Ensure color for dark mode */
+    color: var(--darktextcolor);
 }
 
 .forecast-day-item .forecast-temp {
     font-weight: 700;
-    color: #007bff;
+    color: var(--primarypop);
     margin: 0;
     flex-grow: 1;
     /* Allow temperature to take available space */
@@ -340,7 +338,6 @@ h1 {
     font-size: 1.1rem;
     /* Make temperature more prominent */
 }
-
 
 /* Events and Weather Section Dark mode */
 body.dark-mode .card {
@@ -361,8 +358,17 @@ body.dark-mode .card span {
     color: var(--popvariant);
 }
 
+body.dark-mode .weather-card .details {
+    color: var(--popvariant);
+}
 
+body.dark-mode .weather-card .temperature {
+    color: var(--popvariant);
+}
 
+body.dark-mode .forecast-day-item .forecast-temp {
+    color: var(--popvariant);
+}
 
 /****************** COMPANY SPOTLIGHT SECTION ****************/
 .company-spotlight {
@@ -435,7 +441,7 @@ body.dark-mode .card span {
 
 .company-card .contact-info strong {
     color: #555;
- }
+}
 
 .company-card a {
     color: var(--primarypop);
@@ -472,8 +478,16 @@ body.dark-mode .company-card p {
     color: var(--dark-mode-text);
 }
 
+body.dark-mode .company-card a {
+    color: var(--popvariant);
+}
+
 body.dark-mode .company-card .membership-level {
     border-top: 1px solid var(--dark-mode-border);
+}
+
+body.dark-mode .company-card .contact-info strong {
+    color: var(--popvariant);
 }
 
 /* ***************** RESPONSIVE DESIGN *************** */
@@ -530,23 +544,23 @@ body.dark-mode .company-card .membership-level {
     .event-card,
     .weather-cards-group {
         flex: 1 1 100%;
-        /* Take full width when stacked */
+        /* Taking full width when stacked */
         max-width: 90%;
-        /* Limit width to ensure some padding/margin */
+        /* Limited width to ensure some padding/margin */
     }
 
     .weather-cards-group {
         flex-direction: column;
-        /* Stack individual weather cards within their group */
+        /* Stacking individual weather cards within their group */
         gap: 20px;
-        /* Adjust gap for vertical stacking */
+        /* Adjusted gap for vertical stacking */
     }
 
     .weather-cards-group .weather-card {
         flex: 1 1 100%;
-        /* Take full width within their stacked group */
+        /* Taking full width within their stacked group */
         max-width: 100%;
-        /* Ensure no overflow */
+        /* Ensuring no overflow */
     }
 
     .event-card h2,
@@ -577,24 +591,31 @@ body.dark-mode .company-card .membership-level {
         padding: 1.5rem;
     }
 
-    .spotlight-grid {
-        grid-template-columns: 1fr;
-        /* Stack on small screens */
-    }
-
     .company-spotlight h2 {
         font-size: 1.8rem;
     }
 
+    .spotlight-grid {
+        grid-template-columns: 1fr;
+        /* Stack on small screens */
+        overflow-x: hidden;
+        text-align: center;
+    }
+
     .company-card {
         padding: 15px;
+        height: 70%;
     }
 
     .company-card img {
-        width: 80px;
-        height: 80px;
+        width: 70%;
+        height: auto;
     }
 
+    .company-card a {
+        word-break: break-all;
+        display: block;
+    }
 }
 
 /* 2. Large screen adjustments (e.g, tablet, laptop etc) */

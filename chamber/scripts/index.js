@@ -222,7 +222,7 @@ function displaySpotlights(data) {
         const contactInfo = document.createElement('div');
         contactInfo.classList.add('contact-info');
         contactInfo.innerHTML = `
-                    <p><strong>PHONE:</strong> ${member.phone}</p>
+                    <p><strong>PHONE:</strong>${member.phone}</p>
                     <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">${member.website}</a></p>
                 `;
 
