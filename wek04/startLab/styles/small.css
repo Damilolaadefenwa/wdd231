@@ -1,0 +1,19 @@
+*{box-sizing: border-box;}
+
+#openButton {
+    background-color: aqua;
+}
+
+#dialogBox{
+    background-color: skyblue;
+}
+
+#closeButton{
+    background-color: violet;
+}
+
+::backdrop{
+    background-color: rgb(255, 128, 0, 0.5);
+}
+
+/* REUSABLE DIALOG  */
