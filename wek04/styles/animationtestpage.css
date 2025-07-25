@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+
+}
+
+/* Header Styling */
+.main-header {
+    background-color: #333;
+    /* Dark background */
+    color: #fff;
+    /* White text */
+    padding: 1rem 2rem;
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: space-between;
+    /* Space out logo/title and nav */
+    align-items: center;
+    /* Vertically align items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+}
+
+.main-header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    /* Remove underline from logo link */
+}
+
+/* Navigation Styling */
+.main-nav ul {
+    list-style: none;
+    /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Arrange nav items horizontally */
+    gap: 1.5rem;
+    /* Space between nav items */
+}
+
+.main-nav a {
+    color: #fff;
+    /* White text for links */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    /* Add some padding for click area */
+    transition: color 0.3s ease-in-out;
+    /* Smooth color transition on hover */
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    color: #00bcd4;
+    /* Light blue on hover/focus */
+}
+
+/* Optional: Basic content area for demonstration */
+.content {
+    padding: 2rem;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/************ MAIN TEST PAGE CONTENT GOES IN HERE  *************/
+/* Animation Test build */
+#loader {
+    margin: 2rem;
+    width: 50px;
+    /* width of the loader */
+    height: 50px;
+    /* height of the loader */
+    border: 5px solid transparent;
+    /* border width */
+    border-color: #999 transparent #999 transparent;
+    /* border colors (4 - 2 transparent) */
+    border-radius: 50%;
+    /* make it round */
+    box-shadow: 0 0 1rem rgb(0 0 255 / 40%);
+    /* blueish shadow effect on round div */
+    animation: spin 1.5s linear infinite;
+    /* spin animation with duration and continuous */
+}
+
+#loader::after {
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Using Animation Keyword */
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+
+    /* spin 360 degrees */
+}
+
+@keyframes pulse {
+
+    /* pulse the gear emoji */
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* scale to 1 */
+    50% {
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+}
+
+/***** Applying TRANSITION EFFECT ****/
+.loader-t {
+    /* the only thing that changed was using transition versus animation */
+    transition: spin 1.5s linear infinite;
+}
+
+.loader-t::after {
+    /* the only thing that changed was using transition versus animation and the size and visibility at start */
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1.5s ease-in-out;
+    font-size: 2rem;
+}
+
+.loader-t:hover {
+    transform: rotate(360deg);
+    /* Rotate on hover */
+}
+
+.loader-t:hover::after {
+    transform: translate(-50%, -50%) scale(1.5);
+    /* Scale on hover */
+}
+
+/* Footer Styling */
+.main-footer {
+    background-color: #222;
+    /* Darker background for footer */
+    color: #bbb;
+    /* Lighter text color */
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin-top: 30px;
+    /* Space above the footer */
+    font-size: 1.1rem;
+}
+
+
+/* Responsive Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        /* Stack logo/title and nav vertically */
+        align-items: flex-start;
+        /* Align items to the start */
+        padding: 1rem;
+    }
+
+    .main-header .logo {
+        margin-bottom: 1rem;
+        /* Add space below logo */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        /* Stack nav items vertically */
+        gap: 0.5rem;
+        /* Reduce space between stacked items */
+        width: 100%;
+        /* Make nav list take full width */
+    }
+
+    .main-nav a {
+        display: block;
+        /* Make links take full width for easier tapping */
+        padding: 0.5rem 1rem;
+        /* Add horizontal padding */
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Slightly visible background for each item */
+        border-radius: 5px;
+    }
+}
