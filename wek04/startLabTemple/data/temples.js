@@ -213,6 +213,14 @@ export const temples = [
         "dedicated": "October, 1984",
         "person": "Gordon B. Hinckley",
         "path": "dallas-texas/400x250/dallas-temple-lds-1048888-wallpaper.jpg"
+    },
+    {
+        "number": "121",
+        "name": "Aba Nigeria Temple",
+        "dedicated": "August, 2025",
+        "person": "Gordon B. Hinckley",
+        "path": "aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
     }
+
 ]
 

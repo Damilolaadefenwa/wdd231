@@ -23,6 +23,8 @@ function displayItem(data) {
         photo.src = `${url}${x.path}`
         photo.alt = x.name
 
+        //Add an event listener to each division on the page.
+        photo.addEventListener("click", () => showStuff(x));
         showHere.appendChild(photo)
     })
     
@@ -30,3 +32,13 @@ function displayItem(data) {
 
 //START DISPLAYING ALL ITEMS by calling the function
 displayItem(temples)
+
+
+//Building Our ShowStuff Function.
+function showStuff(x) {
+    mytitle.innerHTML = x.name
+    mydialog.showModal()
+    myinfo.innerHTML = `Dedicated ${x.dedicated} by ${x.person} as temple number ${x.number}`
+
+
+}
