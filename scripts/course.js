@@ -80,53 +80,132 @@ const courses = [
     }
 ]
 
-//1. Modify the courses array content in your script file by changing the completed property 
-// to true if you have completed a course. Mark completed courses.
+// 1. Modify the courses array content by changing 'completed' property
+// (This part of your code is good, leave it as is)
 courses.forEach(course => {
     if (
-        course.subject === 'CSE' ||
+        (course.subject === 'CSE' && course.number === 110) ||
         (course.subject === 'WDD' && course.number === 130) ||
+        (course.subject === 'CSE' && course.number === 111) ||
+        (course.subject === 'CSE' && course.number === 210) ||
         (course.subject === 'WDD' && course.number === 131)
-        // Add more conditions for other completed courses
+        // WDD 231 is 'In Progress', so it remains false
     ) {
         course.completed = true;
     }
 });
 
-//2, 3, 4, 5. Dynamic Display, Filtering, Styling, and Credits
-// Getting DOM elements
-const courseList = document.querySelector('.course-list');
-const courseTotal = document.querySelector('.course-total');
+// Get references to your HTML elements
+// We will use '.course-list' as the main container for course cards
+const courseListContainer = document.querySelector('.course-list');
+const courseTotalElement = document.querySelector('.course-total');
 const filterButtons = document.querySelectorAll('.course-filters button');
 
-// Rendering courses
+//*** 24/7/2025: Learning activity To add Modal */
+// Reference to my HTML <dialog> element
+const courseDetailsModal = document.getElementById('course-details');
+
+
+// MODAL RELATED FUNCTIONS (Part A of your assignment) ---
+
+// Function to display the modal with specific course details
+function displayCourseDetails(course) {
+    // Clear previous content
+    courseDetailsModal.innerHTML = '';
+
+    // Add content (including the close button and all details)
+    courseDetailsModal.innerHTML = `
+            <button id="closeModal">❌</button><h2>${course.subject} ${course.number}</h2>
+            <h3>${course.title}</h3>
+            <p><strong>Credits</strong>: ${course.credits}</p>
+            <p><strong>Certificate</strong>: ${course.certificate}</p>
+            <p>${course.description}</p>
+            <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+        `;
+
+    // Get reference to the close button AFTER it's added to the modal's DOM
+    const closeModalButton = document.getElementById("closeModal");
+
+    // Add event listener for the close button
+    if (closeModalButton) {
+        closeModalButton.addEventListener("click", () => {
+            courseDetailsModal.close();
+        });
+    }
+
+    // Show the modal
+    courseDetailsModal.showModal();
+}
+
+// Event listener to close the modal when clicking outside of the modal content (on the backdrop)
+courseDetailsModal.addEventListener('click', (event) => {
+    if (event.target === courseDetailsModal) {
+        courseDetailsModal.close();
+    }
+});
+
+
+// --- MAIN RENDERING FUNCTION (Adapted from my previous existing renderCourses in week01) ---
+
+// Your existing rendering function, now modified to include the modal click listener
 function renderCourses(filter = 'All') {
-    // Filtering courses
+    // Clear previous cards from the main course list container
+    courseListContainer.innerHTML = '';
+
+    // Filter courses
     let filtered = courses;
     if (filter === 'WDD') filtered = courses.filter(c => c.subject === 'WDD');
     else if (filter === 'CSE') filtered = courses.filter(c => c.subject === 'CSE');
 
-    // Render cards
-    courseList.innerHTML = filtered.map(course => `
-        <div class="course-card${course.completed ? ' completed' : ''}">
-            <h3>${course.subject} ${course.number}</h3>
-            <p>${course.title}</p>
-            <p>Credits: ${course.credits}</p>
-            <p>${course.completed ? '✅ Completed' : '⏳ In Progress'}</p>
-        </div>
-    `).join('');
+    // Loop through filtered courses and create/append cards
+    filtered.forEach(course => {
+        const courseDiv = document.createElement('div');
+        // Add existing classes and 'completed' class for styling
+        courseDiv.classList.add('course-card');
 
-    // Calculate total credits
+        if (course.completed) {
+            courseDiv.classList.add('completed');
+        }
+
+        // Determine completed status icon based on your image
+        const statusIcon = course.completed ? '✅ Completed' : '⏳ In Progress';
+
+        // Populate the course card with its basic info (matching your the week01 assignment)
+        courseDiv.innerHTML = `
+                <h3>${course.subject} ${course.number}</h3>
+                <p>${course.title}</p>
+                <p>Credits: ${course.credits}</p>
+                <p>${statusIcon}</p>
+            `;
+
+        // --- PART B: Add 'click' event listener to each course card ---
+        // This is crucial for opening the modal for the specific course clicked
+        courseDiv.addEventListener('click', () => {
+            displayCourseDetails(course); // Pass the entire course object
+        });
+
+        // Append the created course card to the main container
+        courseListContainer.appendChild(courseDiv);
+    });
+
+    // Calculate and display total credits (your existing logic)
     const totalCredits = filtered.reduce((sum, c) => sum + c.credits, 0);
-    courseTotal.textContent = `The total credits for courses listed above is ${totalCredits}`;
+    courseTotalElement.textContent = `The total credits for courses listed above is ${totalCredits}`;
 }
 
-// Button event listeners
+// --- Button event listeners (My existing logic from my week01 assignment) ---
 filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
+        // Remove 'active' class from all buttons and add to the clicked 
+        // one (optional, but good for UI for later use)
+        // filterButtons.forEach(b => b.classList.remove('active'));
+        // btn.classList.add('active');
+        // Below code written in week01 assignment.
         renderCourses(btn.textContent.trim());
     });
 });
 
-// Initial render
-renderCourses();
+// --- Initial call to render courses when the page loads ---
+// Make sure 'All' button is active initially (optional)
+// document.querySelector('.course-filters button').classList.add('active');
+renderCourses('All'); // Display all courses initially;

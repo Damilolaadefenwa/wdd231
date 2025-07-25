@@ -233,6 +233,58 @@ main {
     font-size: 0.98rem;
 }
 
+/* Adding to the existing course-card styles */
+.course-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ***************** MODAL DIALOG BOX DISPLAY *************** */
+
+/* These are for the modal and backdrop */
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 600px;
+    /* Adjust as needed */
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#closeModal {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 5px;
+    color: #555;
+    /* Adjust color as desired */
+}
+
+/* Styles for content inside the modal for better readability */
+#course-details h2,
+#course-details h3 {
+    margin-bottom: 5px;
+}
+
+#course-details p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+#course-details p strong {
+    color: #333;
+}
+
 /* ***************** FOOTER *************** */
 footer {
     background-color: var(--gray);
@@ -355,4 +407,46 @@ footer {
         height: 24px;
     }
 
+    /* Adjust modal for small screens */
+    #course-details {
+        width: 95%;
+        max-width: unset;
+        /* Remove the max-width constraint */
+        height: 80%;
+        margin: 0;
+        padding: 15px;
+        /* Slightly less padding */
+        top: 5%;
+        /* Position it from the top */
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    /* Adjust content inside the modal for small screens */
+    #course-details h2 {
+        font-size: 1.3em;
+        /* Smaller font for main heading */
+        margin-bottom: 10px;
+    }
+
+    #course-details h3 {
+        font-size: 1em;
+        /* Smaller font for subheading */
+        margin-bottom: 5px;
+    }
+
+    #course-details p {
+        font-size: 0.9em;
+        /* Smaller font for paragraphs */
+        margin-bottom: 5px;
+    }
+
+    /* Adjust the close button position if needed */
+    #closeModal {
+        font-size: 1.2em;
+        /* Slightly smaller close button */
+        top: 5px;
+        right: 5px;
+    }
 }

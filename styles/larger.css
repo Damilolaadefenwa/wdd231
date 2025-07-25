@@ -60,5 +60,21 @@
         height: auto;
     }
 
+    #course-details {
+        max-width: 600px;
+        /* Limits the maximum width of the modal */
+        width: 90%;
+        /* Allows it to be a bit flexible */
+        border: none;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        /* Vertically and horizontally center it (modern way) */
+        margin: auto;
+        /* Optional: Add some padding from the top if you don't want it exactly centered */
+        top: 50%;
+        transform: translateY(-30%);
+    }
 
 }

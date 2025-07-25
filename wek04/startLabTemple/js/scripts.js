@@ -16,7 +16,7 @@ myclose.addEventListener("click", () => mydialog.close())
 //----------- CREATE A FUNCTION THAT WILL LOOP THROUGH
 // THE ARRAY OF JSON ITEMS 
 function displayItem(data) {
-    console.log(data)
+    // console.log(data)
     data.forEach(x => {
         console.log(x)
         const photo = document.createElement('img')
@@ -33,12 +33,9 @@ function displayItem(data) {
 //START DISPLAYING ALL ITEMS by calling the function
 displayItem(temples)
 
-
 //Building Our ShowStuff Function.
 function showStuff(x) {
     mytitle.innerHTML = x.name
     mydialog.showModal()
     myinfo.innerHTML = `Dedicated ${x.dedicated} by ${x.person} as temple number ${x.number}`
-
-
 }
