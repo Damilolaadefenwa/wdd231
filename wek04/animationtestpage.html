@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,18 @@
     <meta name="author" content="Damilola Adefenwa">
 
     <link rel="stylesheet" href="styles/animationtestpage.css">
+    <script src="scripts/animationtestpage.js" defer></script>
+
 </head>
+
 <body>
-   
+
     <header class="main-header">
         <a href="#" class="logo">MY Test Page</a>
+
+        <!-- Hamburger menu toggle button -->
+        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button> <!-- Unicode hamburger icon -->
+
         <nav class="main-nav">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -22,23 +30,32 @@
             </ul>
         </nav>
     </header>
-    
+
     <main class="content">
         <h2>Welcome to My Test Page</h2>
-        <p>This is a simple web page demonstrating a basic header and navigation bar. 
+        <p>This is a simple web page demonstrating a basic header and navigation bar.
             The navigation is responsive and adjusts for smaller screen sizes.<br>
             This will be use for all my Test page
         </p>
-        
+
         <!-- Main Test Content -->
         <h2>MAIN CONTENT: Animation Test </h2>
-        <div id="loader" class="loader-t"></div>
-        
+        <section class="main-content">
+            <div id="loader">
+                <p>Animation Effect</p>
+            </div>
+            <div class="loader-t">
+                <p>Transition Effect</p>
+            </div>
+        </section>
+
+
     </main>
-   
+
     <footer class="main-footer">
         Damilola Adefenwa | BYUI WDD231 MY TEST PAGE | CC BY-SA 4.0
     </footer>
-    
+
 </body>
+
 </html>

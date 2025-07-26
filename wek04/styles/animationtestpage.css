@@ -8,6 +8,7 @@ body {
 }
 
 /* Header Styling */
+/********* Navigation *********/
 .main-header {
     background-color: #333;
     /* Dark background */
@@ -33,6 +34,7 @@ body {
 }
 
 /* Navigation Styling */
+
 .main-nav ul {
     list-style: none;
     /* Remove bullet points */
@@ -62,6 +64,20 @@ body {
     /* Light blue on hover/focus */
 }
 
+/*********  Hamburger Menu Icon Styling *********/
+.menu-toggle {
+    display: none;
+    /* Hidden by default on larger screens */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    /* Ensure it's above other content */
+}
+
 /* Optional: Basic content area for demonstration */
 .content {
     padding: 2rem;
@@ -71,6 +87,13 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* MAIN CONTENT area for demonstration */
+.main-content {
+    display: flex;
+    justify-content: space-around;
+}
+
 
 /************ MAIN TEST PAGE CONTENT GOES IN HERE  *************/
 /* Animation Test build */
@@ -123,18 +146,35 @@ body {
         transform: translate(-50%, -50%) scale(1.25);
     }
 }
+#loader p {
+    padding: 2.5rem;
+    font-style: italic;
+}
 
 /***** Applying TRANSITION EFFECT ****/
 .loader-t {
     /* the only thing that changed was using transition versus animation */
-    transition: spin 1.5s linear infinite;
+    margin: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-color: #999 transparent #999 transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem rgb(0 0 255 / 40%);
+    /* transition: spin 1.5s linear infinite; */
+    transition: transform 1.5s linear;
 }
 
 .loader-t::after {
     /* the only thing that changed was using transition versus animation and the size and visibility at start */
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
     transform: translate(-50%, -50%) scale(0);
     transition: transform 1.5s ease-in-out;
-    font-size: 2rem;
+
 }
 
 .loader-t:hover {
@@ -145,6 +185,11 @@ body {
 .loader-t:hover::after {
     transform: translate(-50%, -50%) scale(1.5);
     /* Scale on hover */
+}
+
+.loader-t p {
+    padding: 2.5rem;
+    font-style: italic;
 }
 
 /* Footer Styling */
@@ -162,12 +207,13 @@ body {
 
 
 /* Responsive Adjustments for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 606px) {
     .main-header {
-        flex-direction: column;
-        /* Stack logo/title and nav vertically */
-        align-items: flex-start;
-        /* Align items to the start */
+        flex-direction: row;
+        /* Keep logo and hamburger on one row */
+        justify-content: space-between;
+        /* Space them out */
+        align-items: center;
         padding: 1rem;
     }
 
@@ -176,22 +222,135 @@ body {
         /* Add space below logo */
     }
 
+    .menu-toggle {
+        display: block;
+        /* Show hamburger icon on mobile */
+    }
+
+    .main-nav {
+        /* Initially hide the navigation on mobile */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        /* Position over content */
+        top: 0;
+        right: 0;
+        width: 70%;
+        /* Adjust as needed */
+        height: 100vh;
+        /* Full viewport height */
+        background-color: #444;
+        /* Background for the mobile menu */
+        padding-top: 5rem;
+        /* Space for the header/toggle */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        /* Start off-screen */
+        z-index: 1000;
+        /* Below toggle, above content */
+    }
+
+    /* When 'nav-open' class is active on body, show the navigation */
+    body.nav-open .main-nav {
+        transform: translateX(0);
+        /* Slide into view */
+        display: flex;
+        /* Ensure it's displayed as flex column */
+    }
+
     .main-nav ul {
         flex-direction: column;
         /* Stack nav items vertically */
-        gap: 0.5rem;
+        gap: 0;
         /* Reduce space between stacked items */
         width: 100%;
         /* Make nav list take full width */
     }
 
-    .main-nav a {
-        display: block;
-        /* Make links take full width for easier tapping */
-        padding: 0.5rem 1rem;
-        /* Add horizontal padding */
-        background-color: rgba(255, 255, 255, 0.1);
-        /* Slightly visible background for each item */
-        border-radius: 5px;
+    .main-nav li {
+        width: 100%;
+        /* Make list items take full width */
     }
+
+    .main-nav a {
+        padding: 1rem 1.5rem;
+        /* Larger padding for easier tapping */
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        /* Subtle separator */
+        background-color: transparent;
+        /* Reset background */
+        border-radius: 0;
+        /* Reset border-radius */
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Optional: Overlay when menu is open */
+    body.nav-open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        /* Below nav, above content */
+    }
+
+    /* Basic content area for demonstration */
+    .content {
+        padding: 2rem;
+        max-width: 960px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        flex-grow: 1;
+        /* Allow content to grow and push footer down */
+    }
+
+    /* Footer Styling */
+    .main-footer {
+        background-color: #222;
+        /* Darker background for footer */
+        color: #bbb;
+        /* Lighter text color */
+        text-align: center;
+        padding: 1.5rem 2rem;
+        margin-top: 30px;
+        /* Space above the footer */
+        font-size: 0.9rem;
+        flex-shrink: 0;
+        /* Prevent footer from shrinking */
+    }
+}
+
+/* Responsive Adjustments for Large screens */
+@media only screen and (min-width: 38rem) {
+    /* header,
+    main,
+    nav,
+    footer {
+        max-width: 900px;
+        margin: 0 auto;
+    } */
+
+    header {
+        grid-template-columns: 24px auto;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+    }
+
 }
