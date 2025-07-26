@@ -1,0 +1,22 @@
+/* Join Page Section */
+/* Author: Damilola Adefenwa/
+/* Date: 2025-07-26 */
+
+:root {
+
+    --myfont: "Merriweather Sans", sans-serif;
+    --primarycolor: #3D4058;
+    --primarypop: #005e8a;
+    --darktextcolor: #0d0d12;
+    --secondarycolor: #B5BABE;
+    --greybackground: #eaecef;
+    --accentcolor: #ff977a;
+    --popcolor: #FFC328;
+    --popvariant: #fcff42;
+
+    /* Dark Mode Colors (example) */
+    --dark-mode-background: #2c3e50;
+    --dark-mode-text: #ecf0f1;
+    --dark-mode-card-bg: #34495e;
+    --dark-mode-border: #4a627d;
+}
