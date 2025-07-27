@@ -1,6 +1,25 @@
+:root {
+
+    --myfont: "Merriweather Sans", sans-serif;
+    --primarycolor: #3D4058;
+    --primarypop: #005e8a;
+    --darktextcolor: #0d0d12;
+    --secondarycolor: #B5BABE;
+    --greybackground: #eaecef;
+    --accentcolor: #ff977a;
+    --popcolor: #FFC328;
+    --popvariant: #fcff42;
+
+    /* Dark Mode Colors (example) */
+    --dark-mode-background: #2c3e50;
+    --dark-mode-text: #ecf0f1;
+    --dark-mode-card-bg: #34495e;
+    --dark-mode-border: #4a627d;
+}
+
 body {
     background-color: #f4f8fb;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Merriweather', Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +29,7 @@ body {
 }
 
 h1 {
-    color: #2a7ae2;
+    color: var(--primarypop);
     margin-bottom: 0.5em;
     font-size: 2.5em;
 }
@@ -21,17 +40,32 @@ p {
     margin-bottom: 2em;
 }
 
+/* Simple styling for the thank you page data */
+.summary {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.summary p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
 a {
     display: inline-block;
     padding: 0.7em 1.5em;
-    background-color: #2a7ae2;
+    background-color: var(--primarypop);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background 0.2s;
+    /* margin-top: 2rem; */
 }
 
 a:hover {
-    background-color: #185a9d;
+    background-color: var(--accentcolor);
 }
