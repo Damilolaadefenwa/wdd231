@@ -213,7 +213,6 @@ body.dark-mode input[type="submit"]:hover {
 .card {
     background-color: white;
     border: 1px solid #daccc2;
-    border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1rem;
     box-shadow: 0 4px 24px rgba(41, 61, 79, 0.6);
@@ -222,6 +221,17 @@ body.dark-mode input[type="submit"]:hover {
     transform: translateY(20px);
     animation: fadeInUp 0.5s ease-out forwards;
     text-align: center;
+    /* border-radius: 20px; */
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-left: solid 5px #005e8a;
+    border-right: solid 5px #ff977a;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Slightly lift the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Stagger the Animation for each card */
