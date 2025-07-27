@@ -17,18 +17,7 @@
     --dark-mode-border: #4a627d;
 }
 
-body {
-    background-color: #f4f8fb;
-    font-family: 'Merriweather', Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
-h1 {
+/* h1 {
     color: var(--primarypop);
     margin-bottom: 0.5em;
     font-size: 2.5em;
@@ -38,7 +27,7 @@ p {
     color: #333;
     font-size: 1.2em;
     margin-bottom: 2em;
-}
+} */
 
 /* Simple styling for the thank you page data */
 .summary {
@@ -54,11 +43,19 @@ p {
     line-height: 1.6;
 }
 
-a {
+body.dark-mode .summary p {
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .summary h2 {
+    color: var(--darktextcolor);
+}
+
+.return a {
     display: inline-block;
     padding: 0.7em 1.5em;
-    background-color: var(--primarypop);
-    color: #fff;
+    background-color: var(--popcolor);
+    color: var(--darktextcolor);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -66,6 +63,16 @@ a {
     /* margin-top: 2rem; */
 }
 
-a:hover {
+.return a:hover {
     background-color: var(--accentcolor);
+}
+
+body.dark-mode .return a {
+    background-color: var(--greybackground);
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .return a:hover {
+    background-color: var(--accentcolor);
+    color: var(--darktextcolor);
 }
