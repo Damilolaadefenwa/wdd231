@@ -367,34 +367,4 @@ body.dark-mode .modal::backdrop {
         grid-template-columns: 1fr 1fr;
     }
 
-
-
-
-    /* form {
-        flex: 1 1 400px;
-    } */
-
-
-    /* JOIN PAGE */
-    /* .form-sec {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 2rem;
-            margin: 2rem;
-            flex-wrap: wrap;
-        }
-    
-        .card {
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-    
-        form {
-            flex: 1 1 400px;
-        }
-    
-        .membership-cards {
-            flex: 1 1 400px; */
 }
