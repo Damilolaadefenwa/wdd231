@@ -17,19 +17,11 @@
     --dark-mode-border: #4a627d;
 }
 
-/* h1 {
-    color: var(--primarypop);
-    margin-bottom: 0.5em;
-    font-size: 2.5em;
+/* Simple styling for the thank you page data */
+h1{
+    font-size: 2.2rem ;
 }
 
-p {
-    color: #333;
-    font-size: 1.2em;
-    margin-bottom: 2em;
-} */
-
-/* Simple styling for the thank you page data */
 .summary {
     background-color: #f4f4f4;
     border: 1px solid #ccc;
@@ -86,6 +78,10 @@ body.dark-mode .return a:hover {
         overflow-x: hidden;
     }
 
+    h1{
+        font-size: 1.9rem;
+    }
+
     p,
     .summary p {
         word-break: break-all;
@@ -94,4 +90,5 @@ body.dark-mode .return a:hover {
         line-height: 2rem;
     }
 
+    
 }
