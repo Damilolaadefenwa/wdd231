@@ -76,3 +76,22 @@ body.dark-mode .return a:hover {
     background-color: var(--accentcolor);
     color: var(--darktextcolor);
 }
+
+
+/* ***************** RESPONSIVE DESIGN *************** */
+@media (max-width: 606px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    p,
+    .summary p {
+        word-break: break-all;
+        display: block;
+        /* display: inline-block; */
+        line-height: 2rem;
+    }
+
+}
