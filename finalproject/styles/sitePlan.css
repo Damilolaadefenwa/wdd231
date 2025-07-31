@@ -8,14 +8,14 @@
     --night: #0d0d12; */
 
     /* FONT STYLE & WEIGHT */
-    --myfont:"Lato", sans-serif;
+    --myfont: "Lato", sans-serif;
     /* Font-weight List: thin-100, light-300, regular-400
     bold-700, black-900, Font-style:normal and italic  */
-    --primarycolor:#f2f2f2 ;
+    --primarycolor: #f2f2f2;
     --primarypop: #253c57;
     --darktextcolor: #0d0d12;
     --lighttextcolor: #ffffff;
-    --accentcolor:#Bee1e5 ;
+    --accentcolor: #Bee1e5;
     --popcolor: #fcff42;
 
     /* Dark Mode Colors (example) */
@@ -46,7 +46,7 @@ header {
 }
 
 
-header p{
+header p {
     color: var(--darktextcolor);
     font-size: 1rem;
     line-height: 1.2rem;
@@ -101,7 +101,7 @@ section {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
 }
 
-.typography{
+.typography {
     color: var(--darktextcolor);
     line-height: 2rem;
 }
@@ -112,7 +112,7 @@ section {
     font-weight: 900;
     font-size: 1rem;
     border-bottom: 1px solid #000;
-    
+
 }
 
 .paragraphEx {
@@ -192,11 +192,12 @@ img {
 
 /* Responsive styles for mobile view */
 @media (max-width: 606px) {
+
     html,
-        body {
-            overflow-x: hidden;
-        }
-    
+    body {
+        overflow-x: hidden;
+    }
+
     body {
         width: 100%;
         min-width: 0;
@@ -227,6 +228,10 @@ img {
         height: auto;
         font-size: 1rem;
         padding: 0.5rem;
+        word-break: break-all;
+        display: block;
+        box-sizing: border-box;
+        max-width: 100%;
     }
 }
 
