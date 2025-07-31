@@ -76,7 +76,7 @@ a:hover {
 
 #header-p {
     font-style: italic;
-    color: #c14700;
+    color: #012a60;
     font-weight: 400;
 }
 
@@ -191,7 +191,12 @@ img {
 
 
 /* Responsive styles for mobile view */
-@media (max-width: 700px) {
+@media (max-width: 606px) {
+    html,
+        body {
+            overflow-x: hidden;
+        }
+    
     body {
         width: 100%;
         min-width: 0;
