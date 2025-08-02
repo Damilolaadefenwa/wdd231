@@ -1,0 +1,126 @@
+/* Discover Page Section */
+/* Author: Damilola Adefenwa/
+/* Date: 2025-08-01 */
+
+:root {
+
+    --myfont: "Merriweather Sans", sans-serif;
+    --primarycolor: #3D4058;
+    --primarypop: #005e8a;
+    --darktextcolor: #0d0d12;
+    --secondarycolor: #B5BABE;
+    --greybackground: #eaecef;
+    --accentcolor: #ff977a;
+    --popcolor: #FFC328;
+    --popvariant: #fcff42;
+
+    /* Dark Mode Colors (example) */
+    --dark-mode-background: #2c3e50;
+    --dark-mode-text: #ecf0f1;
+    --dark-mode-card-bg: #34495e;
+    --dark-mode-border: #4a627d;
+}
+
+
+/* ********** STYLING FOR DISCOVER PAGE ************ */
+
+/* --- New Discover Page Card Styling (Replaces Old Styles) --- */
+
+/* Basic card setup - applies to all sizes */
+.discover-card {
+    background-color: #f8f9fa;
+    /* Light grey background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Important for keeping images inside rounded corners */
+}
+
+.discover-card figure {
+    margin: 0;
+    /* Removes default figure margin */
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.discover-card .card-info {
+    padding: 1rem;
+}
+
+.discover-card h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: #c44536;
+    /* A reddish-brown color from the sample */
+}
+
+.discover-card address {
+    font-style: normal;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.discover-card .info-button {
+    display: block;
+    background-color: #f9c74f;
+    /* Yellow-orange color from the sample */
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.75rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.discover-card .info-button:hover {
+    background-color: #f8b400;
+    /* Darker yellow on hover */
+}
+
+/* --- 1. SMALL SCREEN (320px to 640px) --- */
+/* The layout is a vertical stack: Image on top, info below. */
+/* Our base styles already achieve this, so no extra layout code is needed here! */
+/* We just need to make sure the main gallery is a single column. */
+.gallery {
+    grid-template-columns: 1fr;
+}
+
+
+/* --- 2. MEDIUM SCREEN (641px to 1024px) --- */
+/* The layout is a single column of wide cards. */
+/* Inside each card: Image on left, info on right. */
+@media (min-width: 641px) {
+    .discover-card {
+        display: grid;
+        /* Create two columns: one for the image, one for the info */
+        grid-template-columns: 300px 1fr;
+        /* Fixed width for image, rest for info */
+        gap: 1rem;
+        align-items: center;
+        /* Vertically center the content */
+    }
+
+    /* Add the hover effect for non-mobile views */
+    .discover-card figure img:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        cursor: pointer;
+    }
+}
+
+
+/* --- 3. LARGE SCREEN (1025px and above) --- */
+/* The page layout becomes a two-column grid. */
+/* The internal card layout is the same as medium screen. */
+@media (min-width: 1025px) {
+    .gallery {
+        /* This changes the main container to have two columns of cards */
+        grid-template-columns: 1fr 1fr;
+    }
+}
