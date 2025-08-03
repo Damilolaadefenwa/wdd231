@@ -23,3 +23,114 @@
 
 
 /* ********** STYLING FOR DISCOVER PAGE ************ */
+
+* {
+    box-sizing: border-box;
+}
+
+#allplaces div {
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#allplaces div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+    color: var(--primarycolor);
+    text-align: center;
+}
+
+#allplaces div img {
+    grid-area: photograph;
+    width: 100%;
+    height: auto;
+}
+
+#allplaces div p {
+    margin: 1rem 10px;
+    grid-area: description;
+}
+
+#allplaces div address {
+    margin: 1rem 10px;
+    grid-area: location;
+}
+
+#allplaces .info-button {
+    display: block;
+    background-color: var(--popcolor);
+    color: var(--darktextcolor);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.75rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    grid-area: button;
+}
+
+#allplaces .info-button:hover {
+    background-color: var(--primarypop);
+    color: white;
+}
+
+/* ***************** RESPONSIVE LAYOUT DESIGN *************** */
+/* 1. Mobile  or small screen adjustments */
+@media (max-width: 640px) {
+
+    #allplaces div {
+        display: grid;
+        /* Using the Grid Areas */
+        grid-template-areas:
+            "name"
+            "photograph"
+            "description"
+            "location"
+            "button"
+        ;
+    }
+
+}
+
+
+/* 2. Responsive Layout for Medium screen adjustments (e.g, tablet etc) */
+@media only screen and (min-width: 641px) {
+    .header-content {
+        flex-wrap: wrap;
+    }
+
+    #allplaces div {
+        display: grid;
+        /* Using the Grid Areas */
+        grid-template-areas:
+            "photograph name"
+            "photograph description"
+            "photograph location"
+            "photograph button"
+        ;
+
+    }
+
+    #allplaces div img {
+        width: 325px;
+    }
+
+    #allplaces div img:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        cursor: pointer;
+    }
+}
+
+/* 2. Responsive Layout for Medium screen adjustments (e.g, tablet etc) */
+@media only screen and (min-width: 1024px) {
+    #allplaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+}

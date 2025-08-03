@@ -4,7 +4,7 @@ import { timbuktuData } from '../data/discoverData.mjs';
 // console.log(timbuktuData.activities);
 
 // 2. GETTING THE CONTAINER, CREATING AND DISPLAYING THE CARD
-const gallery = document.querySelector('#gallery');
+const gallery = document.querySelector('#allplaces');
 
 // REPLACE the old code with this new one.
 
@@ -16,19 +16,16 @@ function displayItems(places) {
     places.forEach(activity => {
         //building the card element
         const thecard = document.createElement('div')
+        //creating a class for styling
+        // thecard.className = 'discover-card';
         // buiding the item in the card
         thecard.innerHTML = `
-            <figure>
-                <img src="${activity.photo}" alt="${activity.name}" loading="lazy" width="300" height="200">
-            </figure>
-            <div class="card-info">
-                <h2>${activity.name}</h2>
-                <address>${activity.address}</address>
-                <p>${activity.description}</p>
-                <a href="${activity.url}" target="_blank" class="info-button">Learn More</a>
-            </div>
+            <img src="${activity.photo}" alt="${activity.name}" loading="lazy" width="300" height="200">
+            <h2>${activity.name}</h2>
+            <address>${activity.address}</address>
+            <p>${activity.description}</p>
+            <a href="${activity.url}" target="_blank" class="info-button">Learn More</a>
         `;
-
         // Appending the newly created card to the gallery container
         gallery.appendChild(thecard)
     })  // end of loop
@@ -61,8 +58,6 @@ displayItems(places)
 //     // Append the newly created card to the gallery container
 //     gallery.appendChild(card);
 // });
-
-
 
 
 
