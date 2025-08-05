@@ -1,0 +1,137 @@
+[
+    {
+        "name": "Serenity Spa & Retreat",
+        "address": "12 Awolowo Avenue, Bodija, Ibadan",
+        "phone": "+234 802 111 2233",
+        "website": "www.serenityspaibadan.com",
+        "imageUrl": "https://example.com/images/serenityspa.jpg",
+        "membershipLevel": "Platinum",
+        "tagline": "Where relaxation meets rejuvenation."
+    },
+    {
+        "name": "FitLife Gym",
+        "address": "45 Ring Road, Challenge, Ibadan",
+        "phone": "+234 803 555 7788",
+        "website": "www.fitlifeibadan.com",
+        "imageUrl": "https://example.com/images/fitlife.jpg",
+        "membershipLevel": "Gold",
+        "tagline": "Transform your body, elevate your life."
+    },
+    {
+        "name": "Bliss Wellness Center",
+        "address": "8 Oluyole Estate, Ibadan",
+        "phone": "+234 805 987 6543",
+        "website": "www.blisswellness.com",
+        "imageUrl": "https://example.com/images/blisswellness.jpg",
+        "membershipLevel": "Silver",
+        "tagline": "Your path to holistic wellness."
+    },
+    {
+        "name": "Vitality Fitness Club",
+        "address": "21 Dugbe Road, Ibadan",
+        "phone": "+234 807 432 5678",
+        "website": "www.vitalityclub.com",
+        "imageUrl": "https://example.com/images/vitalityfitness.jpg",
+        "membershipLevel": "Bronze",
+        "tagline": "Strength, stamina, success."
+    },
+    {
+        "name": "Harmony Spa",
+        "address": "30 Ikolaba GRA, Ibadan",
+        "phone": "+234 801 234 5670",
+        "website": "www.harmonyspaibadan.com",
+        "imageUrl": "https://example.com/images/harmonyspa.jpg",
+        "membershipLevel": "Gold",
+        "tagline": "Find your balance in harmony."
+    },
+    {
+        "name": "CoreFlex Pilates Studio",
+        "address": "15 Jericho Road, Ibadan",
+        "phone": "+234 809 876 5432",
+        "website": "www.coreflexibadan.com",
+        "imageUrl": "https://example.com/images/coreflex.jpg",
+        "membershipLevel": "Silver",
+        "tagline": "Flexibility and strength in motion."
+    },
+    {
+        "name": "Oasis Wellness Spa",
+        "address": "7 Challenge Avenue, Ibadan",
+        "phone": "+234 804 321 6789",
+        "website": "www.oasiswellness.com",
+        "imageUrl": "https://example.com/images/oasis.jpg",
+        "membershipLevel": "Platinum",
+        "tagline": "Refresh your body, renew your mind."
+    },
+    {
+        "name": "Peak Performance Gym",
+        "address": "50 Iwo Road, Ibadan",
+        "phone": "+234 806 111 9988",
+        "website": "www.peakperformanceibadan.com",
+        "imageUrl": "https://example.com/images/peakperformance.jpg",
+        "membershipLevel": "Gold",
+        "tagline": "Push limits, achieve greatness."
+    },
+    {
+        "name": "Pure Glow Skincare & Spa",
+        "address": "9 Old Ife Road, Ibadan",
+        "phone": "+234 808 222 4455",
+        "website": "www.pureglowspa.com",
+        "imageUrl": "https://example.com/images/pureglow.jpg",
+        "membershipLevel": "Silver",
+        "tagline": "Glow from within, shine outside."
+    },
+    {
+        "name": "Zen Wellness Studio",
+        "address": "6 Onireke GRA, Ibadan",
+        "phone": "+234 803 765 4321",
+        "website": "www.zenwellnessibadan.com",
+        "imageUrl": "https://example.com/images/zenwellness.jpg",
+        "membershipLevel": "Bronze",
+        "tagline": "Peace, health, and inner calm."
+    },
+    {
+        "name": "Elite Fitness Arena",
+        "address": "34 Bashorun Road, Ibadan",
+        "phone": "+234 810 555 1212",
+        "website": "www.elitefitnessarena.com",
+        "imageUrl": "https://example.com/images/elitefitness.jpg",
+        "membershipLevel": "Platinum",
+        "tagline": "Train like a champion."
+    },
+    {
+        "name": "Tranquil Touch Spa",
+        "address": "11 UI Road, Ibadan",
+        "phone": "+234 807 654 3210",
+        "website": "www.tranquiltouchspa.com",
+        "imageUrl": "https://example.com/images/tranquiltouch.jpg",
+        "membershipLevel": "Gold",
+        "tagline": "Healing hands, soothing experience."
+    },
+    {
+        "name": "ActiveLife Sports Center",
+        "address": "22 Challenge Expressway, Ibadan",
+        "phone": "+234 809 333 7766",
+        "website": "www.activelifeibadan.com",
+        "imageUrl": "https://example.com/images/activelife.jpg",
+        "membershipLevel": "Silver",
+        "tagline": "Stay active, stay alive."
+    },
+    {
+        "name": "Wellness360 Hub",
+        "address": "5 Samonda Road, Ibadan",
+        "phone": "+234 802 789 1234",
+        "website": "www.wellness360ibadan.com",
+        "imageUrl": "https://example.com/images/wellness360.jpg",
+        "membershipLevel": "Bronze",
+        "tagline": "Complete wellness, 360 degrees."
+    },
+    {
+        "name": "Glow & Flow Yoga Studio",
+        "address": "19 Alakia Street, Ibadan",
+        "phone": "+234 805 678 9090",
+        "website": "www.glowflowyoga.com",
+        "imageUrl": "https://example.com/images/glowflow.jpg",
+        "membershipLevel": "Gold",
+        "tagline": "Breathe, stretch, and glow."
+    }
+]
