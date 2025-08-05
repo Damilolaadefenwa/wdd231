@@ -26,7 +26,7 @@ function displayItems(places) {
             <h2>${activity.name}</h2>
             <address>${activity.address}</address>
             <p>${activity.description}</p>
-            <a href="${activity.url}" target="_blank" class="info-button">Learn More</a>
+            <a href="${activity.url}" target="_blank" class="info-button">Learn More About This Place</a>
         `;
         // Appending the newly created card to the gallery container
         gallery.appendChild(thecard)

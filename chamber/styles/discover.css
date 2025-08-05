@@ -78,7 +78,8 @@ body.dark-mode .visitor-message-container p {
     /* Space between icon and text */
     line-height: 1;
     /* Align icon better */
-    color: var(--popcolor);
+    /* color: var(--popcolor); */
+    color: #503a02;
 }
 
 body.dark-mode .visitor-message-container .message-icon {
@@ -86,7 +87,8 @@ body.dark-mode .visitor-message-container .message-icon {
 }
 
 .visitor-message-container .read-more {
-    color: var(--popcolor);
+    color: #503a02;
+    /* color: var(--popcolor); */
     /* A standard blue for links */
     text-decoration: underline;
     font-weight: bold;
@@ -109,7 +111,7 @@ body.dark-mode .visitor-message-container .read-more:hover {
 .my-message {
     font-weight: bold;
     font-size: 1.4rem;
-    color: var(--primarypop);
+    color: #00496b;
 }
 
 /* ********** STYLING FOR GRID AREAS ************ */
