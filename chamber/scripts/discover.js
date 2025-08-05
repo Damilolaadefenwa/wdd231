@@ -5,12 +5,9 @@ import { timbuktuData } from '../data/discoverData.mjs';
 
 // 2. GETTING THE CONTAINER, CREATING AND DISPLAYING THE CARD
 const gallery = document.querySelector('#allplaces');
-
-// REPLACE the old code with this new one.
-
 const places = timbuktuData.activities;
 //Testing
-console.log(places);
+// console.log(places);
 
 function displayItems(places) {
     places.forEach(activity => {
@@ -37,7 +34,7 @@ function displayItems(places) {
 displayItems(places)
 
 
-//4. --- LOCALSTORAGE VISITOR MESSAGE ---
+//3. --- LOCALSTORAGE VISITOR MESSAGE ---
 
 // 1. Getting the message element from the DOM
 const visitMessage = document.getElementById('visit-message');
