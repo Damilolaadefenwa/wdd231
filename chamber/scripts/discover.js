@@ -20,7 +20,9 @@ function displayItems(places) {
         // thecard.className = 'discover-card';
         // buiding the item in the card
         thecard.innerHTML = `
-            <img src="${activity.photo}" alt="${activity.name}" loading="lazy" width="300" height="200">
+            <figure>
+                <img src="${activity.photo}" alt="${activity.name}" loading="lazy" width="300" height="200">
+            </figure>
             <h2>${activity.name}</h2>
             <address>${activity.address}</address>
             <p>${activity.description}</p>
@@ -35,41 +37,15 @@ function displayItems(places) {
 displayItems(places)
 
 
-//Old Code
-// timbuktuData.activities.forEach(activity => {
-//     // Create the main card container. We'll call it 'discover-card'.
-//     let card = document.createElement('div');
-//     card.className = 'discover-card'; // Use a new class to avoid CSS conflicts
-
-//     // Use template literals to build the new inner HTML structure.
-//     // Notice the <div class="card-info"> wrapping the text content.
-//     card.innerHTML = `
-//         <figure>
-//             <img src="${activity.photo}" alt="${activity.name}" loading="lazy" width="300" height="200">
-//         </figure>
-//         <div class="card-info">
-//             <h2>${activity.name}</h2>
-//             <address>${activity.address}</address>
-//             <p>${activity.description}</p>
-//             <a href="${activity.url}" target="_blank" class="info-button">Learn More</a>
-//         </div>
-//     `;
-
-//     // Append the newly created card to the gallery container
-//     gallery.appendChild(card);
-// });
-
-
-
 //4. --- LOCALSTORAGE VISITOR MESSAGE ---
 
-// 1. Get the message element from the DOM
+// 1. Getting the message element from the DOM
 const visitMessage = document.getElementById('visit-message');
 
-// 2. Get the last visit timestamp from localStorage (returns null if not set)
+// 2. Getting the last visit timestamp from localStorage (returns null if not set)
 const lastVisit = localStorage.getItem('lastVisitTimestamp');
 
-// 3. Get the current timestamp
+// 3. Gettingthe current timestamp
 const now = Date.now();
 
 // 4. Logic to determine the message
@@ -83,7 +59,7 @@ if (!lastVisit) {
     if (daysSinceLastVisit < 1) {
         visitMessage.textContent = "Back so soon! Awesome!";
     } else {
-        // Handle singular 'day' vs plural 'days'
+        // Handling singular 'day' vs plural 'days'
         const dayText = daysSinceLastVisit === 1 ? 'day' : 'days';
         visitMessage.textContent = `You last visited ${daysSinceLastVisit} ${dayText} ago.`;
     }

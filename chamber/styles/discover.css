@@ -21,12 +21,98 @@
     --dark-mode-border: #4a627d;
 }
 
-
-/* ********** STYLING FOR DISCOVER PAGE ************ */
-
 * {
     box-sizing: border-box;
 }
+
+
+/* ********** STYLING FOR VISITOR SECTION ************ */
+
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--darktextcolor);
+}
+
+body.dark-mode h1 {
+    color: var(--dark-mode-text);
+}
+
+.visitor-message-container {
+    background-color: whitesmoke;
+    color: var(--darktextcolor);
+    padding: 1rem 1.5rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    border: 1px solid #022c58;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .visitor-message-container {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
+.visitor-message-container p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+body.dark-mode .visitor-message-container p {
+    color: var(--dark-mode-text);
+}
+
+.visitor-message-container .message-icon {
+    font-size: 1.5rem;
+    /* Larger icon */
+    margin-right: 10px;
+    /* Space between icon and text */
+    line-height: 1;
+    /* Align icon better */
+    color: var(--popcolor);
+}
+
+body.dark-mode .visitor-message-container .message-icon {
+    color: var(--popvariant);
+}
+
+.visitor-message-container .read-more {
+    color: var(--popcolor);
+    /* A standard blue for links */
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 10px;
+    /* Space between message and "Read More" link */
+}
+
+body.dark-mode .visitor-message-container .read-more {
+    color: var(--popvariant);
+}
+
+.visitor-message-container .read-more:hover {
+    color: #003D7A;
+}
+
+body.dark-mode .visitor-message-container .read-more:hover {
+    color: var(--accentcolor);
+}
+
+.my-message {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--primarypop);
+}
+
+/* ********** STYLING FOR GRID AREAS ************ */
 
 #allplaces div {
     margin: 1rem 8px;
@@ -36,11 +122,26 @@
     overflow: hidden;
 }
 
+body.dark-mode #allplaces div {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
 #allplaces div h2 {
     margin: 1rem 10px;
     grid-area: name;
     color: var(--primarycolor);
     text-align: center;
+}
+
+body.dark-mode #allplaces div h2 {
+    color: var(--dark-mode-text);
+}
+
+#allplaces figure {
+    margin: 0;
+    /* Removes default figure margin */
+    grid-area: photograph;
 }
 
 #allplaces div img {
@@ -72,10 +173,22 @@
     grid-area: button;
 }
 
+body.dark-mode #allplaces .info-button {
+    background-color: var(--popvariant);
+    color: var(--darktextcolor);
+}
+
 #allplaces .info-button:hover {
     background-color: var(--primarypop);
     color: white;
 }
+
+body.dark-mode #allplaces .info-button:hover{
+    background-color: var(--accentcolor);
+    color: var(--darktextcolor);
+}
+
+
 
 /* ***************** RESPONSIVE LAYOUT DESIGN *************** */
 /* 1. Mobile  or small screen adjustments */
@@ -95,11 +208,32 @@
 
 }
 
-
 /* 2. Responsive Layout for Medium screen adjustments (e.g, tablet etc) */
 @media only screen and (min-width: 641px) {
     .header-content {
         flex-wrap: wrap;
+    }
+
+    .visitor-message-container {
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .visitor-message-container p {
+        flex-direction: column;
+        /* Stack icon and text on very small screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .visitor-message-container .message-icon {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .visitor-message-container .read-more {
+        margin-left: 0;
+        margin-top: 5px;
     }
 
     #allplaces div {
@@ -126,11 +260,14 @@
     }
 }
 
+
 /* 2. Responsive Layout for Medium screen adjustments (e.g, tablet etc) */
 @media only screen and (min-width: 1024px) {
     #allplaces {
         display: grid;
         grid-template-columns: 1fr 1fr;
-
+        margin-top: 2rem;
     }
+
+
 }
