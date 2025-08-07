@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Social media meta tags for Facebook -->
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="">
+    <meta property="og:title" content="Ibadan Wellness Connect">
+    <meta property="og:description"
+        content="A premier online platform dedicated to empowering, promoting and connecting fitness, sport, and spa businesses throughout the beautiful city Ibadan, Nigeria.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Damilolaadefenwa/wdd231/refs/heads/main/finalproject/images/ibwsocialimage.webp">
+    <meta property="og:url" content="https://damilolaadefenwa.github.io/wdd231/finalproject/index.html">
     <!-- End Social media meta tags for Facebook -->
-    <title>Home | </title>
-    <meta name="description" content="">
+    <title>Home | Ibadan Wellness Connect </title>
+    <meta name="description" content="Discover the best wellness, fitness, and health services in Ibadan. Find local gyms, spas, nutritionists, and holistic health centers to start your journey to a healthier lifestyle today.">
     <meta name="author" content="Damilola Adefenwa">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="Ibadan wellness, Ibadan health, Ibadan fitness, gyms in Ibadan, spas in Ibadan, nutritionists Ibadan, wellness centers, health services Ibadan, fitness classes, holistic health.">
 
     <!-- Style Sheets -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/">
 
     <!-- Scripts -->
-    <script src="scripts/" defer></script>
+    <script src="scripts/main.js" defer></script>
     <script src="scripts/" type="module"></script>
 
     <!-- Favicon -->
@@ -33,21 +34,88 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-
-
 </head>
 
 <body>
-    <header>
-
+    <header class="header">
+        <div class="logo">
+            <img src="images/ibwLogo.svg" alt="Ibadan Wellness Connect Logo" width="68" height="68" loading="lazy">
+            <a href="index.html">Ibadan Wellness Connect</a>
+        </div>
+        <nav>
+            <button class="hamburger-menu" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links">
+                <li class="current" title="Home page"><a href="index.html">Home</a></li>
+                <li><a href="#" title="Business Directory">Directory</a></li>
+                <li><a href="#" title="Join Us">Join</a></li>
+            </ul>
+            <div class="dark-mode-toggle">
+                <button type="button" aria-label="Toggle dark mode">&#9680;</button>
+            </div>
+        </nav>
     </header>
 
     <!-- Hero Section -->
-
+    <section class="hero">
+        <img src="images/heroimageIbadan.webp" alt="The Manificient Ibadan City CoCoa House" loading="lazy"
+            class="hero-img">
+        <div class="overlap-containers">
+            <div class="overlap-card mission">
+                <a href="#news" class="overlap-link">Our Mission</a>
+                <p>Our Goal, Vision & Commitment</p>
+            </div>
+            <div class="overlap-card events">
+                <a href="#news" class="overlap-link">Our Events</a>
+                <p>Register & Empower your Business</p>
+            </div>
+            <div class="overlap-card involved">
+                <a href="#news" class="overlap-link">Get Involved</a>
+                <p>Join, Participate, or Support</p>
+            </div>
+        </div>
+    </section>
 
     <main>
         <h1>Home</h1>
+        <section class="events-weather-grid">
+            <div class="card event-card">
+                <h2>Events</h2>
+                <p>
+                    Join us for our annual Timbuktu Business Summit! this year, we're focusing on sustainable growth
+                    and
+                    digital
+                    transformation for local enterprises.Network with industry leaders,attend insightful workshops, and
+                    discover new opportunities to elevate your business.
+                    <br><br>
+                    <span>Date:</span> October 26-28, 2025<br>
+                    <span>Location:</span> Timbuktu Convention Center<br>
+                    <span>Keynote Speaker:</span> Dr. Amina Diallo on "Innovating for Tomorrow's Economy"
+                </p>
+            </div>
 
+            <div class="weather-cards-group">
+                <div class="card weather-card" id="current-weather-card">
+                    <h2>Current Weather</h2>
+                    <img id="current-weather-icon" src="https://openweathermap.org/img/wn/" alt="The API weather Icon"
+                        class="weather-icon">
+                    <div class="weather-text-content">
+                        <p class="location" id="current-location">Timbuktu</p>
+                        <p class="temperature" id="current-temperature">--°F</p>
+                        <p class="description" id="current-description">Loading weather...</p>
+                        <p class="description" id="current-high">Loading weather...</p>
+                        <p class="description" id="current-low">Loading weather...</p>
+                        <p class="details" id="current-details">Humidity: --% | Sunrise: -- AM | Sunset:-- PM</p>
+                    </div>
+                </div>
+
+                <div class="card weather-card" id="weather-forecast-card">
+                    <h2>Weather Forecast</h2>
+                    <div class="forecast-days-container">
+                        <p>Loading forecast...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
@@ -57,11 +125,11 @@
     <footer>
         <div class="footer-content">
             <div class="contact-info">
-                <h3>Timbuktu Chamber of Commerce</h3>
-                <p>10 Rue De La Paix</p>
-                <p>Timbuktu, Mali 999</p>
-                <p>Email: <a href="mailto:info@timbutucc.org">info@timbutucc.org</a></p>
-                <p>Phone: <a href="tel:+2235552300">(223) 555-2300</a></p>
+                <h3>Ibadan Wellness Connect</h3>
+                <p>Lane 130 Ikolaba GRA, Ibadan</p>
+                <p>Oyo State, Nigeria</p>
+                <p>Email: <a href="mailto:info@timbutucc.org">info@ibadanwellnessconnect.org</a></p>
+                <p>Phone: <a href="tel:+2347055485230">(+234)-7055-485-230</a></p>
             </div>
             <div class="social-media">
                 <a href="https://www.youtube.com/" target="_blank" aria-label="Youtube"><img src="images/youtube.svg"
@@ -72,9 +140,9 @@
                         src="images/linkedin.svg" alt="Linkedin Logo" width="32" height="32"></a>
             </div>
             <div class="development-info">
-                <p>WDD231 Class Project: Team 01- Wednesdays 1400 UTC</p>
+                <a href="#" target="_blank">PROJECT LOOM VIDEO LINK</a>
                 <p>🌹 Damilola Adefenwa 🌹</p>
-                <p>&copy; <span id="current-year"></span> Timbuktu Chamber of Commerce</p>
+                <p>&copy; <span id="current-year"></span> Ibadan Wellness Connect</p>
                 <p>Last Modification: <span id="last-modified"></span></p>
             </div>
         </div>
