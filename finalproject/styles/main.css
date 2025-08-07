@@ -1,12 +1,9 @@
-:root {
-    /* CSS HEX */
-    /* --white-smoke: #f2f2f2;
-    --prussian-blue: #253c57;
-    --light-blue: #Bee1e5;
-    --yellow: #fcff42;
-    --white: #ffffff;
-    --night: #0d0d12; */
+/* MAIN STYLE PAGE FOR HEADER, NAVIGATION & FOOTER Section */
+/* Author: Damilola Adefenwa/
+/* Date: 2025-08-06 */
 
+:root {
+    
     /* FONT STYLE & WEIGHT */
     --myfont: "Lato", sans-serif;
     /* Font-weight List: thin-100, light-300, regular-400
@@ -18,7 +15,7 @@
     --accentcolor: #Bee1e5;
     --popcolor: #fcff42;
 
-    /* Dark Mode Colors (example) */
+    /* Dark Mode Colors */
     --dark-mode-background: #2c3e50;
     --dark-mode-text: #ecf0f1;
     --dark-mode-card-bg: #34495e;
@@ -26,10 +23,9 @@
     --dark-mode-footer: #1a252f;
     --dark-mode-header: #9db5cb;
 
-
 }
 
-/************* Base Styles ************/
+/************* BASICS STYLES ************/
 body {
     margin: 0;
     font-family: var(--myfont);
@@ -306,6 +302,7 @@ footer a:hover {
 .development-info {
     font-size: 1.2rem;
     text-align: right;
+    margin-top: 1rem;
 }
 
 /* ***************** DARK MODE FOOTER *************** */

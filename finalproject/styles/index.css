@@ -1,0 +1,28 @@
+/* Home Page Section */
+/* Author: Damilola Adefenwa/
+/* Date: 2025-08-07 */
+
+:root {
+
+    /* FONT STYLE & WEIGHT */
+    --myfont: "Lato", sans-serif;
+    /* Font-weight List: thin-100, light-300, regular-400
+    bold-700, black-900, Font-style:normal and italic  */
+    --primarycolor: #f2f2f2;
+    --primarypop: #253c57;
+    --darktextcolor: #0d0d12;
+    --lighttextcolor: #ffffff;
+    --accentcolor: #Bee1e5;
+    --popcolor: #fcff42;
+
+    /* Dark Mode Colors */
+    --dark-mode-background: #2c3e50;
+    --dark-mode-text: #ecf0f1;
+    --dark-mode-card-bg: #34495e;
+    --dark-mode-border: #4a627d;
+    --dark-mode-footer: #1a252f;
+    --dark-mode-header: #9db5cb;
+
+}
+
+/************* HERO SECTION STYLES ************/

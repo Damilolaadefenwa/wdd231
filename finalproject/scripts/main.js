@@ -1,17 +1,6 @@
-//  // Hamburger menu toggle
-//     const hamburgerBtn = document.querySelector('.hamburger-menu');
-//     const navLinks = document.querySelector('.nav-links');
-
-//     if (hamburgerBtn && navLinks) {
-//         hamburgerBtn.addEventListener('click', () => {
-//             navLinks.classList.toggle('open');
-//             hamburgerBtn.setAttribute('aria-expanded', navLinks.classList.contains('open'));
-//         });
-// }
 
 // Author : Damilola Adefenwa
-// Date   : 2025-07-12
-
+// Date   : 2025-08-07
 document.addEventListener('DOMContentLoaded', () => {
     // Set current year for copyright
     const copyrightYearSpan = document.getElementById('current-year');
