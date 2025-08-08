@@ -3,7 +3,7 @@
 /* Date: 2025-08-06 */
 
 :root {
-    
+
     /* FONT STYLE & WEIGHT */
     --myfont: "Lato", sans-serif;
     /* Font-weight List: thin-100, light-300, regular-400
@@ -63,7 +63,7 @@ body.dark-mode .nav-links a:hover {
     background-color: var(--dark-mode-text);
 }
 
-body.dark-mode .nav-links li.current a:hover{
+body.dark-mode .nav-links li.current a:hover {
     color: var(--darktextcolor);
 }
 
@@ -78,7 +78,7 @@ body.dark-mode .nav-links li.current a:hover{
     position: sticky;
     top: 0;
     z-index: 10;
-    /* max-width: 1200px; */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
