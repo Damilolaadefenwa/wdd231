@@ -80,6 +80,7 @@ body.dark-mode .nav-links li.current a:hover {
     z-index: 10;
     max-width: 1200px;
     margin: 0 auto;
+    border: 2px solid var(--popcolor);
 }
 
 .logo {
@@ -233,6 +234,7 @@ footer {
     text-align: center;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
+    border: 2px solid var(--popcolor);
 }
 
 .footer-content {
