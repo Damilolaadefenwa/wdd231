@@ -103,6 +103,69 @@
 
 /************* NEWS SECTION STYLES ************/
 
+.news-section {
+    padding: 0.5rem 1rem 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 0;
+}
+
+.news-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.news-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: var(--card-radius);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow var(--transition);
+}
+
+.news-card:hover {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16);
+}
+
+.news-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-content h3 {
+    font-size: 1.1rem;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+
+.news-meta {
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1rem;
+    color: #888;
+}
 
 /* body.dark-mode {
 
@@ -134,13 +197,19 @@
         padding: 1.5rem 1rem 1rem 1rem;
     }
 
-    .overlap-card p{
+    .overlap-card p {
         font-size: 0.95rem;
     }
+
     .overlap-link {
         font-size: 1.3rem;
     }
 
+    .news-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
 
 
 }

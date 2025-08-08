@@ -23,7 +23,7 @@
 
     <!-- Scripts -->
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/index.js" type="module"></script>
+    <script type="module" src="scripts/index.js" ></script>
 
     <!-- Favicon -->
     <link rel="icon" href="ibwFavicon.ico">
@@ -77,7 +77,59 @@
 
     <main>
         <h1>Home</h1>
-       
+        <section class="news-section" id="current-news">
+            <h2>Latest News Headlines and Articles</h2>
+            <div class="news-cards">
+                <div class="news-card">
+                    <img id="headline-image" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+                        alt="A Headlines Image from News API">
+                    <div class="news-content">
+                        <h3>Latest Business News</h3>
+                        <p id="headline-title">Loading title.......</p>
+                        <p id="headline-author">Loading source..........</p>
+                        <p id="headline-description">Loading headline..........</p>
+                        <p id="headline-url">Loading url.....</p>
+                        <div class="news-meta">
+                            <span>👁️ 0</span>
+                            <span>💬 0</span>
+                            <span>❤️ 6</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img id="article-image" src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80"
+                        alt="An Article Image from News API">
+                    <div class="news-content">
+                        <h3>Latest Articles Around the World</h3>
+                        <p id="article-title">Loading title</p>
+                        <p id="article-date">Loading date..........</p>
+                        <p id="article-description">Loading article..........</p>
+                        <p id="article-url">Loading url.....</p>
+                        <div class="news-meta">
+                            <span>👁️ 0</span>
+                            <span>💬 0</span>
+                            <span>❤️ 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img id="health-image" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+                        alt="A Health Image from News API">
+                    <div class="news-content">
+                        <h3>Latest Health and Wellness News</h3>
+                        <p id="health-title">Loading title.......</p>
+                        <p id="health-author">Loading source..........</p>
+                        <p id="health-description">Loading headline..........</p>
+                        <p id="health-url">Loading url.....</p>
+                        <div class="news-meta">
+                            <span>👁️ 0</span>
+                            <span>💬 0</span>
+                            <span>❤️ 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 

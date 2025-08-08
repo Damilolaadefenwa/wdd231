@@ -63,9 +63,5 @@ export const allBusinesses = [
     },
 ];
 
-// import { allBusinesses } from './wellnessBusinesses.js';
 
-// allBusinesses.forEach(business => {
-//     console.log(`${business.name} → ${business.booking}`);
-// });
 
