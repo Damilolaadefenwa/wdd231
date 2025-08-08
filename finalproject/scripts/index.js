@@ -44,7 +44,6 @@ const myCountry = "ng";
 const myPreferenceA = "business";
 const myPreferenceB = "health";
 const myDate = "2025-08-07";
-// const currentDate = new Date().getDate();
 const mySource = "Forbes";
 const mySortingOrder = "popularity"
 
