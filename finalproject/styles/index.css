@@ -62,6 +62,7 @@
     text-align: center;
     position: relative;
     transition: background 0.3s;
+    border: 2px solid var(--popcolor);
 }
 
 .overlap-card.mission {
