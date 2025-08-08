@@ -120,7 +120,7 @@
 
 .news-cards {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -147,29 +147,101 @@
 }
 
 .news-content {
-    padding: 1rem;
+    padding: 0.5rem;
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .news-content h3 {
     font-size: 1.1rem;
     margin: 0 0 1rem 0;
     font-weight: 600;
+    color: var(--darktextcolor);
 }
 
-.news-meta {
-    display: flex;
-    gap: 1.2rem;
-    font-size: 1rem;
-    color: #888;
+.news-content p {
+    margin-top: 0;
+    color: #214773;
+}
+
+.news-content h4 {
+    margin-top: 0;
+    color: #2a5309;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 0.3rem;
+}
+
+.news-content a {
+    margin-top: 0.2rem;
+    color: var(--primarypop);
+    text-align: center;
+    margin-bottom: 0.95rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.news-content a:hover {
+    color: blue;
 }
 
 /* body.dark-mode {
 
 } */
+
+/* ********** STYLES FOR THE MISSION STATEMENT CONTAINER *************** */
+
+.mission-container {
+    max-width: 1100px;
+    /*maximum width for the item */
+    margin: 4rem auto;
+    /* Centering it with space above/below */
+    font-family: var(--myfont);
+}
+
+/* FOR THE IMAGE */
+.mission-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* THE CONTENT BOX */
+.mission-content {
+    background-color: var(--popcolor);
+    color: var(--primarypop);
+    padding: 1rem;
+}
+
+.mission-content h1 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+} 
+
+.mission-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* THE 'READ MORE' BUTTON */
+.cta-button {
+    display: inline-block;
+    background-color: #1a3b58;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2c4b58;
+}
+
 
 /* ***************** RESPONSIVE DESIGN *************** */
 /* 1. Mobile  or small screen adjustments */
@@ -209,11 +281,43 @@
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
+        margin-left: 0rem;
+    }
+
+    .news-content {
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 
 
 }
 
-
 /* 2. Large screen adjustments (e.g, tablet, laptop etc) */
-@media only screen and (min-width: 608px) {}
+@media only screen and (min-width: 608px) {
+
+    .mission-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /*a 12-column grid to position items precisely */
+        align-items: center;
+    }
+
+    .mission-image {
+        grid-column: 1 / 9;
+        /* Placeing the image from column 1 to 8 */
+        grid-row: 1 / 2;
+    }
+
+    .mission-content {
+        grid-column: 7 / 13;
+        /* Placing the content box from column 7 to 13 to create the overlap) */
+        grid-row: 1 / 2;
+        /* starting on the first row */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        /* Adding subtle shadow */
+        z-index: 1;
+        /*positioning the content is on top of the image */
+        padding: 1.5rem;
+    }
+
+}
