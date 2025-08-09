@@ -78,8 +78,8 @@ body.dark-mode .nav-links li.current a:hover {
     position: sticky;
     top: 0;
     z-index: 10;
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
     border: 2px solid var(--popcolor);
 }
 
