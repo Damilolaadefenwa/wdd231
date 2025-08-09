@@ -158,13 +158,14 @@
 .news-content h3 {
     font-size: 1.1rem;
     margin: 0 0 1rem 0;
-    font-weight: 600;
+    /* font-weight: 600; */
     color: var(--darktextcolor);
 }
 
 .news-content p {
     margin-top: 0;
     color: #214773;
+    font-size: 1rem;
 }
 
 .news-content h4 {
@@ -188,9 +189,30 @@
     color: blue;
 }
 
-/* body.dark-mode {
+body.dark-mode .news-card {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
 
-} */
+body.dark-mode .news-content h3 {
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode .news-content h4 {
+    color: var(--popcolor);
+}
+
+body.dark-mode .news-content p {
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode .news-content a {
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode .news-content a:hover {
+    color: var(--popcolor);
+}
 
 /* ********** STYLES FOR THE MISSION STATEMENT CONTAINER *************** */
 
@@ -219,7 +241,7 @@
 .mission-content h1 {
     font-size: 1.2rem;
     margin: 0 0 0.5rem 0;
-} 
+}
 
 .mission-content p {
     font-size: 1rem;
@@ -241,6 +263,127 @@
 
 .cta-button:hover {
     background-color: #2c4b58;
+}
+
+body.dark-mode .mission-content {
+    background-color: var(--dark-mode-card-bg);
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode .cta-button:hover {
+    color: var(--popcolor);
+}
+
+/****************** COMPANY SPOTLIGHT SECTION ****************/
+.company-spotlight {
+    text-align: center;
+}
+
+.company-spotlight h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.company-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--greybackground);
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--popcolor);
+}
+
+.company-card img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 1rem;
+    border-radius: 8px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.company-card h3 {
+    font-size: 1.4rem;
+    color: var(--darktextcolor);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.company-card p {
+    font-size: 0.95rem;
+    color: var(--darktextcolor);
+    margin: 0.3rem 0;
+}
+
+.company-card .contact-info {
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.company-card .contact-info strong {
+    color: blue;
+}
+
+.company-card a {
+    color: var(--primarypop);
+    font-weight: bold;
+    margin-top: 0.8rem;
+    display: block;
+    word-break: break-all;
+}
+
+.company-card a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.company-card .membership-level {
+    font-size: 1rem;
+    color: #2a5309;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #0d0d12;
+}
+
+body.dark-mode .company-card {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
+body.dark-mode .company-card h3 {
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode .company-card p {
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode .company-card a {
+    color: var(--popcolor);
+}
+
+body.dark-mode .company-card .membership-level {
+    border-top: 1px solid var(--dark-mode-border);
+}
+
+body.dark-mode .company-card .contact-info strong {
+    color: var(--popcolor);
 }
 
 
@@ -278,11 +421,20 @@
         font-size: 1.3rem;
     }
 
+    .news-section {
+        margin-left: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
     .news-cards {
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
-        margin-left: 0rem;
+    }
+
+    .news-card img {
+        width: auto;
     }
 
     .news-content {
@@ -290,6 +442,43 @@
         flex-direction: column;
     }
 
+    .company-spotlight {
+        padding: 1.5rem;
+    }
+
+    .company-spotlight h2 {
+        font-size: 1.8rem;
+    }
+
+    .spotlight-grid {
+        grid-template-columns: 1fr;
+        overflow-x: hidden;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .company-card {
+        padding: 15px;
+        display: grid;
+    }
+
+    .company-card img {
+        width: 80%;
+        height: auto;
+    }
+
+    .company-card p{
+        font-size: 1rem;
+    }
+
+    .company-card .contact-info {
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    .company-card a {
+        margin-bottom: 0;
+    }
 
 }
 

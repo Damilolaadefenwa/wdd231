@@ -600,15 +600,16 @@ body.dark-mode .company-card .contact-info strong {
         /* Stack on small screens */
         overflow-x: hidden;
         text-align: center;
+        gap: 1.5rem;
     }
 
     .company-card {
         padding: 15px;
-        height: 70%;
+        display: grid;
     }
 
     .company-card img {
-        width: 70%;
+        width: 80%;
         height: auto;
     }
 

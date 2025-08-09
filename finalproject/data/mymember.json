@@ -47,7 +47,7 @@
         "phone": "+234 801 234 5670",
         "website": "https://www.harmonyspaibadan.com",
         "image": "../images/harmonySpa.webp",
-        "membershipLevel": "Gold",
+        "membershipLevel": "Platinum",
         "tagline": "Find your balance in harmony.",
         "booking": "Booking via WhatsApp: https://wa.me/2348012345670"
     },
@@ -67,7 +67,7 @@
         "phone": "+234 804 321 6789",
         "website": "https://www.oasiswellness.com",
         "image": "../images/oasisWellnessSpa.webp",
-        "membershipLevel": "Platinum",
+        "membershipLevel": "Bronze",
         "tagline": "Refresh your body, renew your mind.",
         "booking": "Booking via WhatsApp: https://wa.me/2348043216789"
     },
@@ -87,7 +87,7 @@
         "phone": "+234 808 222 4455",
         "website": "https://www.pureglowspa.com",
         "image": "../images/pureGlowSkincareAndSpa.webp",
-        "membershipLevel": "Silver",
+        "membershipLevel": "Bronze",
         "tagline": "Glow from within, shine outside.",
         "booking": "Booking via WhatsApp: https://wa.me/2348082224455"
     },
@@ -107,7 +107,7 @@
         "phone": "+234 810 555 1212",
         "website": "https://www.elitefitnessarena.com",
         "image": "../images/eliteFitnessArena.webp",
-        "membershipLevel": "Platinum",
+        "membershipLevel": "Silver",
         "tagline": "Train like a champion.",
         "booking": "Booking via WhatsApp: https://wa.me/2348105551212"
 
@@ -128,7 +128,7 @@
         "phone": "+234 809 333 7766",
         "website": "https://www.activelifeibadan.com",
         "image": "../images/activeLifeSportsCenter.webp",
-        "membershipLevel": "Silver",
+        "membershipLevel": "Platinum",
         "tagline": "Stay active, stay alive.",
         "booking": "Booking via WhatsApp: https://wa.me/2348093337766"
     },
@@ -148,7 +148,7 @@
         "phone": "+234 805 678 9090",
         "website": "https://www.glowflowyoga.com",
         "image": "../images/glowAndFlowYogaStudio.webp",
-        "membershipLevel": "Gold",
+        "membershipLevel": "Platinum",
         "tagline": "Breathe, stretch, and glow.",
         "booking": "Booking via WhatsApp: https://wa.me/2348056789090"
     }
