@@ -22,7 +22,7 @@
     <!-- Style Sheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/">
+    <link rel="stylesheet" href="styles/join.css">
 
     <!-- Scripts -->
     <script src="scripts/main.js" defer></script>
@@ -78,9 +78,87 @@
         </div>
     </section>
 
-    <!-- Main container for Business Headline News -->
+    <!-- Main container Membership level Benefits -->
     <main>
+        <section class="join-hero">
+            <h1>Join Our Chamber Of Commerce</h1>
+        </section>
 
+        <div class="join-container">
+            <form method="get" action="thankyou.html">
+
+                <label>First Name*
+                    <input type="text" name="fname" required title="Applicant's First Name" autocomplete="given-name">
+                </label>
+
+                <label>Last Name*
+                    <input type="text" name="lname" required title="Applicant's Last Name" autocomplete="family-name">
+                </label>
+
+                <label>Organizational Title
+                    <input type="text" name="org_title" title="Applicant's Title" autocomplete="organization-title"
+                        pattern="[a-zA-Z\s-]{7,}">
+                </label>
+
+                <label>Email*
+                    <input type="email" name="email" required title="Applicant's Email" autocomplete="email"
+                        placeholder="example@domain.com">
+                </label>
+
+                <label>Mobile Phone*
+                    <input type="tel" name="phone" required title="Applicant's Mobile Phone" autocomplete="tel">
+                </label>
+
+                <label>Business/Organization's Name*
+                    <input type="text" name="business_name" required title="Business or Organization Name"
+                        autocomplete="organization">
+                </label>
+
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <label><input type="radio" name="membership_level" value="np"> NP Membership (Non-Profit)</label>
+                    <label><input type="radio" name="membership_level" value="bronze"> Bronze Membership</label>
+                    <label><input type="radio" name="membership_level" value="silver"> Silver Membership</label>
+                    <label><input type="radio" name="membership_level" value="gold"> Gold Membership</label>
+                </fieldset>
+
+                <label>Business/Organization Description
+                    <textarea name="description" title="Business or Organization Description" rows="6"
+                        cols="52"></textarea>
+                </label>
+
+                <!-- Hidden field for the timestamp -->
+                <input type="hidden" id="formLoadTimestamp" name="timestamp">
+
+                <!-- The sending part -->
+                <input type="submit" value="Join the Chamber" aria-label="Join the Chamber">
+            </form>
+
+            <section class="membership-cards">
+                <h2>Membership Levels</h2>
+                <div class="card" id="card-np">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations.</p>
+                    <button class="modal-link" data-modal="modal-np" aria-label="membership-info">More Info</button>
+                </div>
+                <div class="card" id="card-bronze">
+                    <h3>Bronze Membership</h3>
+                    <p>Ideal for small businesses starting out.</p>
+                    <!-- <a href="#" class="modal-link" data-modal="modal-bronze">More Info</a> -->
+                    <button class="modal-link" data-modal="modal-bronze" aria-label="membership-info">More Info</button>
+                </div>
+                <div class="card" id="card-silver">
+                    <h3>Silver Membership</h3>
+                    <p>Enhanced visibility and networking.</p>
+                    <button class="modal-link" data-modal="modal-silver" aria-label="membership-info">More Info</button>
+                </div>
+                <div class="card" id="card-gold">
+                    <h3>Gold Membership</h3>
+                    <p>Premium benefits and maximum exposure.</p>
+                    <button class="modal-link" data-modal="modal-gold" aria-label="membership-info">More Info</button>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -108,6 +186,29 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODALS: Added before the <script> tag -->
+    <dialog id="modal-np" class="modal">
+        <button class="close-button">❌</button>
+        <h2>NP Membership Benefits</h2>
+        <div class="modal-content"></div>
+    </dialog>
+    <dialog id="modal-bronze" class="modal">
+        <button class="close-button">❌</button>
+        <h2>Bronze Membership Benefits</h2>
+        <div class="modal-content"></div>
+    </dialog>
+    <dialog id="modal-silver" class="modal">
+        <button class="close-button">❌</button>
+        <h2>Silver Membership Benefits</h2>
+        <div class="modal-content"></div>
+    </dialog>
+    <dialog id="modal-gold" class="modal">
+        <button class="close-button">❌</button>
+        <h2>Gold Membership Benefits</h2>
+        <div class="modal-content"></div>
+    </dialog>
+
 </body>
 
 </html>

@@ -1,0 +1,369 @@
+/* Join Page Section */
+/* Author: Damilola Adefenwa/
+/* Date: 2025-08-10 */
+
+:root {
+
+    /* FONT STYLE & WEIGHT */
+    --myfont: "Lato", sans-serif;
+    /* Font-weight List: thin-100, light-300, regular-400
+    bold-700, black-900, Font-style:normal and italic  */
+    --primarycolor: #f2f2f2;
+    --primarypop: #253c57;
+    --darktextcolor: #0d0d12;
+    --lighttextcolor: #ffffff;
+    --accentcolor: #Bee1e5;
+    --popcolor: #fcff42;
+
+    /* Dark Mode Colors */
+    --dark-mode-background: #2c3e50;
+    --dark-mode-text: #ecf0f1;
+    --dark-mode-card-bg: #34495e;
+    --dark-mode-border: #4a627d;
+    --dark-mode-footer: #1a252f;
+    --dark-mode-header: #9db5cb;
+
+}
+.join-hero {
+    background-color: var(--greybackground);
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+body.dark-mode .join-hero {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
+.join-hero h1 {
+    color: var(--darktextcolor);
+    font-size: 2rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+body.dark-mode .join-hero h1 {
+    color: var(--dark-mode-text);
+}
+
+.join-hero p {
+    font-size: 1.4rem;
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .join-hero p {
+    color: var(--dark-mode-text);
+}
+
+/* ***************** STYLING FOR THE FORM & MEMBERSHIP CARD *************** */
+
+/* 1. Layout Container */
+/* Mobile Approach First */
+.join-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Default to single column for smaller screen*/
+    gap: 2rem;
+}
+
+/* 2. Styling for the Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    /* Adds space between form fields */
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+    /* Centers the form */
+    background: white;
+    border-radius: 10px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 24px rgba(41, 61, 79, 0.6);
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-weight: bold;
+    color: var(--primarycolor);
+}
+
+fieldset {
+    border: 2px solid rgb(43, 65, 107);
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+    /* Adds some space above and below */
+}
+
+fieldset legend {
+    font-weight: bold;
+    padding: 0.5rem;
+    /* Giving the legend text some breathing room*/
+    color: var(--primarycolor);
+}
+
+/* Targeting the radio button labels inside the 
+fieldset to align them nicely */
+fieldset label {
+    display: block;
+    /* each radio button appear on its own line */
+    margin-bottom: .5rem;
+    /* d space between the radio buttons */
+    font-weight: normal;
+    /* Overrides the bold label style earlier set */
+    color: var(--primarypop);
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 90%;
+    padding: 10px 12px;
+    border: 1.5px solid #daccc2;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    background: #f8f8f8;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: rgba(4, 108, 177, 0.947);
+    outline: none;
+}
+
+form button,
+input[type="submit"] {
+    width: auto;
+    display: block;
+    margin: 18px auto 0 auto;
+    padding: 12px 32px;
+    background: var(--popcolor);
+    color: var(--darktextcolor);
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+
+}
+
+form button:hover,
+input[type="submit"]:hover {
+    background-color: var(--primarypop);
+    color: white;
+}
+
+input:required {
+    border-bottom: solid 3px red;
+}
+
+input:required:valid {
+    border-bottom: solid 3px green;
+}
+
+body.dark-mode form {
+    background-color: var(--dark-mode-text);
+    border: 1px solid var(--dark-mode-border);
+}
+
+body.dark-mode input[type="submit"] {
+    background-color: var(--dark-mode-text);
+    color: var(--darktextcolor);
+}
+
+body.dark-mode input[type="submit"]:hover {
+    background-color: var(--accentcolor);
+    color: var(--darktextcolor);
+}
+
+/* 3. Membership Cards Styling */
+.membership-cards {
+    border-left: 1px solid #ccc;
+    padding-left: 2rem;
+}
+
+.membership-cards h2 {
+    color: var(--primarycolor);
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #daccc2;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 24px rgba(41, 61, 79, 0.6);
+    /* Animation setup */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+    text-align: center;
+    /* border-radius: 20px; */
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-left: solid 5px #005e8a;
+    border-right: solid 5px #ff977a;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Slightly lift the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Stagger the Animation for each card */
+.card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--primarycolor);
+}
+
+.card button {
+    background: var(--popcolor);
+    color: var(--darktextcolor);
+    padding: 12px 25px;
+    /* border: none; */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    transition: transform 1.5s ease;
+}
+
+.card button:hover {
+    background-color: var(--accentcolor);
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .card {
+    background-color: var(--dark-mode-text);
+    border: 1px solid var(--dark-mode-border);
+}
+
+body.dark-mode .card h3 {
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .card p {
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .card button {
+    background-color: var(--dark-mode-text);
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .card button:hover {
+    background-color: var(--accentcolor);
+    color: var(--darktextcolor);
+}
+
+/* 4. Modal Styling */
+.modal {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+body.dark-mode .modal h2 {
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .modal::backdrop {
+    background-color: rgba(20, 19, 19, 0.9);
+}
+
+
+/* ***************** RESPONSIVE LAYOUT DESIGN *************** */
+/* 1. Mobile  or small screen adjustments */
+@media (max-width: 606px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    form {
+        padding: 18px 6px;
+        max-width: 98vw;
+    }
+
+    .join-hero h1 {
+        font-size: 1.9rem;
+        line-height: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+}
+
+
+/* 2. Responsive Layout for Large screen adjustments (e.g, tablet, laptop etc) */
+@media only screen and (min-width: 38rem) {
+    .join-container {
+        /* Two equal-width columns */
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
