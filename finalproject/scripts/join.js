@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Load and display membership benefits from the provided JSON data
 
     const benefitsData = [
-        { "level": "Bronze", "benefits": ["Listing in the online directory", "Access to community newsletter"] },
-        { "level": "Silver", "cost": "XOF 53,910/year", "benefits": ["All NP benefits", "Discounted tickets to chamber events", "Business name listed at one event per year"] },
-        { "level": "Gold", "cost": "XOF 134,765/year", "benefits": ["All Bronze benefits", "Spotlight feature on the chamber website once per year", "Opportunity to host one 'Business After Hours' event"] },
-        { "level": "Platinum", "cost": "OXF 269,530/year", "benefits": ["All Silver benefits", "Banner ad on the chamber homepage", "Keynote speaking opportunity at one chamber luncheon", "Logo included in all email newsletters"] }
+        { "level": "Bronze", "cost": "₦5,000 per quarter", "benefits": ["Standard listing in our online business directory.", "Invitation to general networking events"] },
+        { "level": "Silver", "cost": "₦12,500 per quarter", "benefits": ["All Bronze benefits", "Promotion on our social media channels", "Inclusion in one quarterly feature on our blog."] },
+        { "level": "Gold", "cost": "₦25,000 per quarter", "benefits": ["All Silver benefits", "Invitations to exclusive member workshops and seminars.", "Priority support from our member services team"] },
+        { "level": "Platinum", "cost": "₦50,000 per quarter", "benefits": ["All Gold benefits", "Dedicated marketing and social media campaigns from our team.", "Exclusive invitations to high-profile networking events and workshops.", "One-on-one business consultation sessions with our experts."] }
     ];
 
     benefitsData.forEach(item => {
