@@ -124,7 +124,7 @@ if (!lastVisit) {
     // First visit ever
     visitMessage.textContent = "Welcome! Let us know if you have any questions.";
 } else {
-    // Calculate the difference in milliseconds, then convert to days
+    // Calculating the difference in milliseconds, then convert to days
     const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
 
     if (daysSinceLastVisit < 1) {
