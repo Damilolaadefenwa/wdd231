@@ -1,0 +1,98 @@
+:root {
+
+    /* FONT STYLE & WEIGHT */
+    --myfont: "Lato", sans-serif;
+    /* Font-weight List: thin-100, light-300, regular-400
+    bold-700, black-900, Font-style:normal and italic  */
+    --primarycolor: #f2f2f2;
+    --primarypop: #253c57;
+    --darktextcolor: #0d0d12;
+    --lighttextcolor: #ffffff;
+    --accentcolor: #Bee1e5;
+    --popcolor: #fcff42;
+
+    /* Dark Mode Colors */
+    --dark-mode-background: #2c3e50;
+    --dark-mode-text: #ecf0f1;
+    --dark-mode-card-bg: #34495e;
+    --dark-mode-border: #4a627d;
+    --dark-mode-footer: #1a252f;
+    --dark-mode-header: #9db5cb;
+
+}
+
+/* Simple styling for the thank you page data */
+h1{
+    font-size: 2rem;
+}
+
+.summary {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.summary p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+body.dark-mode .summary p {
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .summary h2 {
+    color: var(--darktextcolor);
+}
+
+.return a {
+    display: inline-block;
+    padding: 0.7em 1.5em;
+    background-color: var(--popcolor);
+    color: var(--darktextcolor);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.2s;
+    /* margin-top: 2rem; */
+}
+
+.return a:hover {
+    background-color: var(--accentcolor);
+}
+
+body.dark-mode .return a {
+    background-color: var(--lighttextcolor);
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .return a:hover {
+    background-color: var(--accentcolor);
+    color: var(--darktextcolor);
+}
+
+
+/* ***************** RESPONSIVE DESIGN *************** */
+@media (max-width: 606px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    h1{
+        font-size: 1.9rem;
+    }
+
+    p,
+    .summary p {
+        word-break: break-all;
+        display: block;
+        /* display: inline-block; */
+        line-height: 2rem;
+    }
+
+    
+}

@@ -24,8 +24,9 @@
     --dark-mode-header: #9db5cb;
 
 }
+
 .join-hero {
-    background-color: var(--greybackground);
+    background-color: var(--lighttextcolor);
     padding: 2rem;
     text-align: center;
     margin-bottom: 1rem;
@@ -39,8 +40,8 @@ body.dark-mode .join-hero {
 
 .join-hero h1 {
     color: var(--darktextcolor);
-    font-size: 2rem;
-    line-height: 1.5rem;
+    font-size: 1.85rem;
+    line-height: 2.2rem;
     margin-bottom: 0.5rem;
     animation: pulse 2s infinite ease-in-out;
 }
@@ -83,14 +84,14 @@ body.dark-mode .join-hero p {
 
 /* 2. Styling for the Form */
 form {
+    order: 2;
+    /* to push the form to the bottom */
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
-    /* Adds space between form fields */
     max-width: 700px;
     width: 90%;
     margin: 0 auto;
-    /* Centers the form */
     background: white;
     border-radius: 10px;
     padding: 32px 24px;
@@ -102,7 +103,7 @@ label {
     flex-direction: column;
     gap: 1.2rem;
     font-weight: bold;
-    color: var(--primarycolor);
+    color: var(--primarypop);
 }
 
 fieldset {
@@ -117,7 +118,7 @@ fieldset legend {
     font-weight: bold;
     padding: 0.5rem;
     /* Giving the legend text some breathing room*/
-    color: var(--primarycolor);
+    color: var(--primarypop);
 }
 
 /* Targeting the radio button labels inside the 
@@ -159,7 +160,7 @@ input[type="submit"] {
     display: block;
     margin: 18px auto 0 auto;
     padding: 12px 32px;
-    background: var(--popcolor);
+    background: var(--accentcolor);
     color: var(--darktextcolor);
     border: 1px solid #aaa;
     border-radius: 4px;
@@ -195,18 +196,24 @@ body.dark-mode input[type="submit"] {
 }
 
 body.dark-mode input[type="submit"]:hover {
-    background-color: var(--accentcolor);
+    background-color: var(--popcolor);
     color: var(--darktextcolor);
 }
 
-/* 3. Membership Cards Styling */
+/* 3. Revised Membership Cards Styling */
 .membership-cards {
-    border-left: 1px solid #ccc;
-    padding-left: 2rem;
+    order: 1;
+    /* to pull the cards to the top */
+    border-left: none;
+    padding-left: 0;
 }
 
 .membership-cards h2 {
-    color: var(--primarycolor);
+    text-align: center;
+    /* Center the 'Membership Levels' title */
+    color: var(--primarypop);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
 }
 
 .card {
@@ -215,16 +222,14 @@ body.dark-mode input[type="submit"]:hover {
     padding: 1.5rem;
     margin-bottom: 1rem;
     box-shadow: 0 4px 24px rgba(41, 61, 79, 0.6);
-    /* Animation setup */
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease-out forwards;
     text-align: center;
-    /* border-radius: 20px; */
     border-bottom-left-radius: 25px;
     border-top-right-radius: 25px;
     border-left: solid 5px #005e8a;
     border-right: solid 5px #ff977a;
+    /* No animation needed initially on mobile */
+    opacity: 1;
+    transform: none;
 }
 
 .card:hover {
@@ -233,37 +238,13 @@ body.dark-mode input[type="submit"]:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Stagger the Animation for each card */
-.card:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-.card:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-.card:nth-child(4) {
-    animation-delay: 0.3s;
-}
-
-.card:nth-child(5) {
-    animation-delay: 0.4s;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .card h3 {
     margin-top: 0;
-    color: var(--primarycolor);
+    color: var(--primarypop);
 }
 
 .card button {
-    background: var(--popcolor);
+    background: var(--accentcolor);
     color: var(--darktextcolor);
     padding: 12px 25px;
     /* border: none; */
@@ -276,7 +257,7 @@ body.dark-mode input[type="submit"]:hover {
 }
 
 .card button:hover {
-    background-color: var(--accentcolor);
+    background-color: var(--primarycolor);
     color: var(--darktextcolor);
 }
 
@@ -335,7 +316,7 @@ body.dark-mode .modal::backdrop {
     background-color: rgba(20, 19, 19, 0.9);
 }
 
-
+/* --- REVISED MEDIA QUERIES FOR RESPONSIVE LAYOUT --- */
 /* ***************** RESPONSIVE LAYOUT DESIGN *************** */
 /* 1. Mobile  or small screen adjustments */
 @media (max-width: 606px) {
@@ -348,6 +329,7 @@ body.dark-mode .modal::backdrop {
     form {
         padding: 18px 6px;
         max-width: 98vw;
+
     }
 
     .join-hero h1 {
@@ -358,12 +340,38 @@ body.dark-mode .modal::backdrop {
 
 }
 
+/* 2. Responsive Layout for Large screen adjustments (e.g, large mobile, tablet, etc) */
+@media only screen and (min-width: 608px) {
+    
+    .membership-cards {
+        /* Change to 4 horizontal columns on very wide screens */
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: .5rem
+    }
 
-/* 2. Responsive Layout for Large screen adjustments (e.g, tablet, laptop etc) */
-@media only screen and (min-width: 38rem) {
-    .join-container {
-        /* Two equal-width columns */
-        grid-template-columns: 1fr 1fr;
+    /* Stagger the Animation for each card */
+    .card:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .card:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    .card:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+
+    .card:nth-child(5) {
+        animation-delay: 0.4s;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
 }

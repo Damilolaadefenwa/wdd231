@@ -47,14 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Load and display membership benefits from the provided JSON data
 
     const benefitsData = [
-        { "level": "NP", "benefits": ["Listing in the online directory", "Access to community newsletter"] },
-        { "level": "Bronze", "cost": "XOF 53,910/year", "benefits": ["All NP benefits", "Discounted tickets to chamber events", "Business name listed at one event per year"] },
-        { "level": "Silver", "cost": "XOF 134,765/year", "benefits": ["All Bronze benefits", "Spotlight feature on the chamber website once per year", "Opportunity to host one 'Business After Hours' event"] },
-        { "level": "Gold", "cost": "OXF 269,530/year", "benefits": ["All Silver benefits", "Banner ad on the chamber homepage", "Keynote speaking opportunity at one chamber luncheon", "Logo included in all email newsletters"] }
+        { "level": "Bronze", "benefits": ["Listing in the online directory", "Access to community newsletter"] },
+        { "level": "Silver", "cost": "XOF 53,910/year", "benefits": ["All NP benefits", "Discounted tickets to chamber events", "Business name listed at one event per year"] },
+        { "level": "Gold", "cost": "XOF 134,765/year", "benefits": ["All Bronze benefits", "Spotlight feature on the chamber website once per year", "Opportunity to host one 'Business After Hours' event"] },
+        { "level": "Platinum", "cost": "OXF 269,530/year", "benefits": ["All Silver benefits", "Banner ad on the chamber homepage", "Keynote speaking opportunity at one chamber luncheon", "Logo included in all email newsletters"] }
     ];
 
     benefitsData.forEach(item => {
-        // Construct modal ID from level, e.g., 'NP' becomes 'modal-np'
+        // Construct modal ID from level, e.g., 'Bronze' becomes 'modal-bronze'
         const modalId = `modal-${item.level.toLowerCase()}`;
         const modal = document.getElementById(modalId);
         if (modal) {
