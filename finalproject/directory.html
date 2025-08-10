@@ -22,11 +22,11 @@
     <!-- Style Sheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/">
+    <link rel="stylesheet" href="styles/directory.css">
 
     <!-- Scripts -->
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/" defer></script>
+    <script src="scripts/directory.js" defer></script>
 
     <!-- Favicon -->
     <link rel="icon" href="ibwFavicon.ico">
@@ -78,10 +78,37 @@
         </div>
     </section>
 
-    <!-- Main container for Business Headline News -->
-    <main>
+    <!-- Container for Last Visit Message -->
+    <div class="visitor-message-container">
+        <h4 id="visit-message" class="my-message"></h4>
+        <p>
+            <span class="message-icon">&#128578;</span>
+            IBW is buzzing with new businesses and exciting offers from our them!<br>
+            Explore the latest additions to our directory and discover new ways to prioritize your health and well-being
+            today!
+            <span class="message-icon">&#128578;</span>
+        </p>
+    </div>
 
+    <!-- Main container for Member Directory -->
+    <main class="directory-main">
+        <section class="directory-hero">
+            <h1>Browse our comprehensive directory</h1>
+            <p>Connect with professionals and expert in local gyms, spas, fitness centers, and more! for your wellness
+                needs.</p>
+        </section>
 
+        <section class="member-controls">
+            <div class="view-toggle">
+                <button id="grid-view-btn" class="active" type="button" aria-label="Show members as grid">Grid
+                    View</button>
+                <button id="list-view-btn" type="button" aria-label="Show members as list">List View</button>
+            </div>
+        </section>
+
+        <section id="member-display" class="member-grid">
+            <p class="loading-message">Loading business directory...</p>
+        </section>
     </main>
 
     <footer>

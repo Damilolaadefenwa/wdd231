@@ -117,7 +117,7 @@
         "address": "11 UI Road, Ibadan",
         "phone": "+234 807 654 3210",
         "website": "https://www.tranquiltouchspa.com",
-        "imageUrl": "../images/tranquilTouchSpa.webp",
+        "image": "../images/tranquilTouchSpa.webp",
         "membershipLevel": "Gold",
         "tagline": "Healing hands, soothing experience.",
         "booking": "Booking via WhatsApp: https://wa.me/2348076543210"

@@ -1,0 +1,426 @@
+/* Directory Page Section */
+/* Author: Damilola Adefenwa/
+/* Date: 2025-08-09*/
+
+:root {
+
+    /* FONT STYLE & WEIGHT */
+    --myfont: "Lato", sans-serif;
+    /* Font-weight List: thin-100, light-300, regular-400
+    bold-700, black-900, Font-style:normal and italic  */
+    --primarycolor: #f2f2f2;
+    --primarypop: #253c57;
+    --darktextcolor: #0d0d12;
+    --lighttextcolor: #ffffff;
+    --accentcolor: #Bee1e5;
+    --popcolor: #fcff42;
+
+    /* Dark Mode Colors */
+    --dark-mode-background: #2c3e50;
+    --dark-mode-text: #ecf0f1;
+    --dark-mode-card-bg: #34495e;
+    --dark-mode-border: #4a627d;
+    --dark-mode-footer: #1a252f;
+    --dark-mode-header: #9db5cb;
+
+}
+
+/* ********** STYLING FOR VISITOR SECTION ************ */
+
+.visitor-message-container {
+    background-color: var(--accentcolor);
+    color: var(--darktextcolor);
+    padding: 1rem 1.5rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    border: 2px solid #022c58;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .visitor-message-container {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
+.visitor-message-container p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.visitor-message-container h4 {
+    margin: 0;
+    color: #234507;
+    ;
+    font-size: 1.2rem;
+}
+
+body.dark-mode .visitor-message-container p {
+    color: var(--dark-mode-text);
+}
+
+.visitor-message-container .message-icon {
+    font-size: 1.5rem;
+    /* Larger icon */
+    margin-right: 10px;
+    line-height: 1.4;
+}
+
+/* ***************** THE MAIN DIRECTORY DISPLAY *************** */
+.directory-hero {
+    background-color: var(--greybackground);
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+body.dark-mode .directory-hero {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
+.directory-hero h1 {
+    margin: 0;
+    color: var(--darktextcolor);
+    font-size: 2.4rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .directory-hero h1 {
+    color: var(--dark-mode-text);
+}
+
+.directory-hero p {
+    font-size: 1.4rem;
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .directory-hero p {
+    color: var(--dark-mode-text);
+}
+
+/* --- Adding Animation for directory-hero heading and paragraph --- */
+.directory-hero h1,
+.directory-hero p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s ease forwards;
+    transition: color 0.4s;
+}
+
+.directory-hero p {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtle color change on hover */
+.directory-hero h1:hover,
+.directory-hero p:hover {
+    color: var(--popcolor);
+}
+
+/* ********* MEMBER CONTROLS- VIEW TOOGLE BUTTONS********** */
+
+.member-controls {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+.view-toggle button {
+    background-color: var(--primarypop);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-toggle button:hover {
+    background-color: var(--accentcolor);
+    color: var(--primarypop);
+    transform: translateY(-2px);
+}
+
+.view-toggle button.active {
+    background-color: var(--popcolor);
+    color: var(--darktextcolor);
+    font-weight: bold;
+}
+
+body.dark-mode .view-toggle button {
+    background-color: var(--accentcolor);
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .view-toggle button.active {
+    background-color: var(--popcolor);
+    color: var(--darktextcolor);
+}
+
+/*************** MEMBERS DISPLAY AREAS *********************/
+#member-display {
+    display: grid;
+    gap: 20px;
+    margin-top: 1rem;
+}
+
+/************** GRID VIEW SPECIFICS **************/
+.member-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+    /* Center items if not enough to fill a row */
+}
+
+.member-card {
+    border: 2px solid var(--popcolor);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Pushes content apart, aligning footer to bottom */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #ffffff;
+}
+
+body.dark-mode .member-card {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+    max-width: 220px;
+    /* Size for business logos */
+    width: 100%;
+    height: auto;
+    margin: 0 auto 1rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.member-card h3 {
+    color: var(--darktextcolor);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .member-card h3 {
+    color: var(--dark-mode-text);
+}
+
+.member-card p {
+    font-size: 0.97rem;
+    color: var(--primarypop);
+    margin: 0.3rem 0;
+}
+
+body.dark-mode .member-card p {
+    color: var(--dark-mode-text);
+}
+
+.member-card a {
+    color: blue;
+    font-weight: bold;
+    margin-top: 1rem;
+    /* Space above URL */
+    display: block;
+    /* Make link a block for easier styling */
+    margin-bottom: 1rem;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+    color: #234507;
+}
+
+.membership-level {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--primarypop);
+}
+
+body.dark-mode .membership-level {
+    border-top: 1px solid var(--dark-mode-border);
+}
+
+body.dark-mode .member-card a {
+    color: var(--popcolor);
+}
+
+body.dark-mode .member-card a:hover {
+    color: var(--primarycolor);
+}
+
+/**************** LIST VIEW SPECIFICS ******************/
+.member-list {
+    display: block;
+    /* Overrides grid display */
+}
+
+.member-list .member-card {
+    display: flex;
+    /* Arrange content in a row */
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    margin-bottom: 15px;
+    /* Space between list items */
+    box-shadow: none;
+    /* No shadow for list items */
+    transition: background-color 0.2s ease;
+}
+
+body.dark-mode .member-list .member-card {
+    background-color: var(--dark-mode-card-bg);
+    /* Use card background for list items too */
+}
+
+.member-list .member-card:hover {
+    background-color: var(--accentcolor);
+    /* Light hover for list */
+    transform: none;
+    box-shadow: none;
+}
+
+body.dark-mode .member-list .member-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Dark mode hover */
+}
+
+.member-list .member-card img {
+    max-width: 220px;
+    /* Smaller image for list view */
+    width: 100%;
+    height: auto;
+    margin: 0 1.5rem 0 0;
+    /* Space to the right of image */
+    flex-shrink: 0;
+    /* Prevent image from shrinking */
+}
+
+.member-list .member-card .card-content {
+    flex-grow: 1;
+    /* Allow content to take remaining space */
+}
+
+.member-list .member-card h3 {
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.member-list .member-card p {
+    margin: 0.1rem 0;
+}
+
+.member-list .member-card .membership-level {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    margin-left: auto;
+    /* Push membership level to the far right */
+    font-size: 0.9rem;
+    white-space: nowrap;
+    /* Prevent wrapping */
+}
+
+/* ******** LOADING MESSAGE STYLING **************** */
+.loading-message {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    grid-column: 1 / -1;
+    /* Span across all columns in grid */
+}
+
+/* ***************** MEDIA QUERIES FOR DIRECTORY PAGE *************** */
+/* 1. Mobile  or small screen adjustments */
+@media (max-width: 606px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    section h1 {
+        font-size: 1.9rem;
+    }
+
+    .visitor-message-container {
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .visitor-message-container p {
+        flex-direction: column;
+        /* Stack icon and text on very small screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .visitor-message-container .message-icon {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .visitor-message-container .read-more {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .directory-hero h1 {
+        font-size: 1.9rem;
+        line-height: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .member-card a {
+        word-break: break-all;
+        display: block;
+        /* display: inline-block; */
+    }
+
+    .member-list .member-card {
+        flex-direction: column;
+        /* Stack elements on very small screens */
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    .member-list .member-card img {
+        margin: 0 auto 0.8rem;
+    }
+
+    .member-list .member-card .membership-level {
+        margin-left: 0;
+        margin-top: 0.8rem;
+    }
+}
