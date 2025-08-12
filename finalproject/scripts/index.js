@@ -51,7 +51,7 @@ async function getHeadlineData() {
             throw Error(await currentResponse.text());
         }
     } catch (error) {
-        console.error('Error fetching weather data:', error);
+        console.error('Error fetching news data:', error);
     }
 }
 
