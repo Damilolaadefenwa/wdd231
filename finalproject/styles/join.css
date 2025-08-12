@@ -25,6 +25,10 @@
 
 }
 
+h1 {
+    font-size: 1.85rem;
+}
+
 .join-hero {
     background-color: var(--lighttextcolor);
     padding: 2rem;
