@@ -44,7 +44,6 @@ async function getHeadlineData() {
         const currentResponse = await fetch(getHeadlineUrl);
         if (currentResponse.ok) {
             const headlineData = await currentResponse.json();
-            // console.log(headlineData); //testing only
             displayHeadline(headlineData);
 
         } else {
@@ -57,8 +56,6 @@ async function getHeadlineData() {
 
 //4.Displaying result to the Headlines News Card.
 function displayHeadline(headlineData) {
-    console.log("welcome to my display");
-    // console.log(headlineData.results[0].image_url);
     headlineImage1.src = headlineData.results[0].image_url;
     headlineImage1.alt = headlineData.results[0].description;
     headlineTitle1.innerHTML = `<h3>${headlineData.results[0].title}</h3>`;
@@ -85,8 +82,6 @@ function displayHeadline(headlineData) {
 
 // B--- THE BUSINESS SPOTLIGHT SECTION --
 const data = allBusinesses;
-//Testing
-// console.log(data);
 
 // Function to shuffle an array
 function shuffleArray(array) {
@@ -110,10 +105,6 @@ function displaySpotlights(data) {
 
     // 3. Select up to 3 random Gold members
     const selectedCompanies = shuffledPlatinumMembers.slice(0, 3);
-
-    // --- DEBUGGING: Log selected companies to console ---
-    // console.log("Selected Platinum Members for Spotlight:", selectedCompanies);
-    // --- END DEBUGGING ---
 
     if (selectedCompanies.length === 0) {
         spotlightGrid.innerHTML = '<p>No Gold member spotlights available at this time.</p>';
