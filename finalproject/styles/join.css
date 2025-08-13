@@ -38,11 +38,6 @@ h1 {
     border: 2px solid #fcff42;
 }
 
-body.dark-mode .join-hero {
-    background-color: var(--dark-mode-card-bg);
-    border: 1px solid var(--dark-mode-border);
-}
-
 .join-hero h1 {
     font-size: 1.85rem;
     line-height: 2.2rem;
@@ -69,11 +64,6 @@ body.dark-mode .join-hero {
 
 .join-hero p {
     font-size: 1.4rem;
-}
-
-body.dark-mode .join-hero h1,
-body.dark-mode .join-hero p {
-    color: var(--dark-mode-text);
 }
 
 /* ***************** STYLING FOR THE FORM & MEMBERSHIP CARD *************** */
@@ -192,22 +182,6 @@ input:required:valid {
     border-bottom: solid 3px green;
 }
 
-body.dark-mode form {
-    background-color: var(--dark-mode-text);
-    border: 1px solid var(--dark-mode-border);
-}
-
-body.dark-mode input[type="submit"] {
-    background-color: var(--dark-mode-text);
-    color: var(--darktextcolor);
-}
-
-
-body.dark-mode input[type="submit"]:hover {
-    background-color: var(--popcolor);
-    color: var(--darktextcolor);
-}
-
 /* 3. Revised Membership Cards Styling */
 .membership-cards {
     order: 1;
@@ -251,8 +225,7 @@ body.dark-mode input[type="submit"]:hover {
     color: var(--primarypop);
 }
 
-.card button,
-body.dark-mode .card button {
+.card button {
     background: var(--accentcolor);
     color: var(--darktextcolor);
     padding: 12px 25px;
@@ -266,21 +239,8 @@ body.dark-mode .card button {
 }
 
 
-.card button:hover,
-body.dark-mode .card button:hover {
+.card button:hover{
     background-color: var(--primarycolor);
-    color: var(--darktextcolor);
-}
-
-
-body.dark-mode .card {
-    background-color: var(--dark-mode-text);
-    border: 1px solid var(--dark-mode-border);
-}
-
-body.dark-mode .card h3,
-body.dark-mode .card p,
-body.dark-mode .modal h2 {
     color: var(--darktextcolor);
 }
 
@@ -294,8 +254,7 @@ body.dark-mode .modal h2 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.modal::backdrop,
-body.dark-mode .modal::backdrop {
+.modal::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
 

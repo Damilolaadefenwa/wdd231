@@ -22,7 +22,7 @@
 }
 
 /* Simple styling for the thank you page data */
-h1{
+h1 {
     font-size: 2rem;
 }
 
@@ -39,12 +39,6 @@ h1{
     line-height: 1.6;
 }
 
-body.dark-mode .summary h2,
-body.dark-mode .summary p {
-    color: var(--darktextcolor);
-}
-
-
 .return a {
     display: inline-block;
     padding: 0.7em 1.5em;
@@ -56,14 +50,8 @@ body.dark-mode .summary p {
     transition: background 0.2s;
 }
 
-.return a:hover,
-body.dark-mode .return a:hover {
+.return a:hover {
     background-color: var(--accentcolor);
-    color: var(--darktextcolor);
-}
-
-body.dark-mode .return a {
-    background-color: var(--lighttextcolor);
     color: var(--darktextcolor);
 }
 
@@ -75,7 +63,7 @@ body.dark-mode .return a {
         overflow-x: hidden;
     }
 
-    h1{
+    h1 {
         font-size: 1.9rem;
     }
 
@@ -87,5 +75,5 @@ body.dark-mode .return a {
         line-height: 2rem;
     }
 
-    
+
 }

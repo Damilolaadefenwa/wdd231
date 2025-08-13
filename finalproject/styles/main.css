@@ -22,7 +22,114 @@
     --dark-mode-border: #4a627d;
     --dark-mode-footer: #1a252f;
     --dark-mode-header: #9db5cb;
+    --dark-mode-header1: #637d94;
 
+}
+
+/* =================================================================
+   ********************* DARK THEME STYLES *************************
+   ================================================================= 
+*/
+
+body.dark-mode {
+    background-color: var(--dark-mode-background);
+    color: var(--dark-mode-text);
+}
+
+/* General Elements */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode .summary p {
+    color: var(--dark-mode-text);
+}
+
+
+/* Header, Nav, and Footer */
+body.dark-mode #main-header,
+body.dark-mode footer {
+    background-color: var(--dark-mode-header1);
+}
+
+body.dark-mode .logo a,
+body.dark-mode .nav-links a {
+    color: var(--lighttextcolor);
+    /* Or another suitable dark mode link color */
+}
+
+body.dark-mode .modal h2,
+body.dark-mode .member-list .member-card h3,
+body.dark-mode .logo a:hover,
+body.dark-mode .nav-links a:hover,
+body.dark-mode .nav-links li.current a:hover {
+    background-color: var(--dark-mode-text);
+    color: var(--darktextcolor);
+}
+
+body.dark-mode footer a {
+    color: var(--popcolor);
+}
+
+/* Cards and Containers */
+body.dark-mode .news-card,
+body.dark-mode .mission-content,
+body.dark-mode .company-card,
+body.dark-mode .member-card,
+body.dark-mode .member-list .member-card,
+body.dark-mode .visitor-message-container,
+body.dark-mode .directory-hero,
+body.dark-mode .join-hero,
+body.dark-mode .card,
+/* From Join page */
+body.dark-mode .summary {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
+/* Text and Links inside components */
+body.dark-mode .news-content a,
+body.dark-mode .company-card a,
+body.dark-mode .member-card a,
+body.dark-mode .company-card .contact-info strong {
+    color: var(--popcolor);
+}
+
+body.dark-mode .news-content a:hover,
+body.dark-mode .member-card a:hover,
+body.dark-mode .return a:hover {
+    color: var(--primarycolor);
+}
+
+body.dark-mode .news-content h4,
+body.dark-mode .company-card .membership-level,
+body.dark-mode .cta-button:hover {
+    color: var(--popcolor);
+}
+
+/* Form and Buttons */
+body.dark-mode .view-toggle button {
+    background-color: var(--accentcolor);
+    color: var(--darktextcolor);
+}
+
+body.dark-mode .view-toggle button.active {
+    background-color: var(--popcolor);
+}
+
+body.dark-mode input[type="submit"] {
+    background-color: var(--dark-mode-text);
+    color: var(--darktextcolor);
+}
+
+body.dark-mode input[type="submit"]:hover {
+    background-color: var(--popcolor);
+}
+
+body.dark-mode .return a {
+    background-color: var(--lighttextcolor);
+    color: var(--darktextcolor);
 }
 
 /************* BASICS STYLES ************/
@@ -34,42 +141,8 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* ***************** DARK THEME STYLES *************** */
-body.dark-mode {
-    background-color: var(--dark-mode-background);
-    color: var(--dark-mode-text);
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6 {
-    color: var(--dark-mode-text);
-}
-
-body.dark-mode .header {
-    background-color: var(--dark-mode-header);
-}
-
-body.dark-mode .logo a {
-    color: var(--darktextcolor);
-    /* Keep accent color for links formally used light blue*/
-}
-
-body.dark-mode .logo a:hover,
-body.dark-mode .nav-links a:hover {
-    background-color: var(--dark-mode-text);
-}
-
-body.dark-mode .nav-links li.current a:hover {
-    color: var(--darktextcolor);
-}
-
-
 /* ***************** HEADER AND DARK MODE TOGGLE*************** */
-.header {
+#main-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,7 +155,7 @@ body.dark-mode .nav-links li.current a:hover {
 }
 
 /* Border styles to enhance header, footer and card. */
-.header,
+#main-header,
 .overlap-card,
 footer {
     border: 2px solid var(--popcolor);
@@ -212,7 +285,7 @@ nav {
 }
 
 /************* HERO SECTION STYLES ************/
-.hero {
+#page-hero {
     position: relative;
     width: 100%;
     /* height: 350px; */
@@ -310,7 +383,7 @@ footer {
     margin-top: 2rem;
 }
 
-.footer-content {
+#page-footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -381,20 +454,6 @@ footer a:hover {
     margin-top: 1rem;
 }
 
-/* ***************** DARK MODE FOOTER *************** */
-body.dark-mode footer {
-    background-color: var(--dark-mode-footer);
-}
-
-body.dark-mode footer p {
-    color: var(--dark-mode-text);
-}
-
-body.dark-mode footer a {
-    color: var(--popcolor);
-}
-
-
 /* ***************** RESPONSIVE DESIGN *************** */
 /* 1. Mobile  or small screen adjustments */
 @media (max-width: 606px) {
@@ -404,7 +463,7 @@ body.dark-mode footer a {
         overflow-x: hidden;
     }
 
-    .header {
+    #main-header {
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
@@ -506,7 +565,7 @@ body.dark-mode footer a {
         justify-content: flex-end;
     }
 
-    .hero {
+    #page-hero {
         min-height: 600px;
         height: 40vh;
     }
@@ -538,7 +597,7 @@ body.dark-mode footer a {
 /* 2. Large screen adjustments (e.g, tablet, laptop etc) */
 @media only screen and (min-width: 608px) {
 
-    .header {
+    #main-header {
         flex-wrap: nowrap;
         align-items: center;
     }
@@ -615,11 +674,7 @@ body.dark-mode footer a {
         padding: 4px 7px;
     }
 
-    body.dark-mode .nav-links a {
-        color: var(--dark-mode-footer);
-    }
-
-    .footer-content {
+    #page-footer {
         justify-content: space-between;
         line-height: 1.5rem;
     }

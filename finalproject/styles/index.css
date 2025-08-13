@@ -27,38 +27,20 @@
 
 /************* Combining Selectors and Rules ************/
 .news-content h3,
-.company-card h3,
-.company-card p {
+.company-card h3{
     color: var(--darktextcolor);
 }
 
+.cta-button:hover,
 .news-content a:hover,
 .company-card a:hover {
-    color: blue;
+    color: orange;
     text-decoration: underline;
 }
 
 .news-card,
 .company-card {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-}
-
-body.dark-mode .news-content h3,
-body.dark-mode .news-content p,
-body.dark-mode .company-card h3,
-body.dark-mode .company-card p {
-    color: var(--dark-mode-text);
-}
-
-body.dark-mode .news-card,
-body.dark-mode .company-card {
-    background-color: var(--dark-mode-card-bg);
-    border: 1px solid var(--dark-mode-border);
-}
-
-body.dark-mode .news-content a,
-body.dark-mode .company-card a {
-    color: var(--popcolor);
 }
 
 /************* NEWS SECTION STYLES ************/
@@ -123,7 +105,7 @@ body.dark-mode .company-card a {
 }
 
 .company-card p,
-.news-content p{
+.news-content p {
     color: #214773;
     font-size: 1rem;
 }
@@ -143,14 +125,6 @@ body.dark-mode .company-card a {
     margin-bottom: 0.95rem;
     cursor: pointer;
     font-weight: bold;
-}
-
-body.dark-mode .news-content h4 {
-    color: var(--popcolor);
-}
-
-body.dark-mode .news-content a:hover {
-    color: var(--popcolor);
 }
 
 /* ********** STYLES FOR THE MISSION STATEMENT CONTAINER *************** */
@@ -198,19 +172,6 @@ body.dark-mode .news-content a:hover {
     font-weight: bold;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #2c4b58;
-}
-
-body.dark-mode .mission-content {
-    background-color: var(--dark-mode-card-bg);
-    color: var(--dark-mode-text);
-}
-
-body.dark-mode .cta-button:hover {
-    color: var(--popcolor);
 }
 
 /****************** COMPANY SPOTLIGHT SECTION ****************/
@@ -290,15 +251,6 @@ body.dark-mode .cta-button:hover {
     padding-top: 1rem;
     border-top: 1px solid #0d0d12;
 }
-
-body.dark-mode .company-card .membership-level {
-    border-top: 1px solid var(--dark-mode-border);
-}
-
-body.dark-mode .company-card .contact-info strong {
-    color: var(--popcolor);
-}
-
 
 /* ***************** RESPONSIVE DESIGN *************** */
 /* 1. Mobile  or small screen adjustments */
