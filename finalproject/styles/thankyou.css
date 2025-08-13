@@ -39,13 +39,11 @@ h1{
     line-height: 1.6;
 }
 
+body.dark-mode .summary h2,
 body.dark-mode .summary p {
     color: var(--darktextcolor);
 }
 
-body.dark-mode .summary h2 {
-    color: var(--darktextcolor);
-}
 
 .return a {
     display: inline-block;
@@ -56,23 +54,18 @@ body.dark-mode .summary h2 {
     border-radius: 5px;
     font-weight: bold;
     transition: background 0.2s;
-    /* margin-top: 2rem; */
 }
 
-.return a:hover {
+.return a:hover,
+body.dark-mode .return a:hover {
     background-color: var(--accentcolor);
+    color: var(--darktextcolor);
 }
 
 body.dark-mode .return a {
     background-color: var(--lighttextcolor);
     color: var(--darktextcolor);
 }
-
-body.dark-mode .return a:hover {
-    background-color: var(--accentcolor);
-    color: var(--darktextcolor);
-}
-
 
 /* ***************** RESPONSIVE DESIGN *************** */
 @media (max-width: 606px) {
