@@ -163,7 +163,6 @@ select:focus {
     outline: none;
 }
 
-form button,
 input[type="submit"] {
     width: auto;
     display: block;
@@ -180,7 +179,6 @@ input[type="submit"] {
 
 }
 
-form button:hover,
 input[type="submit"]:hover {
     background-color: var(--primarypop);
     color: white;
@@ -199,13 +197,12 @@ body.dark-mode form {
     border: 1px solid var(--dark-mode-border);
 }
 
-body.dark-mode form button,
 body.dark-mode input[type="submit"] {
     background-color: var(--dark-mode-text);
     color: var(--darktextcolor);
 }
 
-body.dark-mode form button:hover,
+
 body.dark-mode input[type="submit"]:hover {
     background-color: var(--popcolor);
     color: var(--darktextcolor);
