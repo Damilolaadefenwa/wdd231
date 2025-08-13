@@ -44,7 +44,6 @@ body.dark-mode .join-hero {
 }
 
 .join-hero h1 {
-    color: var(--darktextcolor);
     font-size: 1.85rem;
     line-height: 2.2rem;
     margin-bottom: 0.5rem;
@@ -63,15 +62,16 @@ body.dark-mode .join-hero {
     }
 }
 
-body.dark-mode .join-hero h1 {
-    color: var(--dark-mode-text);
+.join-hero h1,
+.join-hero p {
+    color: var(--darktextcolor);
 }
 
 .join-hero p {
     font-size: 1.4rem;
-    color: var(--darktextcolor);
 }
 
+body.dark-mode .join-hero h1,
 body.dark-mode .join-hero p {
     color: var(--dark-mode-text);
 }
@@ -104,12 +104,17 @@ form {
     border: 2px solid #fcff42;
 }
 
+label,
+fieldset legend {
+    font-weight: bold;
+    color: var(--primarypop);
+}
+
 label {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    font-weight: bold;
-    color: var(--primarypop);
+
 }
 
 fieldset {
@@ -121,10 +126,8 @@ fieldset {
 }
 
 fieldset legend {
-    font-weight: bold;
     padding: 0.5rem;
     /* Giving the legend text some breathing room*/
-    color: var(--primarypop);
 }
 
 /* Targeting the radio button labels inside the 
@@ -196,11 +199,13 @@ body.dark-mode form {
     border: 1px solid var(--dark-mode-border);
 }
 
+body.dark-mode form button,
 body.dark-mode input[type="submit"] {
     background-color: var(--dark-mode-text);
     color: var(--darktextcolor);
 }
 
+body.dark-mode form button:hover,
 body.dark-mode input[type="submit"]:hover {
     background-color: var(--popcolor);
     color: var(--darktextcolor);
@@ -249,12 +254,13 @@ body.dark-mode input[type="submit"]:hover {
     color: var(--primarypop);
 }
 
-.card button {
+.card button,
+body.dark-mode .card button {
     background: var(--accentcolor);
     color: var(--darktextcolor);
     padding: 12px 25px;
     /* border: none; */
-    border: 1px solid #ccc;
+    border: 1.5px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
@@ -262,31 +268,22 @@ body.dark-mode input[type="submit"]:hover {
     transition: transform 1.5s ease;
 }
 
-.card button:hover {
+
+.card button:hover,
+body.dark-mode .card button:hover {
     background-color: var(--primarycolor);
     color: var(--darktextcolor);
 }
+
 
 body.dark-mode .card {
     background-color: var(--dark-mode-text);
     border: 1px solid var(--dark-mode-border);
 }
 
-body.dark-mode .card h3 {
-    color: var(--darktextcolor);
-}
-
-body.dark-mode .card p {
-    color: var(--darktextcolor);
-}
-
-body.dark-mode .card button {
-    background-color: var(--dark-mode-text);
-    color: var(--darktextcolor);
-}
-
-body.dark-mode .card button:hover {
-    background-color: var(--accentcolor);
+body.dark-mode .card h3,
+body.dark-mode .card p,
+body.dark-mode .modal h2 {
     color: var(--darktextcolor);
 }
 
@@ -300,7 +297,8 @@ body.dark-mode .card button:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.modal::backdrop {
+.modal::backdrop,
+body.dark-mode .modal::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -312,14 +310,6 @@ body.dark-mode .card button:hover {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-}
-
-body.dark-mode .modal h2 {
-    color: var(--darktextcolor);
-}
-
-body.dark-mode .modal::backdrop {
-    background-color: rgba(20, 19, 19, 0.9);
 }
 
 /* --- REVISED MEDIA QUERIES FOR RESPONSIVE LAYOUT --- */

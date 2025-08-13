@@ -86,7 +86,7 @@ function displayHeadline(headlineData) {
 // B--- THE BUSINESS SPOTLIGHT SECTION --
 const data = allBusinesses;
 //Testing
-console.log(data);
+// console.log(data);
 
 // Function to shuffle an array
 function shuffleArray(array) {
