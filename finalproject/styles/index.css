@@ -25,6 +25,42 @@
 
 }
 
+/************* Combining Selectors and Rules ************/
+.news-content h3,
+.company-card h3,
+.company-card p {
+    color: var(--darktextcolor);
+}
+
+.news-content a:hover,
+.company-card a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.news-card,
+.company-card {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode .news-content h3,
+body.dark-mode .news-content p,
+body.dark-mode .company-card h3,
+body.dark-mode .company-card p {
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode .news-card,
+body.dark-mode .company-card {
+    background-color: var(--dark-mode-card-bg);
+    border: 1px solid var(--dark-mode-border);
+}
+
+body.dark-mode .news-content a,
+body.dark-mode .company-card a {
+    color: var(--popcolor);
+}
+
 /************* NEWS SECTION STYLES ************/
 .news-section {
     padding: 0.5rem 1rem 2rem 1rem;
@@ -51,7 +87,6 @@
 .news-card {
     background: #fff;
     border-radius: var(--card-radius);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     width: 350px;
     display: flex;
@@ -80,8 +115,6 @@
 .news-content h3 {
     font-size: 1.1rem;
     margin: 0 0 1rem 0;
-    /* font-weight: 600; */
-    color: var(--darktextcolor);
 }
 
 .news-content p {
@@ -107,29 +140,8 @@
     font-weight: bold;
 }
 
-.news-content a:hover {
-    color: blue;
-}
-
-body.dark-mode .news-card {
-    background-color: var(--dark-mode-card-bg);
-    border: 1px solid var(--dark-mode-border);
-}
-
-body.dark-mode .news-content h3 {
-    color: var(--dark-mode-text);
-}
-
 body.dark-mode .news-content h4 {
     color: var(--popcolor);
-}
-
-body.dark-mode .news-content p {
-    color: var(--dark-mode-text);
-}
-
-body.dark-mode .news-content a {
-    color: var(--dark-mode-text);
 }
 
 body.dark-mode .news-content a:hover {
@@ -160,8 +172,8 @@ body.dark-mode .news-content a:hover {
     padding: 1rem;
 }
 
-.mission-content h1 {
-    font-size: 1.2rem;
+.mission-content h2 {
+    font-size: 1.5rem;
     margin: 0 0 0.5rem 0;
 }
 
@@ -216,7 +228,6 @@ body.dark-mode .cta-button:hover {
 .company-card {
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--greybackground);
     padding: 1.5rem;
     text-align: center;
@@ -237,14 +248,12 @@ body.dark-mode .cta-button:hover {
 
 .company-card h3 {
     font-size: 1.4rem;
-    color: var(--darktextcolor);
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
 .company-card p {
     font-size: 0.95rem;
-    color: var(--darktextcolor);
     margin: 0.3rem 0;
 }
 
@@ -269,11 +278,6 @@ body.dark-mode .cta-button:hover {
     word-break: break-all;
 }
 
-.company-card a:hover {
-    text-decoration: underline;
-    color: blue;
-}
-
 .company-card .membership-level {
     font-size: 1rem;
     color: #2a5309;
@@ -281,23 +285,6 @@ body.dark-mode .cta-button:hover {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid #0d0d12;
-}
-
-body.dark-mode .company-card {
-    background-color: var(--dark-mode-card-bg);
-    border: 1px solid var(--dark-mode-border);
-}
-
-body.dark-mode .company-card h3 {
-    color: var(--dark-mode-text);
-}
-
-body.dark-mode .company-card p {
-    color: var(--dark-mode-text);
-}
-
-body.dark-mode .company-card a {
-    color: var(--popcolor);
 }
 
 body.dark-mode .company-card .membership-level {
@@ -330,8 +317,10 @@ body.dark-mode .company-card .contact-info strong {
         gap: 0.5rem;
     }
 
+    .company-card img,
     .news-card img {
-        width: auto;
+        width: 80%;
+        height: auto;
     }
 
     .news-content {
@@ -357,11 +346,6 @@ body.dark-mode .company-card .contact-info strong {
     .company-card {
         padding: 15px;
         display: grid;
-    }
-
-    .company-card img {
-        width: 80%;
-        height: auto;
     }
 
     .company-card p {
