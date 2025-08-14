@@ -1,0 +1,548 @@
+/* MAIN STYLE PAGE FOR HEADER, NAVIGATION & FOOTER Section */
+/* Author: Damilola Adefenwa/
+/* Date: 2025-08-06 */
+
+:root {
+
+    /* FONT STYLE & WEIGHT */
+    --myfont: "Lato", sans-serif;
+    /* Font-weight List: thin-100, light-300, regular-400
+    bold-700, black-900, Font-style:normal and italic  */
+    --primarycolor: #f2f2f2;
+    --primarypop: #253c57;
+    --darktextcolor: #0d0d12;
+    --lighttextcolor: #ffffff;
+    --accentcolor: #Bee1e5;
+    --popcolor: #fcff42;
+
+    /* Dark Mode Colors */
+    --dark-mode-background: #2c3e50;
+    --dark-mode-text: #ecf0f1;
+    --dark-mode-card-bg: #34495e;
+    --dark-mode-border: #4a627d;
+    --dark-mode-footer: #1a252f;
+    --dark-mode-header: #9db5cb;
+    --dark-mode-header1: #637d94;
+
+}
+
+/************* BASICS STYLES ************/
+body {
+    margin: 0;
+    font-family: var(--myfont);
+    background: var(--primarycolor);
+    color: var(--darktextcolor);
+    transition: background-color 0.3s ease;
+}
+
+/* ***************** HEADER AND DARK MODE TOGGLE*************** */
+#main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--accentcolor);
+    color: var(--primarypop);
+    padding: 0.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Border styles to enhance header, footer and card. */
+#main-header,
+.overlap-card,
+footer {
+    border: 2px solid var(--popcolor);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    /* Fixed size for the logo */
+    height: 40px;
+    border-radius: 10%;
+    object-fit: cover;
+    /* Ensures image covers the area without distortion */
+}
+
+/* ***************** NAVIGATION *************** */
+
+/*** HAMBURGER ***/
+.hamburger-menu {
+    display: block;
+    /* Show hamburger on mobile */
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    order: 1;
+    /* Appears first on small screens */
+}
+
+/*** NAVIGATION ***/
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: none;
+}
+
+.nav-links.open {
+    max-height: 500px;
+}
+
+.nav-links li {
+    border-bottom: 1px solid rgba(231, 224, 224, 0.1);
+}
+
+.nav-links li:last-child {
+    border-bottom: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 0.8rem .1rem;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.nav-links a,
+.logo a {
+    color: var(--darktextcolor);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active,
+.logo a:hover {
+    background-color: var(--popcolor);
+    color: var(--primarypop);
+    text-decoration: none;
+}
+
+.nav-links li.current {
+    background-color: var(--lighttextcolor);
+}
+
+.nav-links li.current a {
+    color: #0d0d12;
+}
+
+/************* HERO SECTION STYLES ************/
+#page-hero {
+    position: relative;
+    width: 100%;
+    /* height: 350px; */
+    height: 450px;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlap-containers {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    z-index: 2;
+}
+
+.overlap-card {
+    color: #f5fcff;
+    padding: 2rem 2.5rem 1.2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.overlap-card.mission {
+    background: #214773;
+}
+
+.overlap-card.involved {
+    background-color: #234507;
+}
+
+.overlap-card.events {
+    background-color: #0000a3;
+}
+
+.overlap-link {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #f5fcff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: text-decoration var(--transition);
+}
+
+.overlap-link:hover {
+    color: #fcff42;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.overlap-card p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+/* ***************** MAIN *************** */
+main {
+    flex: 1;
+    /* Allows main content to grow and push footer down */
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Center align main content */
+    width: 100%;
+    box-sizing: border-box;
+    /* Include padding in element's total width and height */
+}
+
+/* ***************** FOOTER *************** */
+footer {
+    background-color: var(--accentcolor);
+    font-family: var(--myfont);
+    color: var(--primarypop);
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+#page-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1.5rem;
+    /* Space between flex items */
+}
+
+.contact-info,
+.social-media,
+.development-info {
+    flex: 1 1 250px;
+    /* Allow items to grow/shrink, with a base width */
+    text-align: left;
+}
+
+footer h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+    font-size: 1.1rem;
+}
+
+footer a,
+footer a:hover {
+    color: #243d01;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--popcolor);
+    background-color: var(--primarypop);
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    /* Center icons if they wrap */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-media img {
+    width: 40px;
+    /* Size for social icons */
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(1, 1, 1, 0.5);
+    padding: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+    background-color: var(--popcolor);
+}
+
+.development-info {
+    font-size: 1.2rem;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+/* ***************** RESPONSIVE DESIGN *************** */
+/* 1. Mobile  or small screen adjustments */
+@media (max-width: 606px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    #main-header {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+    }
+
+    .logo {
+        flex-direction: row;
+        /* Stack logo and site name vertically */
+        align-items: center;
+        gap: 10px;
+        margin-left: 5px;
+        flex: 1 1 auto;
+    }
+
+    .logo a {
+        /* word-break: break-all; */
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background: none;
+        position: static;
+        width: auto;
+        margin-left: auto;
+        gap: 0.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: none;
+        width: auto;
+        position: absolute;
+        top: 133px;
+        /* adjust as needed */
+        right: 6px;
+        z-index: 100;
+        background: var(--primarypop);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links.open a {
+        /* min-width: 200px; */
+        width: 358px;
+        text-align: right;
+    }
+
+    .nav-links li {
+        width: 100%;
+        border-bottom: none;
+        margin: 0;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 1rem;
+        color: var(--lighttextcolor);
+        font-weight: bold;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+        text-align: right;
+        min-width: 100px;
+        margin-top: .89rem;
+        cursor: pointer;
+    }
+
+    .nav-links li.current a {
+        background: var(--lighttextcolor);
+        color: #0d0d12;
+    }
+
+    .nav-links li.current a:hover {
+        color: blue;
+    }
+
+    .hamburger-menu {
+        display: block;
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+        align-self: flex-end;
+        z-index: 101;
+    }
+
+    #page-hero {
+        min-height: 600px;
+        height: 40vh;
+    }
+
+    .overlap-containers {
+        flex-direction: column;
+        align-items: center;
+        bottom: -10px;
+        gap: 0rem;
+    }
+
+    .overlap-card {
+        min-width: 80vw;
+        padding: 1.5rem 1rem 1rem 1rem;
+    }
+
+    .overlap-card p {
+        font-size: 0.95rem;
+    }
+
+    .overlap-link {
+        font-size: 1.3rem;
+    }
+
+}
+
+
+/* 2. Large screen adjustments (e.g, tablet, laptop etc) */
+@media only screen and (min-width: 608px) {
+
+    #main-header {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        display: none;
+        /* Hide hamburger on larger screens */
+    }
+
+    nav {
+        width: auto;
+        order: initial;
+        margin-top: 0;
+        text-align: left;
+        margin-left: 2rem;
+        display: flex;
+        align-items: center;
+        background: none;
+        position: static;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        max-height: none;
+        overflow: visible;
+        background: none;
+        gap: 2rem;
+        align-items: center;
+        width: auto;
+    }
+
+    .nav-links li {
+        border-bottom: none;
+        margin-right: 1.5rem;
+    }
+
+    .nav-links li:last-child {
+        margin-right: 0;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 1rem;
+        background: none;
+        color: var(--darktextcolor);
+        font-weight: 700;
+        border-radius: 0.5rem;
+    }
+
+    .nav-links li.current {
+        width: 8rem;
+        padding: 4px 7px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        background-color: var(--primarypop);
+        color: var(--popcolor);
+    }
+
+    .nav-links li.current a:hover {
+        color: var(--popcolor);
+    }
+
+    .nav-links li.current {
+        width: 6rem;
+        padding: 4px 7px;
+    }
+
+    #page-footer {
+        justify-content: space-between;
+        line-height: 1.5rem;
+    }
+
+    .contact-info,
+    .social-media,
+    .development-info {
+        flex: 0 1 auto;
+        /* Allow items to take natural width */
+    }
+
+    .social-media {
+        margin-top: 0;
+    }
+
+    .development-info {
+        text-align: right;
+    }
+}
